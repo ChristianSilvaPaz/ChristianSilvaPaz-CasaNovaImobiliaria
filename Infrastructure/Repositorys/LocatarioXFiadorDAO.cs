@@ -12,6 +12,7 @@ namespace Infrastructure.Repositorys
             {
                 using (MySqlCommand cmdAddRelacionamento = new MySqlCommand(queryAddRelacionamento, conn))
                 {
+                    conn.Open();
                     cmdAddRelacionamento.Parameters.AddWithValue("id_person", idLocatario);
                     cmdAddRelacionamento.Parameters.AddWithValue("id_guarantor", idFiador);
                     cmdAddRelacionamento.ExecuteNonQuery();

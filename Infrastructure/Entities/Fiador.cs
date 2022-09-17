@@ -14,10 +14,9 @@ namespace Infrastructure.Entities
         [Required(ErrorMessage = "O CAMPO NOME É OBRIGATÓRIO")]
         public string Name { get; set; }
 
-        //[Required(ErrorMessage = "O CAMPO DATA DE NASCIMENTO É OBRIGATÓRIO")]
-        //[MinLength(8, ErrorMessage = "DATA INVÁLIDA")]
-        //[DisplayFormat(DataFormatString = "dd/MM/yyyy")]
-        public DateOnly BirthDate { get; set; }
+        [Required(ErrorMessage = "O CAMPO DATA DE NASCIMENTO É OBRIGATÓRIO")]
+        [MinLength(8, ErrorMessage = "DATA INVÁLIDA")]
+        public String BirthDate { get; set; }
 
         [Required(ErrorMessage = "O CAMPO ESTADO CIVIL É OBRIGATÓRIO")]
         public string MaritalStatus { get; set; }

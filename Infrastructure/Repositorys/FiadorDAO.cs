@@ -32,7 +32,7 @@ namespace Infrastructure.Repositorys
                     {
                         conn.Open();
                         cmdAdd.Parameters.AddWithValue("name", fiador.Name);
-                        cmdAdd.Parameters.AddWithValue("birthdate", fiador.BirthDate.ToString("yyyy-MM-dd"));
+                        cmdAdd.Parameters.AddWithValue("birthdate", fiador.BirthDate);
                         cmdAdd.Parameters.AddWithValue("maritalstatus", fiador.MaritalStatus);
                         cmdAdd.Parameters.AddWithValue("sex", fiador.Sex);
                         cmdAdd.Parameters.AddWithValue("cpf", fiador.Cpf);
@@ -59,18 +59,18 @@ namespace Infrastructure.Repositorys
                         }
                     }
 
-                    //CHAMA METODO DA CLASSE CONJUGEDAO PARA INSERIR CONJUGE DO FIADOR
-                    if (fiador.Casado)
-                    {
-                        fiador.Conjuge.id_fiador = fiador.Id;
-                        _conjugeDAO.addConjuge(fiador.Conjuge);
-                    }
-
-                    //CHAMA METODO DA CLASSE DE INSERIR NA TABELA DE RELACIONAMENTO
-                    _locatarioXFiadorDAO.AddRelacionamento(idLocatario, fiador.Id);
-
-                    //ENCERRA CONEXAO    
+                    //ENCERRA CONEXAO   
                 }
+
+                //CHAMA METODO DA CLASSE CONJUGEDAO PARA INSERIR CONJUGE DO FIADOR
+                if (fiador.Casado)
+                {
+                    fiador.Conjuge.id_fiador = fiador.Id;
+                    _conjugeDAO.addConjuge(fiador.Conjuge);
+                }
+
+                //CHAMA METODO DA CLASSE DE INSERIR NA TABELA DE RELACIONAMENTO
+                _locatarioXFiadorDAO.AddRelacionamento(idLocatario, fiador.Id);
             }
         }
 
@@ -95,7 +95,7 @@ namespace Infrastructure.Repositorys
                             fiador.Id = Convert.ToInt32(reader["id"]);
                             fiador.Name = reader["name"].ToString();
                             fiador.MaritalStatus = reader["maritalstatus"].ToString();
-                            fiador.BirthDate = DateOnly.ParseExact((string)reader["birthdate"], "dd/MM/yyyy");
+                            fiador.BirthDate = reader["birthdate"].ToString();
                             fiador.Sex = reader["sex"].ToString();
                             fiador.Cpf = reader["cpf"].ToString();
                             fiador.Rg = reader["rg"].ToString();

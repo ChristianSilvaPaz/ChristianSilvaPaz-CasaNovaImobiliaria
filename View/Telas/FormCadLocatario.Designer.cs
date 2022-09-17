@@ -727,6 +727,7 @@
             this.maskedBirthDate.Size = new System.Drawing.Size(135, 29);
             this.maskedBirthDate.TabIndex = 2;
             this.maskedBirthDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.maskedBirthDate.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.maskedBirthDate.ValidatingType = typeof(System.DateTime);
             // 
             // label3
@@ -1050,6 +1051,7 @@
             this.maskedBirthDate1.Size = new System.Drawing.Size(135, 29);
             this.maskedBirthDate1.TabIndex = 2;
             this.maskedBirthDate1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.maskedBirthDate1.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.maskedBirthDate1.ValidatingType = typeof(System.DateTime);
             // 
             // label24
@@ -1429,6 +1431,7 @@
             this.maskedBirthDate2.Size = new System.Drawing.Size(135, 29);
             this.maskedBirthDate2.TabIndex = 2;
             this.maskedBirthDate2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.maskedBirthDate2.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.maskedBirthDate2.ValidatingType = typeof(System.DateTime);
             // 
             // label64
@@ -1752,6 +1755,7 @@
             this.maskedBirthDate3.Size = new System.Drawing.Size(135, 29);
             this.maskedBirthDate3.TabIndex = 2;
             this.maskedBirthDate3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.maskedBirthDate3.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.maskedBirthDate3.ValidatingType = typeof(System.DateTime);
             // 
             // label40
@@ -2131,6 +2135,7 @@
             this.maskedBirthDate4.Size = new System.Drawing.Size(135, 29);
             this.maskedBirthDate4.TabIndex = 2;
             this.maskedBirthDate4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.maskedBirthDate4.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.maskedBirthDate4.ValidatingType = typeof(System.DateTime);
             // 
             // label76
@@ -2454,6 +2459,7 @@
             this.maskedBirthDate5.Size = new System.Drawing.Size(135, 29);
             this.maskedBirthDate5.TabIndex = 2;
             this.maskedBirthDate5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.maskedBirthDate5.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.maskedBirthDate5.ValidatingType = typeof(System.DateTime);
             // 
             // label52

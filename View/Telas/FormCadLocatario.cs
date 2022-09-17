@@ -1,5 +1,4 @@
 ﻿using Infrastructure.Entities;
-using System.Globalization;
 using Domain.Services;
 using System.Media;
 
@@ -32,11 +31,10 @@ namespace View.Telas
         {
             _locatario = new Locatario();
             _locatario.Name = textName.Text;
-            //_locatario.BirthDate = DateOnly.ParseExact(maskedBirthDate.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+            _locatario.BirthDate = maskedBirthDate.Text;
             _locatario.MaritalStatus = IdentifierMaritalStatus(groupMaritalStatus);
-            //_locatario.Casado = _locatario.MaritalStatus.Equals("CASADO(A)") ? true : false;
             _locatario.Sex = IdentifierSex(groupSex);
-            //_locatario.Cpf = maskedCpf.Text;
+            _locatario.Cpf = maskedCpf.Text;
             _locatario.Rg = textRg.Text;
             _locatario.DispatchingAgency = textDispatchingAgency.Text;
             _locatario.Nacionality = textNacionality.Text;
@@ -53,6 +51,7 @@ namespace View.Telas
             _locatario.Comments = textComments.Text;
             if (ValidationDataAnnotation.ValidationModel(_locatario))
             {
+                _locatario.Casado = _locatario.MaritalStatus.Equals("CASADO(A)") ? true : false;
                 if (_locatario.Casado)
                 {
                     ((Control)tabControl1.TabPages["tabPageConjuge"]).Enabled = true;
@@ -69,7 +68,7 @@ namespace View.Telas
         {
             _conjuge = new Conjuge();
             _conjuge.Name = textName1.Text;
-            _conjuge.BirthDate = DateOnly.ParseExact(maskedBirthDate1.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+            _conjuge.BirthDate = maskedBirthDate1.Text;
             _conjuge.Sex = IdentifierSex(groupSex1);
             _conjuge.Cpf = maskedCpf1.Text;
             _conjuge.Rg = textRg1.Text;
@@ -91,9 +90,8 @@ namespace View.Telas
         {
             _fiador1 = new Fiador();
             _fiador1.Name = textName2.Text;
-            _fiador1.BirthDate = DateOnly.ParseExact(maskedBirthDate2.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+            _fiador1.BirthDate = maskedBirthDate2.Text;
             _fiador1.MaritalStatus = IdentifierMaritalStatus(groupMaritalStatus2);
-            _fiador1.Casado = _fiador1.MaritalStatus.Equals("CASADO(A)") ? true : false;
             _fiador1.Sex = IdentifierSex(groupSex2);
             _fiador1.Cpf = maskedCpf2.Text;
             _fiador1.Rg = textRg2.Text;
@@ -107,6 +105,7 @@ namespace View.Telas
             _fiador1.Email = textEmail2.Text;
             if (ValidationDataAnnotation.ValidationModel(_fiador1))
             {
+                _fiador1.Casado = _fiador1.MaritalStatus.Equals("CASADO(A)") ? true : false;
                 if (_fiador1.Casado)
                 {
                     ((Control)tabControl1.TabPages["tabPageConjugeF1"]).Enabled = true;
@@ -123,7 +122,7 @@ namespace View.Telas
         {
             _conjugeF1 = new Conjuge();
             _conjugeF1.Name = textName3.Text;
-            _conjugeF1.BirthDate = DateOnly.ParseExact(maskedBirthDate3.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+            _conjugeF1.BirthDate = maskedBirthDate3.Text;
             _conjugeF1.Sex = IdentifierSex(groupSex3);
             _conjugeF1.Cpf = maskedCpf3.Text;
             _conjugeF1.Rg = textRg3.Text;
@@ -145,9 +144,8 @@ namespace View.Telas
         {
             _fiador2 = new Fiador();
             _fiador2.Name = textName4.Text;
-            _fiador2.BirthDate = DateOnly.ParseExact(maskedBirthDate4.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+            _fiador2.BirthDate = maskedBirthDate4.Text;
             _fiador2.MaritalStatus = IdentifierMaritalStatus(groupMaritalStatus4);
-            _fiador2.Casado = _fiador2.MaritalStatus.Equals("CASADO(A)") ? true : false;
             _fiador2.Sex = IdentifierSex(groupSex4);
             _fiador2.Cpf = maskedCpf4.Text;
             _fiador2.Rg = textRg4.Text;
@@ -161,6 +159,7 @@ namespace View.Telas
             _fiador2.Email = textEmail4.Text;
             if (ValidationDataAnnotation.ValidationModel(_fiador2))
             {
+                _fiador2.Casado = _fiador2.MaritalStatus.Equals("CASADO(A)") ? true : false;
                 if (_fiador2.Casado)
                 {
                     ((Control)tabControl1.TabPages["tabPageConjugeF2"]).Enabled = true;
@@ -176,7 +175,7 @@ namespace View.Telas
         {
             _conjugeF2 = new Conjuge();
             _conjugeF2.Name = textName5.Text;
-            _conjugeF2.BirthDate = DateOnly.ParseExact(maskedBirthDate5.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+            _conjugeF2.BirthDate = maskedBirthDate5.Text;
             _conjugeF2.Sex = IdentifierSex(groupSex5);
             _conjugeF2.Cpf = maskedCpf5.Text;
             _conjugeF2.Rg = textRg5.Text;
@@ -287,7 +286,7 @@ namespace View.Telas
             }
         }
 
-        //EVENTOS PARA PROIBIR A ENTRADA CARACTERES INVALIDOS
+        //EVENTOS PARA PROIBIR A ENTRADA DE CARACTERES INVALIDOS
         private void textName_KeyPress(object sender, KeyPressEventArgs e)
         {
             try

@@ -19,7 +19,7 @@ namespace Infrastructure.Repositorys
                 {
                     conn.Open();
                     cmdAdd.Parameters.AddWithValue("name", conjuge.Name);
-                    cmdAdd.Parameters.AddWithValue("birthdate", conjuge.BirthDate.ToString("yyyy-MM-dd"));
+                    cmdAdd.Parameters.AddWithValue("birthdate", conjuge.BirthDate);
                     cmdAdd.Parameters.AddWithValue("sex", conjuge.Sex);
                     cmdAdd.Parameters.AddWithValue("cpf", conjuge.Cpf);
                     cmdAdd.Parameters.AddWithValue("rg", conjuge.Rg);
@@ -54,7 +54,7 @@ namespace Infrastructure.Repositorys
                         {
                             conjuge.Id = Convert.ToInt32(reader["id"]);
                             conjuge.Name = reader["name"].ToString();
-                            conjuge.BirthDate = DateOnly.ParseExact((string)reader["birthdate"], "dd/MM/yyyy");
+                            conjuge.BirthDate = reader["birthdate"].ToString();
                             conjuge.Sex = reader["sex"].ToString();
                             conjuge.Cpf = reader["cpf"].ToString();
                             conjuge.Rg = reader["rg"].ToString();
@@ -90,7 +90,7 @@ namespace Infrastructure.Repositorys
                         {
                             conjuge.Id = Convert.ToInt32(reader["id"]);
                             conjuge.Name = reader["name"].ToString();
-                            conjuge.BirthDate = DateOnly.ParseExact((string)reader["birthdate"], "dd/MM/yyyy");
+                            conjuge.BirthDate = reader["birthdate"].ToString();
                             conjuge.Sex = reader["sex"].ToString();
                             conjuge.Cpf = reader["cpf"].ToString();
                             conjuge.Rg = reader["rg"].ToString();
