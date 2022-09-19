@@ -95,7 +95,7 @@ namespace Infrastructure.Repositorys
                             fiador.Id = Convert.ToInt32(reader["id"]);
                             fiador.Name = reader["name"].ToString();
                             fiador.MaritalStatus = reader["maritalstatus"].ToString();
-                            fiador.BirthDate = reader["birthdate"].ToString();
+                            fiador.BirthDate = DateOnly.ParseExact((string)reader["birthdate"], "dd/MM/yyyy");
                             fiador.Sex = reader["sex"].ToString();
                             fiador.Cpf = reader["cpf"].ToString();
                             fiador.Rg = reader["rg"].ToString();

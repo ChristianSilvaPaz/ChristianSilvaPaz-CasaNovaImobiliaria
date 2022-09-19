@@ -6,7 +6,7 @@ namespace View.Telas
 {
     public partial class FormCadLocatario : Form
     {
-        private PersonServices _personServices;
+        private LocatarioServices _locatarioServices;
         private Locatario _locatario;
         private Conjuge _conjugeF1;
         private Conjuge _conjugeF2;
@@ -17,13 +17,8 @@ namespace View.Telas
         public FormCadLocatario()
         {
             InitializeComponent();
-            _personServices = new PersonServices();
-            //INICIALIZA OS TABPAGES COMO INATIVOS
-            ((Control)tabControl1.TabPages[1]).Enabled = false;
-            ((Control)tabControl1.TabPages[2]).Enabled = false;
-            ((Control)tabControl1.TabPages[3]).Enabled = false;
-            ((Control)tabControl1.TabPages[4]).Enabled = false;
-            ((Control)tabControl1.TabPages[5]).Enabled = false;
+            EstadoInicial();
+            _locatarioServices = new LocatarioServices();
         }
 
         //EVENTOS DOS BOTOES DE VALIDAR
@@ -31,7 +26,7 @@ namespace View.Telas
         {
             _locatario = new Locatario();
             _locatario.Name = textName.Text;
-            _locatario.BirthDate = maskedBirthDate.Text;
+            _locatario.BirthDate = (string.IsNullOrEmpty(maskedBirthDate.Text) || maskedBirthDate.Text.Length < 8 ? null : DateOnly.ParseExact(maskedBirthDate.Text, "ddMMyyyy"));
             _locatario.MaritalStatus = IdentifierMaritalStatus(groupMaritalStatus);
             _locatario.Sex = IdentifierSex(groupSex);
             _locatario.Cpf = maskedCpf.Text;
@@ -68,7 +63,7 @@ namespace View.Telas
         {
             _conjuge = new Conjuge();
             _conjuge.Name = textName1.Text;
-            _conjuge.BirthDate = maskedBirthDate1.Text;
+            _conjuge.BirthDate = (string.IsNullOrEmpty(maskedBirthDate1.Text) || maskedBirthDate1.Text.Length < 8 ? null : DateOnly.ParseExact(maskedBirthDate1.Text, "ddMMyyyy"));
             _conjuge.Sex = IdentifierSex(groupSex1);
             _conjuge.Cpf = maskedCpf1.Text;
             _conjuge.Rg = textRg1.Text;
@@ -90,7 +85,7 @@ namespace View.Telas
         {
             _fiador1 = new Fiador();
             _fiador1.Name = textName2.Text;
-            _fiador1.BirthDate = maskedBirthDate2.Text;
+            _fiador1.BirthDate = (string.IsNullOrEmpty(maskedBirthDate2.Text) || maskedBirthDate2.Text.Length < 8 ? null : DateOnly.ParseExact(maskedBirthDate2.Text, "ddMMyyyy"));
             _fiador1.MaritalStatus = IdentifierMaritalStatus(groupMaritalStatus2);
             _fiador1.Sex = IdentifierSex(groupSex2);
             _fiador1.Cpf = maskedCpf2.Text;
@@ -122,7 +117,7 @@ namespace View.Telas
         {
             _conjugeF1 = new Conjuge();
             _conjugeF1.Name = textName3.Text;
-            _conjugeF1.BirthDate = maskedBirthDate3.Text;
+            _conjugeF1.BirthDate = (string.IsNullOrEmpty(maskedBirthDate3.Text) || maskedBirthDate3.Text.Length < 8 ? null : DateOnly.ParseExact(maskedBirthDate3.Text, "ddMMyyyy"));
             _conjugeF1.Sex = IdentifierSex(groupSex3);
             _conjugeF1.Cpf = maskedCpf3.Text;
             _conjugeF1.Rg = textRg3.Text;
@@ -144,7 +139,7 @@ namespace View.Telas
         {
             _fiador2 = new Fiador();
             _fiador2.Name = textName4.Text;
-            _fiador2.BirthDate = maskedBirthDate4.Text;
+            _fiador2.BirthDate = (string.IsNullOrEmpty(maskedBirthDate4.Text) || maskedBirthDate4.Text.Length < 8 ? null : DateOnly.ParseExact(maskedBirthDate4.Text, "ddMMyyyy"));
             _fiador2.MaritalStatus = IdentifierMaritalStatus(groupMaritalStatus4);
             _fiador2.Sex = IdentifierSex(groupSex4);
             _fiador2.Cpf = maskedCpf4.Text;
@@ -175,7 +170,7 @@ namespace View.Telas
         {
             _conjugeF2 = new Conjuge();
             _conjugeF2.Name = textName5.Text;
-            _conjugeF2.BirthDate = maskedBirthDate5.Text;
+            _conjugeF2.BirthDate = (string.IsNullOrEmpty(maskedBirthDate5.Text) || maskedBirthDate5.Text.Length < 8 ? null : DateOnly.ParseExact(maskedBirthDate5.Text, "ddMMyyyy"));
             _conjugeF2.Sex = IdentifierSex(groupSex5);
             _conjugeF2.Cpf = maskedCpf5.Text;
             _conjugeF2.Rg = textRg5.Text;
@@ -199,7 +194,7 @@ namespace View.Telas
             Cadastrar();
         }
 
-        //METODO CADASTRAR
+        //METODO DE CADASTRAR
         private void Cadastrar()
         {
             var resposta = DialogResult;
@@ -214,9 +209,11 @@ namespace View.Telas
 
                 try
                 {
-                    _personServices.AddLocatario(_locatario);
+                    _locatarioServices.AddLocatario(_locatario);
                     _locatario = null;
                     LimparControls(this);
+                    tabControl1.SelectTab(tabPageLocatario);
+                    EstadoInicial();
                     MessageBox.Show("Locatário Cadastrado com Sucesso");
                 }
                 catch (Exception e)
@@ -284,6 +281,16 @@ namespace View.Telas
                     }
                 }
             }
+        }
+
+        //METODO PARA INICIALIZAR TABPAGES COMO INATIVOS
+        private void EstadoInicial()
+        {
+            ((Control)tabControl1.TabPages[1]).Enabled = false;
+            ((Control)tabControl1.TabPages[2]).Enabled = false;
+            ((Control)tabControl1.TabPages[3]).Enabled = false;
+            ((Control)tabControl1.TabPages[4]).Enabled = false;
+            ((Control)tabControl1.TabPages[5]).Enabled = false;
         }
 
         //EVENTOS PARA PROIBIR A ENTRADA DE CARACTERES INVALIDOS

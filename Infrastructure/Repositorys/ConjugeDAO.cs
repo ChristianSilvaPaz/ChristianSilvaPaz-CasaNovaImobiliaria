@@ -54,7 +54,7 @@ namespace Infrastructure.Repositorys
                         {
                             conjuge.Id = Convert.ToInt32(reader["id"]);
                             conjuge.Name = reader["name"].ToString();
-                            conjuge.BirthDate = reader["birthdate"].ToString();
+                            conjuge.BirthDate = DateOnly.ParseExact((string)reader["birthdate"], "dd/MM/yyyy");
                             conjuge.Sex = reader["sex"].ToString();
                             conjuge.Cpf = reader["cpf"].ToString();
                             conjuge.Rg = reader["rg"].ToString();
@@ -90,7 +90,7 @@ namespace Infrastructure.Repositorys
                         {
                             conjuge.Id = Convert.ToInt32(reader["id"]);
                             conjuge.Name = reader["name"].ToString();
-                            conjuge.BirthDate = reader["birthdate"].ToString();
+                            conjuge.BirthDate = DateOnly.ParseExact((string)reader["birthdate"], "dd/MM/yyyy");
                             conjuge.Sex = reader["sex"].ToString();
                             conjuge.Cpf = reader["cpf"].ToString();
                             conjuge.Rg = reader["rg"].ToString();

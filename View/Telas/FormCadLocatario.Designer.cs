@@ -781,7 +781,7 @@
             this.tabPageConjuge.Location = new System.Drawing.Point(4, 28);
             this.tabPageConjuge.Name = "tabPageConjuge";
             this.tabPageConjuge.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageConjuge.Size = new System.Drawing.Size(689, 714);
+            this.tabPageConjuge.Size = new System.Drawing.Size(742, 714);
             this.tabPageConjuge.TabIndex = 1;
             this.tabPageConjuge.Text = "Cônjuge";
             this.tabPageConjuge.UseVisualStyleBackColor = true;

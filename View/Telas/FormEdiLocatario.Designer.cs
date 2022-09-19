@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageLocatario = new System.Windows.Forms.TabPage();
+            this.buttonValidarLocatario = new System.Windows.Forms.Button();
             this.numericQtdAnimals = new System.Windows.Forms.NumericUpDown();
             this.maskedPhone2 = new System.Windows.Forms.MaskedTextBox();
             this.maskedPhone1 = new System.Windows.Forms.MaskedTextBox();
@@ -73,6 +74,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPageConjuge = new System.Windows.Forms.TabPage();
+            this.buttonValidarConjuge = new System.Windows.Forms.Button();
             this.textEmail1 = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
@@ -101,6 +103,7 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.tabPageFiador1 = new System.Windows.Forms.TabPage();
+            this.buttonValidarFiador1 = new System.Windows.Forms.Button();
             this.groupMaritalStatus2 = new System.Windows.Forms.GroupBox();
             this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.radioButton10 = new System.Windows.Forms.RadioButton();
@@ -134,6 +137,7 @@
             this.label64 = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
             this.tabPageConjugeF1 = new System.Windows.Forms.TabPage();
+            this.buttonValidarConjugeF1 = new System.Windows.Forms.Button();
             this.textEmail3 = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
@@ -162,6 +166,7 @@
             this.label40 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.tabPageFiador2 = new System.Windows.Forms.TabPage();
+            this.buttonValidarFiador2 = new System.Windows.Forms.Button();
             this.groupMaritalStatus4 = new System.Windows.Forms.GroupBox();
             this.radioButton13 = new System.Windows.Forms.RadioButton();
             this.radioButton14 = new System.Windows.Forms.RadioButton();
@@ -195,6 +200,7 @@
             this.label76 = new System.Windows.Forms.Label();
             this.label77 = new System.Windows.Forms.Label();
             this.tabPageConjugeF2 = new System.Windows.Forms.TabPage();
+            this.buttonValidarConjugeF2 = new System.Windows.Forms.Button();
             this.textEmail5 = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
             this.maskedTextBox9 = new System.Windows.Forms.MaskedTextBox();
@@ -222,6 +228,7 @@
             this.maskedBirthDate5 = new System.Windows.Forms.MaskedTextBox();
             this.label52 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
+            this.buttonEditar = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPageLocatario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericQtdAnimals)).BeginInit();
@@ -257,6 +264,7 @@
             // 
             // tabPageLocatario
             // 
+            this.tabPageLocatario.Controls.Add(this.buttonValidarLocatario);
             this.tabPageLocatario.Controls.Add(this.numericQtdAnimals);
             this.tabPageLocatario.Controls.Add(this.maskedPhone2);
             this.tabPageLocatario.Controls.Add(this.maskedPhone1);
@@ -300,6 +308,16 @@
             this.tabPageLocatario.TabIndex = 0;
             this.tabPageLocatario.Text = "Locatário";
             this.tabPageLocatario.UseVisualStyleBackColor = true;
+            // 
+            // buttonValidarLocatario
+            // 
+            this.buttonValidarLocatario.Location = new System.Drawing.Point(551, 622);
+            this.buttonValidarLocatario.Name = "buttonValidarLocatario";
+            this.buttonValidarLocatario.Size = new System.Drawing.Size(75, 23);
+            this.buttonValidarLocatario.TabIndex = 49;
+            this.buttonValidarLocatario.Text = "Validar";
+            this.buttonValidarLocatario.UseVisualStyleBackColor = true;
+            this.buttonValidarLocatario.Click += new System.EventHandler(this.buttonValidarLocatario_Click);
             // 
             // numericQtdAnimals
             // 
@@ -436,6 +454,7 @@
             this.textIncome.Size = new System.Drawing.Size(200, 29);
             this.textIncome.TabIndex = 12;
             this.textIncome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textIncome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textIncome_KeyPress);
             // 
             // textProfession
             // 
@@ -485,6 +504,7 @@
             this.textName.Name = "textName";
             this.textName.Size = new System.Drawing.Size(620, 29);
             this.textName.TabIndex = 1;
+            this.textName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textName_KeyPress);
             // 
             // textUf
             // 
@@ -494,6 +514,7 @@
             this.textUf.Size = new System.Drawing.Size(207, 29);
             this.textUf.TabIndex = 10;
             this.textUf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textUf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textUf_KeyPress);
             // 
             // textNaturalness
             // 
@@ -503,6 +524,7 @@
             this.textNaturalness.Size = new System.Drawing.Size(200, 29);
             this.textNaturalness.TabIndex = 9;
             this.textNaturalness.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textNaturalness.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textNaturalness_KeyPress);
             // 
             // label11
             // 
@@ -532,6 +554,7 @@
             this.textNacionality.Size = new System.Drawing.Size(135, 29);
             this.textNacionality.TabIndex = 8;
             this.textNacionality.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textNacionality.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textNacionality_KeyPress);
             // 
             // textDispatchingAgency
             // 
@@ -541,6 +564,7 @@
             this.textDispatchingAgency.Size = new System.Drawing.Size(200, 29);
             this.textDispatchingAgency.TabIndex = 7;
             this.textDispatchingAgency.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textDispatchingAgency.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textDispatchingAgency_KeyPress);
             // 
             // textRg
             // 
@@ -550,6 +574,7 @@
             this.textRg.Size = new System.Drawing.Size(135, 29);
             this.textRg.TabIndex = 6;
             this.textRg.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textRg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textRg_KeyPress);
             // 
             // label9
             // 
@@ -725,6 +750,7 @@
             // 
             // tabPageConjuge
             // 
+            this.tabPageConjuge.Controls.Add(this.buttonValidarConjuge);
             this.tabPageConjuge.Controls.Add(this.textEmail1);
             this.tabPageConjuge.Controls.Add(this.label29);
             this.tabPageConjuge.Controls.Add(this.maskedTextBox2);
@@ -757,6 +783,16 @@
             this.tabPageConjuge.TabIndex = 1;
             this.tabPageConjuge.Text = "Cônjuge";
             this.tabPageConjuge.UseVisualStyleBackColor = true;
+            // 
+            // buttonValidarConjuge
+            // 
+            this.buttonValidarConjuge.Location = new System.Drawing.Point(544, 406);
+            this.buttonValidarConjuge.Name = "buttonValidarConjuge";
+            this.buttonValidarConjuge.Size = new System.Drawing.Size(75, 23);
+            this.buttonValidarConjuge.TabIndex = 57;
+            this.buttonValidarConjuge.Text = "Validar";
+            this.buttonValidarConjuge.UseVisualStyleBackColor = true;
+            this.buttonValidarConjuge.Click += new System.EventHandler(this.buttonValidarConjuge_Click);
             // 
             // textEmail1
             // 
@@ -846,6 +882,7 @@
             this.textName1.Name = "textName1";
             this.textName1.Size = new System.Drawing.Size(620, 29);
             this.textName1.TabIndex = 1;
+            this.textName1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textName1_KeyPress);
             // 
             // textUf1
             // 
@@ -855,6 +892,7 @@
             this.textUf1.Size = new System.Drawing.Size(207, 29);
             this.textUf1.TabIndex = 9;
             this.textUf1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textUf1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textUf1_KeyPress);
             // 
             // textNaturalness1
             // 
@@ -864,6 +902,7 @@
             this.textNaturalness1.Size = new System.Drawing.Size(200, 29);
             this.textNaturalness1.TabIndex = 8;
             this.textNaturalness1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textNaturalness1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textNaturalness1_KeyPress);
             // 
             // label1
             // 
@@ -893,6 +932,7 @@
             this.textNacionality1.Size = new System.Drawing.Size(135, 29);
             this.textNacionality1.TabIndex = 7;
             this.textNacionality1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textNacionality1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textNacionality1_KeyPress);
             // 
             // textDispatchingAgency1
             // 
@@ -902,6 +942,7 @@
             this.textDispatchingAgency1.Size = new System.Drawing.Size(200, 29);
             this.textDispatchingAgency1.TabIndex = 6;
             this.textDispatchingAgency1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textDispatchingAgency1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textDispatchingAgency1_KeyPress);
             // 
             // textRg1
             // 
@@ -911,6 +952,7 @@
             this.textRg1.Size = new System.Drawing.Size(135, 29);
             this.textRg1.TabIndex = 5;
             this.textRg1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textRg1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textRg1_KeyPress);
             // 
             // label20
             // 
@@ -1031,6 +1073,7 @@
             // 
             // tabPageFiador1
             // 
+            this.tabPageFiador1.Controls.Add(this.buttonValidarFiador1);
             this.tabPageFiador1.Controls.Add(this.groupMaritalStatus2);
             this.tabPageFiador1.Controls.Add(this.textEmail2);
             this.tabPageFiador1.Controls.Add(this.label54);
@@ -1064,6 +1107,16 @@
             this.tabPageFiador1.TabIndex = 2;
             this.tabPageFiador1.Text = "Fiador 1";
             this.tabPageFiador1.UseVisualStyleBackColor = true;
+            // 
+            // buttonValidarFiador1
+            // 
+            this.buttonValidarFiador1.Location = new System.Drawing.Point(544, 416);
+            this.buttonValidarFiador1.Name = "buttonValidarFiador1";
+            this.buttonValidarFiador1.Size = new System.Drawing.Size(75, 23);
+            this.buttonValidarFiador1.TabIndex = 83;
+            this.buttonValidarFiador1.Text = "button2";
+            this.buttonValidarFiador1.UseVisualStyleBackColor = true;
+            this.buttonValidarFiador1.Click += new System.EventHandler(this.buttonValidarFiador1_Click);
             // 
             // groupMaritalStatus2
             // 
@@ -1208,6 +1261,7 @@
             this.textName2.Name = "textName2";
             this.textName2.Size = new System.Drawing.Size(620, 29);
             this.textName2.TabIndex = 1;
+            this.textName2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textName2_KeyPress);
             // 
             // textUf2
             // 
@@ -1217,6 +1271,7 @@
             this.textUf2.Size = new System.Drawing.Size(207, 29);
             this.textUf2.TabIndex = 10;
             this.textUf2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textUf2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textUf2_KeyPress);
             // 
             // textNaturalness2
             // 
@@ -1226,6 +1281,7 @@
             this.textNaturalness2.Size = new System.Drawing.Size(200, 29);
             this.textNaturalness2.TabIndex = 9;
             this.textNaturalness2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textNaturalness2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textNaturalness2_KeyPress);
             // 
             // label58
             // 
@@ -1255,6 +1311,7 @@
             this.textNacionality2.Size = new System.Drawing.Size(135, 29);
             this.textNacionality2.TabIndex = 8;
             this.textNacionality2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textNacionality2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textNacionality2_KeyPress);
             // 
             // textDispatchingAgency2
             // 
@@ -1264,6 +1321,7 @@
             this.textDispatchingAgency2.Size = new System.Drawing.Size(200, 29);
             this.textDispatchingAgency2.TabIndex = 7;
             this.textDispatchingAgency2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textDispatchingAgency2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textDispatchingAgency2_KeyPress);
             // 
             // textRg2
             // 
@@ -1273,6 +1331,7 @@
             this.textRg2.Size = new System.Drawing.Size(135, 29);
             this.textRg2.TabIndex = 6;
             this.textRg2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textRg2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textRg2_KeyPress);
             // 
             // label60
             // 
@@ -1393,6 +1452,7 @@
             // 
             // tabPageConjugeF1
             // 
+            this.tabPageConjugeF1.Controls.Add(this.buttonValidarConjugeF1);
             this.tabPageConjugeF1.Controls.Add(this.textEmail3);
             this.tabPageConjugeF1.Controls.Add(this.label30);
             this.tabPageConjugeF1.Controls.Add(this.maskedTextBox5);
@@ -1425,6 +1485,16 @@
             this.tabPageConjugeF1.TabIndex = 3;
             this.tabPageConjugeF1.Text = "Cônjuge do Fiador 1";
             this.tabPageConjugeF1.UseVisualStyleBackColor = true;
+            // 
+            // buttonValidarConjugeF1
+            // 
+            this.buttonValidarConjugeF1.Location = new System.Drawing.Point(548, 406);
+            this.buttonValidarConjugeF1.Name = "buttonValidarConjugeF1";
+            this.buttonValidarConjugeF1.Size = new System.Drawing.Size(75, 23);
+            this.buttonValidarConjugeF1.TabIndex = 82;
+            this.buttonValidarConjugeF1.Text = "Validar";
+            this.buttonValidarConjugeF1.UseVisualStyleBackColor = true;
+            this.buttonValidarConjugeF1.Click += new System.EventHandler(this.buttonValidarConjugeF1_Click);
             // 
             // textEmail3
             // 
@@ -1514,6 +1584,7 @@
             this.textName3.Name = "textName3";
             this.textName3.Size = new System.Drawing.Size(620, 29);
             this.textName3.TabIndex = 1;
+            this.textName3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textName3_KeyPress);
             // 
             // textUf3
             // 
@@ -1523,6 +1594,7 @@
             this.textUf3.Size = new System.Drawing.Size(207, 29);
             this.textUf3.TabIndex = 9;
             this.textUf3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textUf3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textUf3_KeyPress);
             // 
             // textNaturalness3
             // 
@@ -1532,6 +1604,7 @@
             this.textNaturalness3.Size = new System.Drawing.Size(200, 29);
             this.textNaturalness3.TabIndex = 8;
             this.textNaturalness3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textNaturalness3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textNaturalness3_KeyPress);
             // 
             // label34
             // 
@@ -1561,6 +1634,7 @@
             this.textNacionality3.Size = new System.Drawing.Size(135, 29);
             this.textNacionality3.TabIndex = 7;
             this.textNacionality3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textNacionality3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textNacionality3_KeyPress);
             // 
             // textDispatchingAgency3
             // 
@@ -1570,6 +1644,7 @@
             this.textDispatchingAgency3.Size = new System.Drawing.Size(200, 29);
             this.textDispatchingAgency3.TabIndex = 6;
             this.textDispatchingAgency3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textDispatchingAgency3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textDispatchingAgency3_KeyPress);
             // 
             // textRg3
             // 
@@ -1579,6 +1654,7 @@
             this.textRg3.Size = new System.Drawing.Size(135, 29);
             this.textRg3.TabIndex = 5;
             this.textRg3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textRg3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textRg3_KeyPress);
             // 
             // label36
             // 
@@ -1699,6 +1775,7 @@
             // 
             // tabPageFiador2
             // 
+            this.tabPageFiador2.Controls.Add(this.buttonValidarFiador2);
             this.tabPageFiador2.Controls.Add(this.groupMaritalStatus4);
             this.tabPageFiador2.Controls.Add(this.textEmail4);
             this.tabPageFiador2.Controls.Add(this.label66);
@@ -1732,6 +1809,16 @@
             this.tabPageFiador2.TabIndex = 4;
             this.tabPageFiador2.Text = "Fiador 2";
             this.tabPageFiador2.UseVisualStyleBackColor = true;
+            // 
+            // buttonValidarFiador2
+            // 
+            this.buttonValidarFiador2.Location = new System.Drawing.Point(547, 425);
+            this.buttonValidarFiador2.Name = "buttonValidarFiador2";
+            this.buttonValidarFiador2.Size = new System.Drawing.Size(75, 23);
+            this.buttonValidarFiador2.TabIndex = 108;
+            this.buttonValidarFiador2.Text = "Validar";
+            this.buttonValidarFiador2.UseVisualStyleBackColor = true;
+            this.buttonValidarFiador2.Click += new System.EventHandler(this.buttonValidarFiador2_Click);
             // 
             // groupMaritalStatus4
             // 
@@ -1876,6 +1963,7 @@
             this.textName4.Name = "textName4";
             this.textName4.Size = new System.Drawing.Size(620, 29);
             this.textName4.TabIndex = 1;
+            this.textName4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textName4_KeyPress);
             // 
             // textUf4
             // 
@@ -1885,6 +1973,7 @@
             this.textUf4.Size = new System.Drawing.Size(207, 29);
             this.textUf4.TabIndex = 10;
             this.textUf4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textUf4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textUf4_KeyPress);
             // 
             // textNaturalness4
             // 
@@ -1894,6 +1983,7 @@
             this.textNaturalness4.Size = new System.Drawing.Size(200, 29);
             this.textNaturalness4.TabIndex = 9;
             this.textNaturalness4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textNaturalness4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textNaturalness4_KeyPress);
             // 
             // label70
             // 
@@ -1923,6 +2013,7 @@
             this.textNacionality4.Size = new System.Drawing.Size(135, 29);
             this.textNacionality4.TabIndex = 8;
             this.textNacionality4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textNacionality4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textNacionality4_KeyPress);
             // 
             // textDispatchingAgency4
             // 
@@ -1932,6 +2023,7 @@
             this.textDispatchingAgency4.Size = new System.Drawing.Size(200, 29);
             this.textDispatchingAgency4.TabIndex = 7;
             this.textDispatchingAgency4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textDispatchingAgency4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textDispatchingAgency4_KeyPress);
             // 
             // textRg4
             // 
@@ -1941,6 +2033,7 @@
             this.textRg4.Size = new System.Drawing.Size(135, 29);
             this.textRg4.TabIndex = 6;
             this.textRg4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textRg4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textRg4_KeyPress);
             // 
             // label72
             // 
@@ -2061,6 +2154,7 @@
             // 
             // tabPageConjugeF2
             // 
+            this.tabPageConjugeF2.Controls.Add(this.buttonValidarConjugeF2);
             this.tabPageConjugeF2.Controls.Add(this.textEmail5);
             this.tabPageConjugeF2.Controls.Add(this.label42);
             this.tabPageConjugeF2.Controls.Add(this.maskedTextBox9);
@@ -2093,6 +2187,16 @@
             this.tabPageConjugeF2.TabIndex = 5;
             this.tabPageConjugeF2.Text = "Conjuge do Fiador 2";
             this.tabPageConjugeF2.UseVisualStyleBackColor = true;
+            // 
+            // buttonValidarConjugeF2
+            // 
+            this.buttonValidarConjugeF2.Location = new System.Drawing.Point(548, 418);
+            this.buttonValidarConjugeF2.Name = "buttonValidarConjugeF2";
+            this.buttonValidarConjugeF2.Size = new System.Drawing.Size(75, 23);
+            this.buttonValidarConjugeF2.TabIndex = 82;
+            this.buttonValidarConjugeF2.Text = "Validar";
+            this.buttonValidarConjugeF2.UseVisualStyleBackColor = true;
+            this.buttonValidarConjugeF2.Click += new System.EventHandler(this.buttonValidarConjugeF2_Click);
             // 
             // textEmail5
             // 
@@ -2182,6 +2286,7 @@
             this.textName5.Name = "textName5";
             this.textName5.Size = new System.Drawing.Size(620, 29);
             this.textName5.TabIndex = 1;
+            this.textName5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textName5_KeyPress);
             // 
             // textUf5
             // 
@@ -2191,6 +2296,7 @@
             this.textUf5.Size = new System.Drawing.Size(207, 29);
             this.textUf5.TabIndex = 9;
             this.textUf5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textUf5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textUf5_KeyPress);
             // 
             // textNaturalness5
             // 
@@ -2200,6 +2306,7 @@
             this.textNaturalness5.Size = new System.Drawing.Size(200, 29);
             this.textNaturalness5.TabIndex = 8;
             this.textNaturalness5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textNaturalness5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textNaturalness5_KeyPress);
             // 
             // label46
             // 
@@ -2229,6 +2336,7 @@
             this.textNacionality5.Size = new System.Drawing.Size(135, 29);
             this.textNacionality5.TabIndex = 7;
             this.textNacionality5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textNacionality5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textNacionality5_KeyPress);
             // 
             // textDispatchingAgency5
             // 
@@ -2238,6 +2346,7 @@
             this.textDispatchingAgency5.Size = new System.Drawing.Size(200, 29);
             this.textDispatchingAgency5.TabIndex = 6;
             this.textDispatchingAgency5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textDispatchingAgency5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textDispatchingAgency5_KeyPress);
             // 
             // textRg5
             // 
@@ -2247,6 +2356,7 @@
             this.textRg5.Size = new System.Drawing.Size(135, 29);
             this.textRg5.TabIndex = 5;
             this.textRg5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textRg5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textRg5_KeyPress);
             // 
             // label48
             // 
@@ -2365,11 +2475,21 @@
             this.label53.TabIndex = 57;
             this.label53.Text = "NOME";
             // 
+            // buttonEditar
+            // 
+            this.buttonEditar.Location = new System.Drawing.Point(652, 23);
+            this.buttonEditar.Name = "buttonEditar";
+            this.buttonEditar.Size = new System.Drawing.Size(75, 23);
+            this.buttonEditar.TabIndex = 1;
+            this.buttonEditar.Text = "Editar";
+            this.buttonEditar.UseVisualStyleBackColor = true;
+            // 
             // FormEdiLocatario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(732, 710);
+            this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.tabControl1);
             this.Name = "FormEdiLocatario";
             this.Text = "CadastroLocatario";
@@ -2605,5 +2725,12 @@
         private MaskedTextBox maskedBirthDate5;
         private Label label52;
         private Label label53;
+        private Button buttonValidarLocatario;
+        private Button buttonValidarConjuge;
+        private Button buttonValidarFiador1;
+        private Button buttonValidarConjugeF1;
+        private Button buttonValidarFiador2;
+        private Button buttonValidarConjugeF2;
+        private Button buttonEditar;
     }
 }
