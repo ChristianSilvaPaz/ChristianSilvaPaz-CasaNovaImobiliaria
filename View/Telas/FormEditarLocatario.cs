@@ -16,6 +16,7 @@ namespace View.Telas
         private Conjuge _conjuge;
         private Fiador _fiador1;
         private Fiador _fiador2;
+        private DialogResult resposta;
 
         public FormEditarLocatario(int idLocatario, bool editar)
         {
@@ -23,14 +24,17 @@ namespace View.Telas
             _locatarioServices = new LocatarioServices();
             _conjugeServices = new ConjugeServices();
             _fiadorServices = new FiadorServices();
-            EstadoInicial(editar);
+            buttonCadastrarConjuge.Enabled = false;
+            buttonCadastrarConjugeF1.Enabled = false;
+            buttonCadastrarConjugeF2.Enabled = false;
+            EstadoInicialVisualizar(editar);
             PreencheCamposLocatario(idLocatario);
             PreencheCamposFiador1(idLocatario);
             PreencheCamposFiador2(idLocatario);
         }
 
         //METODO CASO O FORM SEJA PARA VISUALIZAR
-        private void EstadoInicial(bool editar)
+        private void EstadoInicialVisualizar(bool editar)
         {
             if (!editar)
             {
@@ -217,7 +221,6 @@ namespace View.Telas
             {
                 locatarioNovo.Casado = locatarioNovo.MaritalStatus.Equals("CASADO(A)") ? true : false;
                 locatarioNovo.Id = _locatario.Id;
-                var resposta = DialogResult;
                 resposta = MessageBox.Show("Deseja Alterar o Locatário ?", "Alterar Locatário", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
 
                 if (resposta == DialogResult.Yes)
@@ -241,7 +244,9 @@ namespace View.Telas
                 }
                 else if (_locatario.Casado == false && locatarioNovo.Casado == true)
                 {
-                    MessageBox.Show("Cadastrar Conjuge");
+                    buttonCadastrarConjuge.Enabled = true;
+                    buttonEditarConjuge.Enabled = false;
+                    tabControl1.SelectTab(tabPageConjuge);
                 }
             }
         }
@@ -264,7 +269,6 @@ namespace View.Telas
             if (ValidationDataAnnotation.ValidationModel(conjugeNovo))
             {
                 conjugeNovo.Id = _conjuge.Id;
-                var resposta = DialogResult;
                 resposta = MessageBox.Show("Deseja Alterar o Conjuge ?", "Alterar Conjuge", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
 
                 if (resposta == DialogResult.Yes)
@@ -302,7 +306,6 @@ namespace View.Telas
             {
                 fiador1Novo.Casado = fiador1Novo.MaritalStatus.Equals("CASADO(A)") ? true : false;
                 fiador1Novo.Id = _fiador1.Id;
-                var resposta = DialogResult;
                 resposta = MessageBox.Show("Deseja Alterar o Fiador 1 ?", "Alterar Fiador", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
 
                 if (resposta == DialogResult.Yes)
@@ -326,7 +329,9 @@ namespace View.Telas
                 }
                 else if (_fiador1.Casado == false && fiador1Novo.Casado == true)
                 {
-                    MessageBox.Show("Cadastrar Conjuge");
+                    buttonCadastrarConjugeF1.Enabled = true;
+                    buttonEditarConjugeF1.Enabled = false;
+                    tabControl1.SelectTab(tabPageConjugeF1);
                 }
             }
         }        
@@ -349,7 +354,6 @@ namespace View.Telas
             if (ValidationDataAnnotation.ValidationModel(conjugeF1Novo))
             {
                 conjugeF1Novo.Id = _conjugeF1.Id;
-                var resposta = DialogResult;
                 resposta = MessageBox.Show("Deseja Alterar o Conjuge ?", "Alterar Conjuge", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
 
                 if (resposta == DialogResult.Yes)
@@ -387,7 +391,6 @@ namespace View.Telas
             {
                 fiador2Novo.Casado = fiador2Novo.MaritalStatus.Equals("CASADO(A)") ? true : false;
                 fiador2Novo.Id = _fiador2.Id;
-                var resposta = DialogResult;
                 resposta = MessageBox.Show("Deseja Alterar o Fiador 2 ?", "Alterar Fiador", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
 
                 if (resposta == DialogResult.Yes)
@@ -411,7 +414,9 @@ namespace View.Telas
                 }
                 else if (_fiador2.Casado == false && fiador2Novo.Casado == true)
                 {
-                    MessageBox.Show("Cadastrar Conjuge");
+                    buttonCadastrarConjugeF2.Enabled = true;
+                    buttonEditarConjugeF2.Enabled = false;
+                    tabControl1.SelectTab(tabPageConjugeF2);
                 }
             }
         }       
@@ -434,7 +439,6 @@ namespace View.Telas
             if (ValidationDataAnnotation.ValidationModel(conjugeF2Novo))
             {
                 conjugeF2Novo.Id = _conjugeF2.Id;
-                var resposta = DialogResult;
                 resposta = MessageBox.Show("Deseja Alterar o Conjuge ?", "Alterar Conjuge", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
 
                 if (resposta == DialogResult.Yes)
@@ -447,6 +451,113 @@ namespace View.Telas
                     catch (Exception ex)
                     {
                         MessageBox.Show("Erro ao Alterar o Conjuge", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        //EVENTOS DOS BOTOES DE CADASTRAR NOVOS CONJUGES
+        private void buttonCadastrarConjuge_Click(object sender, EventArgs e)
+        {
+            Conjuge conjugeNovo = new Conjuge();
+            conjugeNovo.Name = textName1.Text;
+            conjugeNovo.BirthDate = (string.IsNullOrEmpty(maskedBirthDate1.Text) || maskedBirthDate1.Text.Length < 8 ? null : DateOnly.ParseExact(maskedBirthDate1.Text, "ddMMyyyy"));
+            conjugeNovo.Sex = IdentifierSex(groupSex1);
+            conjugeNovo.Cpf = maskedCpf1.Text;
+            conjugeNovo.Rg = textRg1.Text;
+            conjugeNovo.DispatchingAgency = textDispatchingAgency1.Text;
+            conjugeNovo.Nacionality = textNacionality1.Text;
+            conjugeNovo.Naturalness = textNaturalness1.Text;
+            conjugeNovo.Uf = textUf1.Text;
+            conjugeNovo.Profession = textProfession1.Text;
+            conjugeNovo.Phone1 = maskedTextBox1.Text;
+            conjugeNovo.Phone2 = maskedTextBox2.Text;
+            conjugeNovo.Email = textEmail1.Text;
+            if (ValidationDataAnnotation.ValidationModel(conjugeNovo))
+            {
+                conjugeNovo.id_locatario = _locatario.Id;
+                resposta = MessageBox.Show("Deseja Cadastrar o Conjuge ?", "Cadastrar Conjuge", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+                if (resposta == DialogResult.Yes)
+                {
+                    try
+                    {
+                        _conjugeServices.CadastrarConjuge(conjugeNovo);
+                        MessageBox.Show("Conjuge Cadastrado com Sucesso");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro ao Cadastrar o Conjuge", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+        private void buttonCadastrarConjugeF1_Click(object sender, EventArgs e)
+        {
+            Conjuge conjugeNovo = new Conjuge();
+            conjugeNovo.Name = textName3.Text;
+            conjugeNovo.BirthDate = (string.IsNullOrEmpty(maskedBirthDate3.Text) || maskedBirthDate3.Text.Length < 8 ? null : DateOnly.ParseExact(maskedBirthDate3.Text, "ddMMyyyy"));
+            conjugeNovo.Sex = IdentifierSex(groupSex3);
+            conjugeNovo.Cpf = maskedCpf3.Text;
+            conjugeNovo.Rg = textRg3.Text;
+            conjugeNovo.DispatchingAgency = textDispatchingAgency3.Text;
+            conjugeNovo.Nacionality = textNacionality3.Text;
+            conjugeNovo.Naturalness = textNaturalness3.Text;
+            conjugeNovo.Uf = textUf3.Text;
+            conjugeNovo.Profession = textProfession3.Text;
+            conjugeNovo.Phone1 = maskedTextBox5.Text;
+            conjugeNovo.Phone2 = maskedTextBox6.Text;
+            conjugeNovo.Email = textEmail1.Text;
+            if (ValidationDataAnnotation.ValidationModel(conjugeNovo))
+            {
+                conjugeNovo.id_fiador = _fiador1.Id;
+                resposta = MessageBox.Show("Deseja Cadastrar o Conjuge ?", "Cadastrar Conjuge", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+                if (resposta == DialogResult.Yes)
+                {
+                    try
+                    {
+                        _conjugeServices.CadastrarConjuge(conjugeNovo);
+                        MessageBox.Show("Conjuge Cadastrado com Sucesso");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro ao Cadastrar o Conjuge", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+        private void buttonCadastrarConjugeF2_Click(object sender, EventArgs e)
+        {
+            Conjuge conjugeNovo = new Conjuge();
+            conjugeNovo.Name = textName5.Text;
+            conjugeNovo.BirthDate = (string.IsNullOrEmpty(maskedBirthDate5.Text) || maskedBirthDate5.Text.Length < 8 ? null : DateOnly.ParseExact(maskedBirthDate5.Text, "ddMMyyyy"));
+            conjugeNovo.Sex = IdentifierSex(groupSex5);
+            conjugeNovo.Cpf = maskedCpf5.Text;
+            conjugeNovo.Rg = textRg5.Text;
+            conjugeNovo.DispatchingAgency = textDispatchingAgency5.Text;
+            conjugeNovo.Nacionality = textNacionality5.Text;
+            conjugeNovo.Naturalness = textNaturalness5.Text;
+            conjugeNovo.Uf = textUf5.Text;
+            conjugeNovo.Profession = textProfession5.Text;
+            conjugeNovo.Phone1 = maskedTextBox9.Text;
+            conjugeNovo.Phone2 = maskedTextBox10.Text;
+            conjugeNovo.Email = textEmail5.Text;
+            if (ValidationDataAnnotation.ValidationModel(conjugeNovo))
+            {
+                conjugeNovo.id_fiador = _fiador2.Id;
+                resposta = MessageBox.Show("Deseja Cadastrar o Conjuge ?", "Cadastrar Conjuge", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+                if (resposta == DialogResult.Yes)
+                {
+                    try
+                    {
+                        _conjugeServices.CadastrarConjuge(conjugeNovo);
+                        MessageBox.Show("Conjuge Cadastrado com Sucesso");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro ao Cadastrar o Conjuge", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

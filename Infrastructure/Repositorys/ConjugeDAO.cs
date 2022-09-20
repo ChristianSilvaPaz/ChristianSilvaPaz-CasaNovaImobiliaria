@@ -134,14 +134,14 @@ namespace Infrastructure.Repositorys
                     cmd.Parameters.AddWithValue("phone1", conjuge.Phone1);
                     cmd.Parameters.AddWithValue("phone2", conjuge.Phone2);
                     cmd.Parameters.AddWithValue("email", conjuge.Email);
-                    //try
-                    //{
+                    try
+                    {
                         cmd.ExecuteNonQuery();
-                    //}
-                    //catch (Exception e)
-                    //{
-                    //    throw e;
-                    //}
+                    }
+                    catch (Exception e)
+                    {
+                        throw e;
+                    }
                 }
             }
         }

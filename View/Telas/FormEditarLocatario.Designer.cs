@@ -74,6 +74,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPageConjuge = new System.Windows.Forms.TabPage();
+            this.buttonCadastrarConjuge = new System.Windows.Forms.Button();
             this.buttonEditarConjuge = new System.Windows.Forms.Button();
             this.textEmail1 = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
@@ -228,6 +229,8 @@
             this.maskedBirthDate5 = new System.Windows.Forms.MaskedTextBox();
             this.label52 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
+            this.buttonCadastrarConjugeF1 = new System.Windows.Forms.Button();
+            this.buttonCadastrarConjugeF2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPageLocatario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericQtdAnimals)).BeginInit();
@@ -749,6 +752,7 @@
             // 
             // tabPageConjuge
             // 
+            this.tabPageConjuge.Controls.Add(this.buttonCadastrarConjuge);
             this.tabPageConjuge.Controls.Add(this.buttonEditarConjuge);
             this.tabPageConjuge.Controls.Add(this.textEmail1);
             this.tabPageConjuge.Controls.Add(this.label29);
@@ -782,6 +786,16 @@
             this.tabPageConjuge.TabIndex = 1;
             this.tabPageConjuge.Text = "Cônjuge";
             this.tabPageConjuge.UseVisualStyleBackColor = true;
+            // 
+            // buttonCadastrarConjuge
+            // 
+            this.buttonCadastrarConjuge.Location = new System.Drawing.Point(8, 412);
+            this.buttonCadastrarConjuge.Name = "buttonCadastrarConjuge";
+            this.buttonCadastrarConjuge.Size = new System.Drawing.Size(75, 23);
+            this.buttonCadastrarConjuge.TabIndex = 58;
+            this.buttonCadastrarConjuge.Text = "Cadastrar";
+            this.buttonCadastrarConjuge.UseVisualStyleBackColor = true;
+            this.buttonCadastrarConjuge.Click += new System.EventHandler(this.buttonCadastrarConjuge_Click);
             // 
             // buttonEditarConjuge
             // 
@@ -1451,6 +1465,7 @@
             // 
             // tabPageConjugeF1
             // 
+            this.tabPageConjugeF1.Controls.Add(this.buttonCadastrarConjugeF1);
             this.tabPageConjugeF1.Controls.Add(this.buttonEditarConjugeF1);
             this.tabPageConjugeF1.Controls.Add(this.textEmail3);
             this.tabPageConjugeF1.Controls.Add(this.label30);
@@ -2153,6 +2168,7 @@
             // 
             // tabPageConjugeF2
             // 
+            this.tabPageConjugeF2.Controls.Add(this.buttonCadastrarConjugeF2);
             this.tabPageConjugeF2.Controls.Add(this.buttonEditarConjugeF2);
             this.tabPageConjugeF2.Controls.Add(this.textEmail5);
             this.tabPageConjugeF2.Controls.Add(this.label42);
@@ -2474,6 +2490,26 @@
             this.label53.TabIndex = 57;
             this.label53.Text = "NOME";
             // 
+            // buttonCadastrarConjugeF1
+            // 
+            this.buttonCadastrarConjugeF1.Location = new System.Drawing.Point(10, 406);
+            this.buttonCadastrarConjugeF1.Name = "buttonCadastrarConjugeF1";
+            this.buttonCadastrarConjugeF1.Size = new System.Drawing.Size(75, 23);
+            this.buttonCadastrarConjugeF1.TabIndex = 83;
+            this.buttonCadastrarConjugeF1.Text = "Cadastrar";
+            this.buttonCadastrarConjugeF1.UseVisualStyleBackColor = true;
+            this.buttonCadastrarConjugeF1.Click += new System.EventHandler(this.buttonCadastrarConjugeF1_Click);
+            // 
+            // buttonCadastrarConjugeF2
+            // 
+            this.buttonCadastrarConjugeF2.Location = new System.Drawing.Point(10, 418);
+            this.buttonCadastrarConjugeF2.Name = "buttonCadastrarConjugeF2";
+            this.buttonCadastrarConjugeF2.Size = new System.Drawing.Size(75, 23);
+            this.buttonCadastrarConjugeF2.TabIndex = 83;
+            this.buttonCadastrarConjugeF2.Text = "Cadastrar";
+            this.buttonCadastrarConjugeF2.UseVisualStyleBackColor = true;
+            this.buttonCadastrarConjugeF2.Click += new System.EventHandler(this.buttonCadastrarConjugeF2_Click);
+            // 
             // FormEditarLocatario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -2481,7 +2517,7 @@
             this.ClientSize = new System.Drawing.Size(732, 710);
             this.Controls.Add(this.tabControl1);
             this.Name = "FormEditarLocatario";
-            this.Text = "CadastroLocatario";
+            this.Text = "EditarLocatario";
             this.tabControl1.ResumeLayout(false);
             this.tabPageLocatario.ResumeLayout(false);
             this.tabPageLocatario.PerformLayout();
@@ -2720,5 +2756,8 @@
         private Button buttonEditarConjugeF1;
         private Button buttonEditarFiador2;
         private Button buttonEditarConjugeF2;
+        private Button buttonCadastrarConjuge;
+        private Button buttonCadastrarConjugeF1;
+        private Button buttonCadastrarConjugeF2;
     }
 }

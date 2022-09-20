@@ -26,5 +26,10 @@ namespace Domain.Services
         {
             _conjugeDAO.EditarConjuge(conjuge);
         }
+
+        public void CadastrarConjuge(Conjuge conjuge)
+        {
+            _conjugeDAO.CadastrarConjuge(conjuge);
+        }
     }
 }
