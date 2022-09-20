@@ -1,6 +1,6 @@
 ﻿namespace View.Telas
 {
-    partial class FormPesLocatario
+    partial class FormPesquisarLocatario
     {
         /// <summary>
         /// Required designer variable.

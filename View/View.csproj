@@ -23,7 +23,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Update="Telas\FormEdiLocatario.cs">
+    <Compile Update="Telas\FormEditarLocatario.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

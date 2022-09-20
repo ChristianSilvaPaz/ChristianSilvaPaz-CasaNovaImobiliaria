@@ -6,7 +6,7 @@ namespace Infrastructure.Repositorys
     public class ConjugeDAO
     {
         //METODO DE INSERIR CONJUGES, INCLUIDO NO ESCOPO DE CONTROLE DE TRANSACAO
-        public void addConjuge(Conjuge conjuge)
+        public void CadastrarConjuge(Conjuge conjuge)
         {
             string queryAdd = "INSERT INTO spouce(name, birthdate, sex, cpf, rg," +
                " dispatchingagency, nacionality, naturalness, uf, phone1, phone2, email, id_person, id_guarantor)" +
@@ -37,7 +37,7 @@ namespace Infrastructure.Repositorys
             }
         }
 
-        public Conjuge GetConjugePorId(int idLocatario)
+        public Conjuge ListarConjugeLocatarioPorId(int idLocatario)
         {
             Conjuge conjuge = new Conjuge();
 
@@ -73,7 +73,7 @@ namespace Infrastructure.Repositorys
             return conjuge;
         }
 
-        public Conjuge GetConjugeFiadorPorId(int idFiador)
+        public Conjuge ListarConjugeFiadorPorId(int idFiador)
         {
             Conjuge conjuge = new Conjuge();
 
@@ -107,6 +107,43 @@ namespace Infrastructure.Repositorys
                 }
             }
             return conjuge;
+        }
+
+        public void EditarConjuge(Conjuge conjuge)
+        {
+            string queryEditarConjuge = "UPDATE spouce SET name=@name, birthdate=@birthdate," +
+                " sex=@sex, cpf=@cpf, rg=@rg, dispatchingagency=@dispatchingagency," +
+                " nacionality=@nacionality, naturalness=@naturalness, uf=@uf, profession=@profession," +
+                $" phone1=@phone1, phone2=@phone2, email=@email WHERE id={conjuge.Id};";
+
+            using (MySqlConnection conn = new MySqlConnection(Connection.ConnectionString))
+            {
+                using (MySqlCommand cmd = new MySqlCommand(queryEditarConjuge, conn))
+                {
+                    conn.Open();
+                    cmd.Parameters.AddWithValue("name", conjuge.Name);
+                    cmd.Parameters.AddWithValue("birthdate", conjuge.BirthDate);
+                    cmd.Parameters.AddWithValue("sex", conjuge.Sex);
+                    cmd.Parameters.AddWithValue("cpf", conjuge.Cpf);
+                    cmd.Parameters.AddWithValue("rg", conjuge.Rg);
+                    cmd.Parameters.AddWithValue("dispatchingagency", conjuge.DispatchingAgency);
+                    cmd.Parameters.AddWithValue("nacionality", conjuge.Nacionality);
+                    cmd.Parameters.AddWithValue("naturalness", conjuge.Naturalness);
+                    cmd.Parameters.AddWithValue("uf", conjuge.Uf);
+                    cmd.Parameters.AddWithValue("profession", conjuge.Profession);
+                    cmd.Parameters.AddWithValue("phone1", conjuge.Phone1);
+                    cmd.Parameters.AddWithValue("phone2", conjuge.Phone2);
+                    cmd.Parameters.AddWithValue("email", conjuge.Email);
+                    //try
+                    //{
+                        cmd.ExecuteNonQuery();
+                    //}
+                    //catch (Exception e)
+                    //{
+                    //    throw e;
+                    //}
+                }
+            }
         }
     }
 }

@@ -12,9 +12,14 @@ namespace Domain.Services
             _fiadorDAO = new FiadorDAO();
         }
 
-        public List<Fiador> GetFiadorPorId(int idLocatario)
+        public List<Fiador> ListarFiadorPorId(int idLocatario)
         {
-            return _fiadorDAO.GetFiadorPorId(idLocatario);
+            return _fiadorDAO.ListarFiadorPorId(idLocatario);
+        }
+
+        public void EditarFiador(Fiador fiador)
+        {
+            _fiadorDAO.EditarFiador(fiador);
         }
     }
 }

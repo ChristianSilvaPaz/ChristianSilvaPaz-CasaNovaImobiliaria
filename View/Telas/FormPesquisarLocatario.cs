@@ -2,19 +2,21 @@
 
 namespace View.Telas
 {
-    public partial class FormPesLocatario : Form
+    public partial class FormPesquisarLocatario : Form
     {
         private LocatarioServices _locatarioServices;
 
-        public FormPesLocatario()
+        public FormPesquisarLocatario()
         {
             InitializeComponent();
             _locatarioServices = new LocatarioServices();
-            dataGridView1.DataSource = _locatarioServices.GetLocatarios();
-            PreencheDGV();
+            //PREENCHER O DGV COM TODOS OS LOCATARIOS CADASTRADOS
+            dataGridView1.DataSource = _locatarioServices.ListarLocatarios();
+            CustomizaDGV();
         }
 
-        public void PreencheDGV()
+        //ALTERA PROPRIEDADE VISIBLE DAS COLUNAS
+        public void CustomizaDGV()
         {
             dataGridView1.ReadOnly = true;
             dataGridView1.Columns["Conjuge"].Visible = false;
@@ -32,34 +34,40 @@ namespace View.Telas
             dataGridView1.Columns["Casado"].Visible = false;
         }
 
-
-
         //EVENTO CASO O USURIO APERTE A TECLA ENTER
         private void textPesquisar_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                dataGridView1.DataSource = _locatarioServices.GetLocatarioPorNome(textPesquisar.Text);
+                ListarLocatarioPorNome();
             }
         }
 
         //EVENTO DO BOTAO DE PESQUISAR
         private void buttonPesquisar_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = _locatarioServices.GetLocatarioPorNome(textPesquisar.Text);
+            ListarLocatarioPorNome();
         }
 
+        //METODO PARA LISTAR OS LOCATARIOS PELO NOME DIGITADO 
+        private void ListarLocatarioPorNome()
+        {
+            dataGridView1.DataSource = _locatarioServices.ListarLocatarioPorNome(textPesquisar.Text);
+        }
+
+        //EVENTO DO BOTOES DE VISUALIZAR E EDITAR
+        //FALSE = VISUALIZAR
+        //TRUE = EDITAR
         private void buttonVisualizar_Click(object sender, EventArgs e)
         {
             int idLocatario = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Id"].Value);
-            FormEdiLocatario formEdiLocatario = new FormEdiLocatario(idLocatario, false);
+            FormEditarLocatario formEdiLocatario = new FormEditarLocatario(idLocatario, false);
             formEdiLocatario.Show();
         }
-
         private void buttonEditar_Click(object sender, EventArgs e)
         {
             int idLocatario = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Id"].Value);
-            FormEdiLocatario formEdiLocatario = new FormEdiLocatario(idLocatario, true);
+            FormEditarLocatario formEdiLocatario = new FormEditarLocatario(idLocatario, true);
             formEdiLocatario.Show();
         }
     }

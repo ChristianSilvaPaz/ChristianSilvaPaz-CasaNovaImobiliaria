@@ -4,12 +4,9 @@ using System.Media;
 
 namespace View.Telas
 {
-    public partial class FormEdiLocatario : Form
+    public partial class FormCadastrarLocatario : Form
     {
         private LocatarioServices _locatarioServices;
-        private ConjugeServices _conjugeServices;
-        private FiadorServices _fiadorServices;
-        private List<Fiador> _fiadores;
         private Locatario _locatario;
         private Conjuge _conjugeF1;
         private Conjuge _conjugeF2;
@@ -17,184 +14,17 @@ namespace View.Telas
         private Fiador _fiador1;
         private Fiador _fiador2;
 
-        public FormEdiLocatario(int idLocatario, bool editar)
+        public FormCadastrarLocatario()
         {
             InitializeComponent();
+            EstadoInicial();
             _locatarioServices = new LocatarioServices();
-            _conjugeServices = new ConjugeServices();
-            _fiadorServices = new FiadorServices();
-            EstadoInicial(editar);
-            _locatario = _locatarioServices.GetLocatarioPorId(idLocatario);
-            PreencheCamposLocatario(idLocatario);
-            PreencheCamposFiador1(idLocatario);
-            PreencheCamposFiador2(idLocatario);
-        }
-
-        //METODO CASO O FORM SEJA PARA VISUALIZAR
-        private void EstadoInicial(bool editar)
-        {
-            if (!editar)
-            {
-                buttonValidarLocatario.Enabled = false;
-                buttonValidarConjuge.Enabled = false;
-                buttonValidarFiador1.Enabled = false;
-                buttonValidarConjugeF1.Enabled = false;
-                buttonValidarFiador2.Enabled = false;
-                buttonValidarConjugeF2.Enabled = false;
-                buttonEditar.Enabled = false;
-            }
-        }
-
-        //METODOS PARA PREENCHER OS CAMPOS
-        private void PreencheCamposLocatario(int idLocatario)
-        {
-            _locatario = _locatarioServices.GetLocatarioPorId(idLocatario);
-            textName.Text = _locatario.Name;
-            maskedBirthDate.Text = _locatario.BirthDate.ToString();
-            SelecionaMaritalStatus(_locatario.MaritalStatus, groupMaritalStatus);
-            SelecionaSex(_locatario.Sex, groupSex);
-            maskedCpf.Text = _locatario.Cpf;
-            textRg.Text = _locatario.Rg;
-            textDispatchingAgency.Text = _locatario.DispatchingAgency;
-            textNacionality.Text = _locatario.Nacionality;
-            textNaturalness.Text = _locatario.Naturalness;
-            textUf.Text = _locatario.Uf;
-            textProfession.Text = _locatario.Profession;
-            textIncome.Text = _locatario.Income.ToString();
-            textWorkAdress.Text = _locatario.WorkAddress;
-            maskedPhoneWork.Text = _locatario.WorkAddress;
-            maskedPhone1.Text = _locatario.Phone1;
-            maskedPhone2.Text = _locatario.Phone2;
-            numericQtdAnimals.Value = _locatario.QtdAnimals;
-            textEmail.Text = _locatario.Email;
-            textComments.Text = _locatario.Comments;
-            if (_locatario.MaritalStatus.Equals("CASADO(A)"))
-            {
-                PreencheCamposConjuge(idLocatario);
-            }
-        }
-        private void PreencheCamposConjuge(int idLocatario)
-        {
-            _conjuge = _conjugeServices.GetConjugePorId(idLocatario);
-            textName1.Text = _conjuge.Name;
-            maskedBirthDate1.Text = _conjuge.BirthDate.ToString();
-            SelecionaSex(_conjuge.Sex, groupSex1);
-            maskedCpf1.Text = _conjuge.Cpf;
-            textRg1.Text = _conjuge.Rg;
-            textDispatchingAgency1.Text = _conjuge.DispatchingAgency;
-            textNacionality1.Text = _conjuge.Nacionality;
-            textNaturalness1.Text = _conjuge.Naturalness;
-            textUf1.Text = _conjuge.Uf;
-            textProfession1.Text = _conjuge.Profession;
-            maskedTextBox1.Text = _conjuge.Phone1;
-            maskedTextBox2.Text = _conjuge.Phone2;
-            textEmail1.Text = _conjuge.Email;
-        }
-        private void PreencheCamposFiador1(int idLocatrio)
-        {
-            _fiadores = _fiadorServices.GetFiadorPorId(idLocatrio);
-            _fiador1 = _fiadores[0];
-            textName2.Text = _fiador1.Name;
-            maskedBirthDate2.Text = _fiador1.BirthDate.ToString();
-            SelecionaMaritalStatus(_fiador1.MaritalStatus, groupMaritalStatus2);
-            SelecionaSex(_fiador1.Sex, groupSex2);
-            maskedCpf2.Text = _fiador1.Cpf;
-            textRg2.Text = _fiador1.Rg;
-            textDispatchingAgency2.Text = _fiador1.DispatchingAgency;
-            textNacionality2.Text = _fiador1.Nacionality;
-            textNaturalness2.Text = _fiador1.Naturalness;
-            textUf2.Text = _fiador1.Uf;
-            textProfession2.Text = _fiador1.Profession;
-            maskedTextBox3.Text = _fiador1.Phone1;
-            maskedTextBox4.Text = _fiador1.Phone2;
-            textEmail2.Text = _fiador1.Email;
-            if (_fiador1.MaritalStatus.Equals("CASADO(A)"))
-            {
-                PreencheCamposConjugeF1(_fiador1.Id);
-            }
-        }
-        private void PreencheCamposConjugeF1(int idFiador)
-        {
-            _conjugeF1 = _conjugeServices.GetConjugeFiadorPorId(idFiador);
-            textName3.Text = _conjugeF1.Name;
-            maskedBirthDate3.Text = _conjugeF1.BirthDate.ToString();
-            SelecionaSex(_conjugeF1.Sex, groupSex3);
-            maskedCpf3.Text = _conjugeF1.Cpf;
-            textRg3.Text = _conjugeF1.Rg;
-            textDispatchingAgency3.Text = _conjugeF1.DispatchingAgency;
-            textNacionality3.Text = _conjugeF1.Nacionality;
-            textNaturalness3.Text = _conjugeF1.Naturalness;
-            textUf3.Text = _conjugeF1.Uf;
-            textProfession3.Text = _conjugeF1.Profession;
-            maskedTextBox5.Text = _conjugeF1.Phone1;
-            maskedTextBox6.Text = _conjugeF1.Phone2;
-            textEmail3.Text = _conjugeF1.Email;
-        }
-        private void PreencheCamposFiador2(int idLocatrio)
-        {
-            _fiador2 = _fiadores[1];
-            textName4.Text = _fiador2.Name;
-            maskedBirthDate4.Text = _fiador2.BirthDate.ToString();
-            SelecionaMaritalStatus(_fiador2.MaritalStatus, groupMaritalStatus4);
-            SelecionaSex(_fiador2.Sex, groupSex4);
-            maskedCpf4.Text = _fiador2.Cpf;
-            textRg4.Text = _fiador2.Rg;
-            textDispatchingAgency4.Text = _fiador2.DispatchingAgency;
-            textNacionality4.Text = _fiador2.Nacionality;
-            textNaturalness4.Text = _fiador2.Naturalness;
-            textUf4.Text = _fiador2.Uf;
-            textProfession4.Text = _fiador2.Profession;
-            maskedTextBox7.Text = _fiador2.Phone1;
-            maskedTextBox8.Text = _fiador2.Phone2;
-            textEmail4.Text = _fiador2.Email;
-            if (_fiador2.MaritalStatus.Equals("CASADO(A)"))
-            {
-                PreencheCamposConjugeF2(_fiador2.Id);
-            }
-        }
-        private void PreencheCamposConjugeF2(int idFiador)
-        {
-            _conjugeF2 = _conjugeServices.GetConjugeFiadorPorId(idFiador);
-            textName5.Text = _conjugeF2.Name;
-            maskedBirthDate5.Text = _conjugeF2.BirthDate.ToString();
-            SelecionaSex(_conjugeF2.Sex, groupSex5);
-            maskedCpf5.Text = _conjugeF2.Cpf;
-            textRg5.Text = _conjugeF2.Rg;
-            textDispatchingAgency5.Text = _conjugeF2.DispatchingAgency;
-            textNacionality5.Text = _conjugeF2.Nacionality;
-            textNaturalness5.Text = _conjugeF2.Naturalness;
-            textUf5.Text = _conjugeF2.Uf;
-            textProfession5.Text = _conjugeF2.Profession;
-            maskedTextBox9.Text = _conjugeF2.Phone1;
-            maskedTextBox10.Text = _conjugeF2.Phone2;
-            textEmail5.Text = _conjugeF2.Email;
-        }
-
-        //METODOS PARA SELECIONAR RADIO BUTTON
-        private void SelecionaMaritalStatus(string texto, GroupBox groupBox)
-        {
-            foreach (RadioButton rb in groupBox.Controls)
-            {
-                if (rb.Text == texto)
-                {
-                    rb.Checked = true;
-                }
-            }
-        }
-        private void SelecionaSex(string texto, GroupBox groupBox)
-        {
-            foreach (RadioButton rb in groupBox.Controls)
-            {
-                if (rb.Text == texto)
-                {
-                    rb.Checked = true;
-                }
-            }
         }
 
         //EVENTOS DOS BOTOES DE VALIDAR
         private void buttonValidarLocatario_Click(object sender, EventArgs e)
         {
+            _locatario = new Locatario();
             _locatario.Name = textName.Text;
             _locatario.BirthDate = (string.IsNullOrEmpty(maskedBirthDate.Text) || maskedBirthDate.Text.Length < 8 ? null : DateOnly.ParseExact(maskedBirthDate.Text, "ddMMyyyy"));
             _locatario.MaritalStatus = IdentifierMaritalStatus(groupMaritalStatus);
@@ -217,7 +47,16 @@ namespace View.Telas
             if (ValidationDataAnnotation.ValidationModel(_locatario))
             {
                 _locatario.Casado = _locatario.MaritalStatus.Equals("CASADO(A)") ? true : false;
-                _locatarioServices.EditarLocatario(_locatario);
+                if (_locatario.Casado)
+                {
+                    ((Control)tabControl1.TabPages["tabPageConjuge"]).Enabled = true;
+                    tabControl1.SelectTab(tabPageConjuge);
+                }
+                else
+                {
+                    ((Control)tabControl1.TabPages["tabPageFiador1"]).Enabled = true;
+                    tabControl1.SelectTab(tabPageFiador1);
+                }
             }
         }
         private void buttonValidarConjuge_Click(object sender, EventArgs e)
@@ -323,7 +162,7 @@ namespace View.Telas
                 }
                 else
                 {
-                    
+                    buttonCadastrar.Enabled = true;
                 }
             }
         }
@@ -345,7 +184,42 @@ namespace View.Telas
             _conjugeF2.Email = textEmail5.Text;
             if (ValidationDataAnnotation.ValidationModel(_conjugeF2))
             {
-                
+                buttonCadastrar.Enabled = true;
+            }
+        }
+
+        //EVENTO DO BOTAO DE CADASTRAR
+        private void buttonCadastrar_Click(object sender, EventArgs e)
+        {
+            Cadastrar();
+        }
+
+        //METODO DE CADASTRAR
+        private void Cadastrar()
+        {
+            var resposta = DialogResult;
+            resposta = MessageBox.Show("Deseja Cadastrar o Locatário ?", "Cadastrar Locatário", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+            if (resposta == DialogResult.Yes)
+            {
+                _locatario.Conjuge = _conjuge;
+                _fiador1.Conjuge = _conjugeF1;
+                _fiador2.Conjuge = _conjugeF2;
+                _locatario.Fiadores.AddRange(new Fiador[] { _fiador1, _fiador2 });
+
+                try
+                {
+                    _locatarioServices.CadastrarLocatario(_locatario);
+                    _locatario = null;
+                    LimparControls(this);
+                    tabControl1.SelectTab(tabPageLocatario);
+                    EstadoInicial();
+                    MessageBox.Show("Locatário Cadastrado com Sucesso");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao Cadastrar Locatário", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -373,6 +247,51 @@ namespace View.Telas
             return null;
         }
 
+        //METODO PARA LIMPAR TODOS OS CAMPO DO FORMULARIO
+        private void LimparControls(Form frm)
+        {
+            foreach (Control item in frm.Controls)
+            {
+                if (item is TabControl)
+                {
+                    foreach (TabPage page in ((TabControl)item).TabPages)
+                    {
+                        foreach (Control control in page.Controls)
+                        {
+                            if (control is TextBox)
+                                control.Text = string.Empty;
+
+                            else if (control is MaskedTextBox)
+                                control.Text = String.Empty;
+
+                            else if (control is NumericUpDown)
+                            {
+                                NumericUpDown numericUpDown = (NumericUpDown)control;
+                                numericUpDown.Value = 0;
+                            }
+
+                            else if (control is GroupBox)
+                            {
+                                foreach (RadioButton r in control.Controls)
+                                {
+                                    r.Checked = false;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //METODO PARA INICIALIZAR TABPAGES COMO INATIVOS
+        private void EstadoInicial()
+        {
+            ((Control)tabControl1.TabPages[1]).Enabled = false;
+            ((Control)tabControl1.TabPages[2]).Enabled = false;
+            ((Control)tabControl1.TabPages[3]).Enabled = false;
+            ((Control)tabControl1.TabPages[4]).Enabled = false;
+            ((Control)tabControl1.TabPages[5]).Enabled = false;
+        }
 
         //EVENTOS PARA PROIBIR A ENTRADA DE CARACTERES INVALIDOS
         private void textName_KeyPress(object sender, KeyPressEventArgs e)

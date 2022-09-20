@@ -1,6 +1,6 @@
 ﻿namespace View.Telas
 {
-    partial class FormEdiLocatario
+    partial class FormCadastrarLocatario
     {
         /// <summary>
         /// Required designer variable.
@@ -65,10 +65,10 @@
             this.radioFeminine = new System.Windows.Forms.RadioButton();
             this.radioMasculine = new System.Windows.Forms.RadioButton();
             this.groupMaritalStatus = new System.Windows.Forms.GroupBox();
-            this.radioWidower = new System.Windows.Forms.RadioButton();
-            this.radioSingle = new System.Windows.Forms.RadioButton();
-            this.radioDivorced = new System.Windows.Forms.RadioButton();
-            this.radioMarried = new System.Windows.Forms.RadioButton();
+            this.radioButton13 = new System.Windows.Forms.RadioButton();
+            this.radioButton14 = new System.Windows.Forms.RadioButton();
+            this.radioButton15 = new System.Windows.Forms.RadioButton();
+            this.radioButton16 = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.maskedBirthDate = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -168,10 +168,10 @@
             this.tabPageFiador2 = new System.Windows.Forms.TabPage();
             this.buttonValidarFiador2 = new System.Windows.Forms.Button();
             this.groupMaritalStatus4 = new System.Windows.Forms.GroupBox();
-            this.radioButton13 = new System.Windows.Forms.RadioButton();
-            this.radioButton14 = new System.Windows.Forms.RadioButton();
-            this.radioButton15 = new System.Windows.Forms.RadioButton();
-            this.radioButton16 = new System.Windows.Forms.RadioButton();
+            this.radioButton19 = new System.Windows.Forms.RadioButton();
+            this.radioButton20 = new System.Windows.Forms.RadioButton();
+            this.radioButton21 = new System.Windows.Forms.RadioButton();
+            this.radioButton22 = new System.Windows.Forms.RadioButton();
             this.textEmail4 = new System.Windows.Forms.TextBox();
             this.label66 = new System.Windows.Forms.Label();
             this.maskedTextBox8 = new System.Windows.Forms.MaskedTextBox();
@@ -228,7 +228,7 @@
             this.maskedBirthDate5 = new System.Windows.Forms.MaskedTextBox();
             this.label52 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
-            this.buttonEditar = new System.Windows.Forms.Button();
+            this.buttonCadastrar = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPageLocatario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericQtdAnimals)).BeginInit();
@@ -256,14 +256,16 @@
             this.tabControl1.Controls.Add(this.tabPageConjugeF1);
             this.tabControl1.Controls.Add(this.tabPageFiador2);
             this.tabControl1.Controls.Add(this.tabPageConjugeF2);
-            this.tabControl1.Location = new System.Drawing.Point(1, 2);
+            this.tabControl1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tabControl1.Location = new System.Drawing.Point(154, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(647, 746);
+            this.tabControl1.Size = new System.Drawing.Size(697, 746);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPageLocatario
             // 
+            this.tabPageLocatario.BackColor = System.Drawing.Color.White;
             this.tabPageLocatario.Controls.Add(this.buttonValidarLocatario);
             this.tabPageLocatario.Controls.Add(this.numericQtdAnimals);
             this.tabPageLocatario.Controls.Add(this.maskedPhone2);
@@ -301,21 +303,21 @@
             this.tabPageLocatario.Controls.Add(this.maskedBirthDate);
             this.tabPageLocatario.Controls.Add(this.label3);
             this.tabPageLocatario.Controls.Add(this.label2);
-            this.tabPageLocatario.Location = new System.Drawing.Point(4, 24);
+            this.tabPageLocatario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tabPageLocatario.Location = new System.Drawing.Point(4, 28);
             this.tabPageLocatario.Name = "tabPageLocatario";
             this.tabPageLocatario.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageLocatario.Size = new System.Drawing.Size(639, 718);
+            this.tabPageLocatario.Size = new System.Drawing.Size(689, 714);
             this.tabPageLocatario.TabIndex = 0;
             this.tabPageLocatario.Text = "Locatário";
-            this.tabPageLocatario.UseVisualStyleBackColor = true;
             // 
             // buttonValidarLocatario
             // 
-            this.buttonValidarLocatario.Location = new System.Drawing.Point(551, 622);
+            this.buttonValidarLocatario.Location = new System.Drawing.Point(551, 624);
             this.buttonValidarLocatario.Name = "buttonValidarLocatario";
             this.buttonValidarLocatario.Size = new System.Drawing.Size(75, 23);
             this.buttonValidarLocatario.TabIndex = 49;
-            this.buttonValidarLocatario.Text = "Validar";
+            this.buttonValidarLocatario.Text = "Próximo";
             this.buttonValidarLocatario.UseVisualStyleBackColor = true;
             this.buttonValidarLocatario.Click += new System.EventHandler(this.buttonValidarLocatario_Click);
             // 
@@ -653,10 +655,10 @@
             // 
             // groupMaritalStatus
             // 
-            this.groupMaritalStatus.Controls.Add(this.radioWidower);
-            this.groupMaritalStatus.Controls.Add(this.radioSingle);
-            this.groupMaritalStatus.Controls.Add(this.radioDivorced);
-            this.groupMaritalStatus.Controls.Add(this.radioMarried);
+            this.groupMaritalStatus.Controls.Add(this.radioButton13);
+            this.groupMaritalStatus.Controls.Add(this.radioButton14);
+            this.groupMaritalStatus.Controls.Add(this.radioButton15);
+            this.groupMaritalStatus.Controls.Add(this.radioButton16);
             this.groupMaritalStatus.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupMaritalStatus.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.groupMaritalStatus.Location = new System.Drawing.Point(178, 58);
@@ -666,45 +668,45 @@
             this.groupMaritalStatus.TabStop = false;
             this.groupMaritalStatus.Text = "ESTADO CIVIL";
             // 
-            // radioWidower
+            // radioButton13
             // 
-            this.radioWidower.AutoSize = true;
-            this.radioWidower.Location = new System.Drawing.Point(9, 93);
-            this.radioWidower.Name = "radioWidower";
-            this.radioWidower.Size = new System.Drawing.Size(79, 19);
-            this.radioWidower.TabIndex = 3;
-            this.radioWidower.Text = "VIÚVO(A)";
-            this.radioWidower.UseVisualStyleBackColor = true;
+            this.radioButton13.AutoSize = true;
+            this.radioButton13.Location = new System.Drawing.Point(8, 94);
+            this.radioButton13.Name = "radioButton13";
+            this.radioButton13.Size = new System.Drawing.Size(79, 19);
+            this.radioButton13.TabIndex = 7;
+            this.radioButton13.Text = "VIÚVO(A)";
+            this.radioButton13.UseVisualStyleBackColor = true;
             // 
-            // radioSingle
+            // radioButton14
             // 
-            this.radioSingle.AutoSize = true;
-            this.radioSingle.Location = new System.Drawing.Point(9, 68);
-            this.radioSingle.Name = "radioSingle";
-            this.radioSingle.Size = new System.Drawing.Size(96, 19);
-            this.radioSingle.TabIndex = 2;
-            this.radioSingle.Text = "SOLTEIRO(A)";
-            this.radioSingle.UseVisualStyleBackColor = true;
+            this.radioButton14.AutoSize = true;
+            this.radioButton14.Location = new System.Drawing.Point(8, 69);
+            this.radioButton14.Name = "radioButton14";
+            this.radioButton14.Size = new System.Drawing.Size(96, 19);
+            this.radioButton14.TabIndex = 6;
+            this.radioButton14.Text = "SOLTEIRO(A)";
+            this.radioButton14.UseVisualStyleBackColor = true;
             // 
-            // radioDivorced
+            // radioButton15
             // 
-            this.radioDivorced.AutoSize = true;
-            this.radioDivorced.Location = new System.Drawing.Point(9, 43);
-            this.radioDivorced.Name = "radioDivorced";
-            this.radioDivorced.Size = new System.Drawing.Size(116, 19);
-            this.radioDivorced.TabIndex = 1;
-            this.radioDivorced.Text = "DIVORCIADO(A)";
-            this.radioDivorced.UseVisualStyleBackColor = true;
+            this.radioButton15.AutoSize = true;
+            this.radioButton15.Location = new System.Drawing.Point(8, 44);
+            this.radioButton15.Name = "radioButton15";
+            this.radioButton15.Size = new System.Drawing.Size(116, 19);
+            this.radioButton15.TabIndex = 5;
+            this.radioButton15.Text = "DIVORCIADO(A)";
+            this.radioButton15.UseVisualStyleBackColor = true;
             // 
-            // radioMarried
+            // radioButton16
             // 
-            this.radioMarried.AutoSize = true;
-            this.radioMarried.Location = new System.Drawing.Point(9, 18);
-            this.radioMarried.Name = "radioMarried";
-            this.radioMarried.Size = new System.Drawing.Size(89, 19);
-            this.radioMarried.TabIndex = 0;
-            this.radioMarried.Text = "CASADO(A)";
-            this.radioMarried.UseVisualStyleBackColor = true;
+            this.radioButton16.AutoSize = true;
+            this.radioButton16.Location = new System.Drawing.Point(8, 19);
+            this.radioButton16.Name = "radioButton16";
+            this.radioButton16.Size = new System.Drawing.Size(89, 19);
+            this.radioButton16.TabIndex = 4;
+            this.radioButton16.Text = "CASADO(A)";
+            this.radioButton16.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -776,21 +778,22 @@
             this.tabPageConjuge.Controls.Add(this.maskedBirthDate1);
             this.tabPageConjuge.Controls.Add(this.label24);
             this.tabPageConjuge.Controls.Add(this.label25);
-            this.tabPageConjuge.Location = new System.Drawing.Point(4, 24);
+            this.tabPageConjuge.Location = new System.Drawing.Point(4, 28);
             this.tabPageConjuge.Name = "tabPageConjuge";
             this.tabPageConjuge.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageConjuge.Size = new System.Drawing.Size(639, 718);
+            this.tabPageConjuge.Size = new System.Drawing.Size(742, 714);
             this.tabPageConjuge.TabIndex = 1;
             this.tabPageConjuge.Text = "Cônjuge";
             this.tabPageConjuge.UseVisualStyleBackColor = true;
             // 
             // buttonValidarConjuge
             // 
+            this.buttonValidarConjuge.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonValidarConjuge.Location = new System.Drawing.Point(544, 406);
             this.buttonValidarConjuge.Name = "buttonValidarConjuge";
             this.buttonValidarConjuge.Size = new System.Drawing.Size(75, 23);
             this.buttonValidarConjuge.TabIndex = 57;
-            this.buttonValidarConjuge.Text = "Validar";
+            this.buttonValidarConjuge.Text = "Próximo";
             this.buttonValidarConjuge.UseVisualStyleBackColor = true;
             this.buttonValidarConjuge.Click += new System.EventHandler(this.buttonValidarConjuge_Click);
             // 
@@ -1100,21 +1103,22 @@
             this.tabPageFiador1.Controls.Add(this.maskedBirthDate2);
             this.tabPageFiador1.Controls.Add(this.label64);
             this.tabPageFiador1.Controls.Add(this.label65);
-            this.tabPageFiador1.Location = new System.Drawing.Point(4, 24);
+            this.tabPageFiador1.Location = new System.Drawing.Point(4, 28);
             this.tabPageFiador1.Name = "tabPageFiador1";
             this.tabPageFiador1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageFiador1.Size = new System.Drawing.Size(639, 718);
+            this.tabPageFiador1.Size = new System.Drawing.Size(689, 714);
             this.tabPageFiador1.TabIndex = 2;
             this.tabPageFiador1.Text = "Fiador 1";
             this.tabPageFiador1.UseVisualStyleBackColor = true;
             // 
             // buttonValidarFiador1
             // 
+            this.buttonValidarFiador1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonValidarFiador1.Location = new System.Drawing.Point(544, 416);
             this.buttonValidarFiador1.Name = "buttonValidarFiador1";
             this.buttonValidarFiador1.Size = new System.Drawing.Size(75, 23);
-            this.buttonValidarFiador1.TabIndex = 83;
-            this.buttonValidarFiador1.Text = "button2";
+            this.buttonValidarFiador1.TabIndex = 82;
+            this.buttonValidarFiador1.Text = "Validar";
             this.buttonValidarFiador1.UseVisualStyleBackColor = true;
             this.buttonValidarFiador1.Click += new System.EventHandler(this.buttonValidarFiador1_Click);
             // 
@@ -1478,16 +1482,17 @@
             this.tabPageConjugeF1.Controls.Add(this.maskedBirthDate3);
             this.tabPageConjugeF1.Controls.Add(this.label40);
             this.tabPageConjugeF1.Controls.Add(this.label41);
-            this.tabPageConjugeF1.Location = new System.Drawing.Point(4, 24);
+            this.tabPageConjugeF1.Location = new System.Drawing.Point(4, 28);
             this.tabPageConjugeF1.Name = "tabPageConjugeF1";
             this.tabPageConjugeF1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageConjugeF1.Size = new System.Drawing.Size(639, 718);
+            this.tabPageConjugeF1.Size = new System.Drawing.Size(689, 714);
             this.tabPageConjugeF1.TabIndex = 3;
             this.tabPageConjugeF1.Text = "Cônjuge do Fiador 1";
             this.tabPageConjugeF1.UseVisualStyleBackColor = true;
             // 
             // buttonValidarConjugeF1
             // 
+            this.buttonValidarConjugeF1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonValidarConjugeF1.Location = new System.Drawing.Point(548, 406);
             this.buttonValidarConjugeF1.Name = "buttonValidarConjugeF1";
             this.buttonValidarConjugeF1.Size = new System.Drawing.Size(75, 23);
@@ -1591,7 +1596,7 @@
             this.textUf3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textUf3.Location = new System.Drawing.Point(423, 271);
             this.textUf3.Name = "textUf3";
-            this.textUf3.Size = new System.Drawing.Size(207, 29);
+            this.textUf3.Size = new System.Drawing.Size(200, 29);
             this.textUf3.TabIndex = 9;
             this.textUf3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textUf3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textUf3_KeyPress);
@@ -1802,17 +1807,18 @@
             this.tabPageFiador2.Controls.Add(this.maskedBirthDate4);
             this.tabPageFiador2.Controls.Add(this.label76);
             this.tabPageFiador2.Controls.Add(this.label77);
-            this.tabPageFiador2.Location = new System.Drawing.Point(4, 24);
+            this.tabPageFiador2.Location = new System.Drawing.Point(4, 28);
             this.tabPageFiador2.Name = "tabPageFiador2";
             this.tabPageFiador2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageFiador2.Size = new System.Drawing.Size(639, 718);
+            this.tabPageFiador2.Size = new System.Drawing.Size(689, 714);
             this.tabPageFiador2.TabIndex = 4;
             this.tabPageFiador2.Text = "Fiador 2";
             this.tabPageFiador2.UseVisualStyleBackColor = true;
             // 
             // buttonValidarFiador2
             // 
-            this.buttonValidarFiador2.Location = new System.Drawing.Point(547, 425);
+            this.buttonValidarFiador2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonValidarFiador2.Location = new System.Drawing.Point(547, 416);
             this.buttonValidarFiador2.Name = "buttonValidarFiador2";
             this.buttonValidarFiador2.Size = new System.Drawing.Size(75, 23);
             this.buttonValidarFiador2.TabIndex = 108;
@@ -1822,10 +1828,10 @@
             // 
             // groupMaritalStatus4
             // 
-            this.groupMaritalStatus4.Controls.Add(this.radioButton13);
-            this.groupMaritalStatus4.Controls.Add(this.radioButton14);
-            this.groupMaritalStatus4.Controls.Add(this.radioButton15);
-            this.groupMaritalStatus4.Controls.Add(this.radioButton16);
+            this.groupMaritalStatus4.Controls.Add(this.radioButton19);
+            this.groupMaritalStatus4.Controls.Add(this.radioButton20);
+            this.groupMaritalStatus4.Controls.Add(this.radioButton21);
+            this.groupMaritalStatus4.Controls.Add(this.radioButton22);
             this.groupMaritalStatus4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupMaritalStatus4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.groupMaritalStatus4.Location = new System.Drawing.Point(181, 66);
@@ -1835,45 +1841,45 @@
             this.groupMaritalStatus4.TabStop = false;
             this.groupMaritalStatus4.Text = "ESTADO CIVIL";
             // 
-            // radioButton13
+            // radioButton19
             // 
-            this.radioButton13.AutoSize = true;
-            this.radioButton13.Location = new System.Drawing.Point(9, 93);
-            this.radioButton13.Name = "radioButton13";
-            this.radioButton13.Size = new System.Drawing.Size(79, 19);
-            this.radioButton13.TabIndex = 3;
-            this.radioButton13.Text = "VIÚVO(A)";
-            this.radioButton13.UseVisualStyleBackColor = true;
+            this.radioButton19.AutoSize = true;
+            this.radioButton19.Location = new System.Drawing.Point(8, 92);
+            this.radioButton19.Name = "radioButton19";
+            this.radioButton19.Size = new System.Drawing.Size(79, 19);
+            this.radioButton19.TabIndex = 7;
+            this.radioButton19.Text = "VIÚVO(A)";
+            this.radioButton19.UseVisualStyleBackColor = true;
             // 
-            // radioButton14
+            // radioButton20
             // 
-            this.radioButton14.AutoSize = true;
-            this.radioButton14.Location = new System.Drawing.Point(9, 68);
-            this.radioButton14.Name = "radioButton14";
-            this.radioButton14.Size = new System.Drawing.Size(96, 19);
-            this.radioButton14.TabIndex = 2;
-            this.radioButton14.Text = "SOLTEIRO(A)";
-            this.radioButton14.UseVisualStyleBackColor = true;
+            this.radioButton20.AutoSize = true;
+            this.radioButton20.Location = new System.Drawing.Point(8, 67);
+            this.radioButton20.Name = "radioButton20";
+            this.radioButton20.Size = new System.Drawing.Size(96, 19);
+            this.radioButton20.TabIndex = 6;
+            this.radioButton20.Text = "SOLTEIRO(A)";
+            this.radioButton20.UseVisualStyleBackColor = true;
             // 
-            // radioButton15
+            // radioButton21
             // 
-            this.radioButton15.AutoSize = true;
-            this.radioButton15.Location = new System.Drawing.Point(9, 43);
-            this.radioButton15.Name = "radioButton15";
-            this.radioButton15.Size = new System.Drawing.Size(116, 19);
-            this.radioButton15.TabIndex = 1;
-            this.radioButton15.Text = "DIVORCIADO(A)";
-            this.radioButton15.UseVisualStyleBackColor = true;
+            this.radioButton21.AutoSize = true;
+            this.radioButton21.Location = new System.Drawing.Point(8, 42);
+            this.radioButton21.Name = "radioButton21";
+            this.radioButton21.Size = new System.Drawing.Size(116, 19);
+            this.radioButton21.TabIndex = 5;
+            this.radioButton21.Text = "DIVORCIADO(A)";
+            this.radioButton21.UseVisualStyleBackColor = true;
             // 
-            // radioButton16
+            // radioButton22
             // 
-            this.radioButton16.AutoSize = true;
-            this.radioButton16.Location = new System.Drawing.Point(9, 18);
-            this.radioButton16.Name = "radioButton16";
-            this.radioButton16.Size = new System.Drawing.Size(89, 19);
-            this.radioButton16.TabIndex = 0;
-            this.radioButton16.Text = "CASADO(A)";
-            this.radioButton16.UseVisualStyleBackColor = true;
+            this.radioButton22.AutoSize = true;
+            this.radioButton22.Location = new System.Drawing.Point(8, 17);
+            this.radioButton22.Name = "radioButton22";
+            this.radioButton22.Size = new System.Drawing.Size(89, 19);
+            this.radioButton22.TabIndex = 4;
+            this.radioButton22.Text = "CASADO(A)";
+            this.radioButton22.UseVisualStyleBackColor = true;
             // 
             // textEmail4
             // 
@@ -1970,7 +1976,7 @@
             this.textUf4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textUf4.Location = new System.Drawing.Point(422, 281);
             this.textUf4.Name = "textUf4";
-            this.textUf4.Size = new System.Drawing.Size(207, 29);
+            this.textUf4.Size = new System.Drawing.Size(200, 29);
             this.textUf4.TabIndex = 10;
             this.textUf4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textUf4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textUf4_KeyPress);
@@ -2180,16 +2186,17 @@
             this.tabPageConjugeF2.Controls.Add(this.maskedBirthDate5);
             this.tabPageConjugeF2.Controls.Add(this.label52);
             this.tabPageConjugeF2.Controls.Add(this.label53);
-            this.tabPageConjugeF2.Location = new System.Drawing.Point(4, 24);
+            this.tabPageConjugeF2.Location = new System.Drawing.Point(4, 28);
             this.tabPageConjugeF2.Name = "tabPageConjugeF2";
             this.tabPageConjugeF2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageConjugeF2.Size = new System.Drawing.Size(639, 718);
+            this.tabPageConjugeF2.Size = new System.Drawing.Size(689, 714);
             this.tabPageConjugeF2.TabIndex = 5;
             this.tabPageConjugeF2.Text = "Conjuge do Fiador 2";
             this.tabPageConjugeF2.UseVisualStyleBackColor = true;
             // 
             // buttonValidarConjugeF2
             // 
+            this.buttonValidarConjugeF2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonValidarConjugeF2.Location = new System.Drawing.Point(548, 418);
             this.buttonValidarConjugeF2.Name = "buttonValidarConjugeF2";
             this.buttonValidarConjugeF2.Size = new System.Drawing.Size(75, 23);
@@ -2233,7 +2240,7 @@
             this.maskedTextBox10.Location = new System.Drawing.Point(423, 333);
             this.maskedTextBox10.Mask = "(00)00000-0000";
             this.maskedTextBox10.Name = "maskedTextBox10";
-            this.maskedTextBox10.Size = new System.Drawing.Size(207, 29);
+            this.maskedTextBox10.Size = new System.Drawing.Size(200, 29);
             this.maskedTextBox10.TabIndex = 11;
             this.maskedTextBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.maskedTextBox10.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -2293,7 +2300,7 @@
             this.textUf5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textUf5.Location = new System.Drawing.Point(423, 283);
             this.textUf5.Name = "textUf5";
-            this.textUf5.Size = new System.Drawing.Size(207, 29);
+            this.textUf5.Size = new System.Drawing.Size(200, 29);
             this.textUf5.TabIndex = 9;
             this.textUf5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textUf5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textUf5_KeyPress);
@@ -2475,23 +2482,25 @@
             this.label53.TabIndex = 57;
             this.label53.Text = "NOME";
             // 
-            // buttonEditar
+            // buttonCadastrar
             // 
-            this.buttonEditar.Location = new System.Drawing.Point(652, 23);
-            this.buttonEditar.Name = "buttonEditar";
-            this.buttonEditar.Size = new System.Drawing.Size(75, 23);
-            this.buttonEditar.TabIndex = 1;
-            this.buttonEditar.Text = "Editar";
-            this.buttonEditar.UseVisualStyleBackColor = true;
+            this.buttonCadastrar.Enabled = false;
+            this.buttonCadastrar.Location = new System.Drawing.Point(857, 49);
+            this.buttonCadastrar.Name = "buttonCadastrar";
+            this.buttonCadastrar.Size = new System.Drawing.Size(170, 29);
+            this.buttonCadastrar.TabIndex = 50;
+            this.buttonCadastrar.Text = "Cadastrar";
+            this.buttonCadastrar.UseVisualStyleBackColor = true;
+            this.buttonCadastrar.Click += new System.EventHandler(this.buttonCadastrar_Click);
             // 
-            // FormEdiLocatario
+            // FormCadLocatario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(732, 710);
-            this.Controls.Add(this.buttonEditar);
+            this.ClientSize = new System.Drawing.Size(1065, 687);
+            this.Controls.Add(this.buttonCadastrar);
             this.Controls.Add(this.tabControl1);
-            this.Name = "FormEdiLocatario";
+            this.Name = "FormCadLocatario";
             this.Text = "CadastroLocatario";
             this.tabControl1.ResumeLayout(false);
             this.tabPageLocatario.ResumeLayout(false);
@@ -2568,10 +2577,6 @@
         private RadioButton radioFeminine;
         private RadioButton radioMasculine;
         private GroupBox groupMaritalStatus;
-        private RadioButton radioWidower;
-        private RadioButton radioSingle;
-        private RadioButton radioDivorced;
-        private RadioButton radioMarried;
         private Label label4;
         private MaskedTextBox maskedBirthDate;
         private Label label3;
@@ -2666,10 +2671,6 @@
         private Label label41;
         private TabPage tabPageFiador2;
         private GroupBox groupMaritalStatus4;
-        private RadioButton radioButton13;
-        private RadioButton radioButton14;
-        private RadioButton radioButton15;
-        private RadioButton radioButton16;
         private TextBox textEmail4;
         private Label label66;
         private MaskedTextBox maskedTextBox8;
@@ -2725,12 +2726,20 @@
         private MaskedTextBox maskedBirthDate5;
         private Label label52;
         private Label label53;
-        private Button buttonValidarLocatario;
         private Button buttonValidarConjuge;
         private Button buttonValidarFiador1;
         private Button buttonValidarConjugeF1;
         private Button buttonValidarFiador2;
         private Button buttonValidarConjugeF2;
-        private Button buttonEditar;
+        private Button buttonCadastrar;
+        private Button buttonValidarLocatario;
+        private RadioButton radioButton13;
+        private RadioButton radioButton14;
+        private RadioButton radioButton15;
+        private RadioButton radioButton16;
+        private RadioButton radioButton19;
+        private RadioButton radioButton20;
+        private RadioButton radioButton21;
+        private RadioButton radioButton22;
     }
 }

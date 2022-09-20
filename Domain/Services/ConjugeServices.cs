@@ -12,14 +12,19 @@ namespace Domain.Services
             _conjugeDAO = new ConjugeDAO();
         }
 
-        public Conjuge GetConjugePorId(int idLocatario)
+        public Conjuge ListarConjugeLocatarioPorId(int idLocatario)
         {
-            return _conjugeDAO.GetConjugePorId(idLocatario);
+            return _conjugeDAO.ListarConjugeLocatarioPorId(idLocatario);
         }
 
-        public Conjuge GetConjugeFiadorPorId(int idFiador)
+        public Conjuge ListarConjugeFiadorPorId(int idFiador)
         {
-            return _conjugeDAO.GetConjugeFiadorPorId(idFiador);
+            return _conjugeDAO.ListarConjugeFiadorPorId(idFiador);
         }        
+
+        public void EditarConjuge(Conjuge conjuge)
+        {
+            _conjugeDAO.EditarConjuge(conjuge);
+        }
     }
 }

@@ -12,29 +12,30 @@ namespace Domain.Services
             _locatarioDAO = new LocatarioDAO();
         }
 
-        public void AddLocatario(Locatario locatario)
+        public void CadastrarLocatario(Locatario locatario)
         {
-            _locatarioDAO.AddLocatario(locatario);
-        }
-
-        public List<Locatario> GetLocatarios()
-        {
-            return _locatarioDAO.GetLocatarios();
-        }
-
-        public Locatario GetLocatarioPorId(int idLocatario)
-        {
-            return _locatarioDAO.GetLocatarioPorId(idLocatario);
-        }
-
-        public List<Locatario> GetLocatarioPorNome(string nome)
-        {
-            return _locatarioDAO.GetLocatarioPorNome(nome);
+            _locatarioDAO.CadastrarLocatario(locatario);
         }
 
         public void EditarLocatario(Locatario locatario)
         {
             _locatarioDAO.EditarLocatario(locatario);
         }
+
+        public Locatario ListarLocatarioPorId(int idLocatario)
+        {
+            return _locatarioDAO.ListarLocatarioPorId(idLocatario);
+        }
+
+        public List<Locatario> ListarLocatarioPorNome(string nome)
+        {
+            return _locatarioDAO.ListarLocatarioPorNome(nome);
+        }
+
+        public List<Locatario> ListarLocatarios()
+        {
+            return _locatarioDAO.ListarLocatarios();
+        }
+
     }
 }

@@ -49,13 +49,13 @@
 
         private void buttonCadCrud_Click(object sender, EventArgs e)
         {
-            AbrirFormNovo(new FormCadLocatario());
+            AbrirFormNovo(new FormCadastrarLocatario());
             OcultaSubMenu();
         }
 
         private void buttonPesCrud_Click(object sender, EventArgs e)
         {
-            AbrirFormNovo(new FormPesLocatario());
+            AbrirFormNovo(new FormPesquisarLocatario());
             OcultaSubMenu();
         }
     }
