@@ -155,5 +155,30 @@ namespace Infrastructure.Repositorys
                 }
             }
         }
+
+        public void ExcluirFiador(List<Fiador> fiadores)
+        {
+            foreach (Fiador fiador in fiadores)
+            {
+                string queryExcluirFiador = $"DELETE FROM guarantor WHERE id = {fiador.Id}";
+
+                using (MySqlConnection conn = new MySqlConnection(Connection.ConnectionString))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand(queryExcluirFiador, conn))
+                    {
+                        try
+                        {
+                            _locatarioXFiadorDAO.ExcluirRelacionamento(fiador.Id);
+                            conn.Open();
+                            cmd.ExecuteNonQuery();
+                        }
+                        catch (Exception e)
+                        {
+                            throw e;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

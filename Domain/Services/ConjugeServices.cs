@@ -31,5 +31,10 @@ namespace Domain.Services
         {
             _conjugeDAO.CadastrarConjuge(conjuge);
         }
+
+        public void ExcluirConjuge(int idConjuge)
+        {
+            _conjugeDAO.ExcluirConjuge(idConjuge);
+        }
     }
 }

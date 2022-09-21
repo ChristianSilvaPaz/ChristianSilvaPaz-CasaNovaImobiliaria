@@ -145,5 +145,26 @@ namespace Infrastructure.Repositorys
                 }
             }
         }
+
+        public void ExcluirConjuge(int idConjuge)
+        {
+            string queryExcluirConjuge = $"DELETE FROM spouce WHERE id = {idConjuge}";
+
+            using (MySqlConnection conn = new MySqlConnection(Connection.ConnectionString))
+            {
+                using (MySqlCommand cmd = new MySqlCommand(queryExcluirConjuge, conn))
+                {
+                    try
+                    {
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception e)
+                    {
+                        throw e;
+                    }
+                }
+            }
+        }
     }
 }

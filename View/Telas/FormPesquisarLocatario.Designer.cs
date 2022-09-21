@@ -33,7 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonExcluir = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
             this.buttonVisualizar = new System.Windows.Forms.Button();
             this.buttonPesquisar = new System.Windows.Forms.Button();
@@ -84,7 +84,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.buttonExcluir);
             this.panel2.Controls.Add(this.buttonEditar);
             this.panel2.Controls.Add(this.buttonVisualizar);
             this.panel2.Controls.Add(this.buttonPesquisar);
@@ -97,14 +97,15 @@
             this.panel2.Size = new System.Drawing.Size(1065, 618);
             this.panel2.TabIndex = 4;
             // 
-            // button2
+            // buttonExcluir
             // 
-            this.button2.Location = new System.Drawing.Point(943, 127);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Excluir";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonExcluir.Location = new System.Drawing.Point(943, 127);
+            this.buttonExcluir.Name = "buttonExcluir";
+            this.buttonExcluir.Size = new System.Drawing.Size(75, 23);
+            this.buttonExcluir.TabIndex = 6;
+            this.buttonExcluir.Text = "Excluir";
+            this.buttonExcluir.UseVisualStyleBackColor = true;
+            this.buttonExcluir.Click += new System.EventHandler(this.buttonExcluir_Click);
             // 
             // buttonEditar
             // 
@@ -154,7 +155,7 @@
             this.Label2.TabIndex = 1;
             this.Label2.Text = "Pesquisar locatário";
             // 
-            // FormPesLocatario
+            // FormPesquisarLocatario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -162,7 +163,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
-            this.Name = "FormPesLocatario";
+            this.Name = "FormPesquisarLocatario";
             this.Text = "FormPesLocatario";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -183,7 +184,7 @@
         private TextBox textPesquisar;
         private Label Label2;
         private Button buttonPesquisar;
-        private Button button2;
+        private Button buttonExcluir;
         private Button buttonEditar;
         private Button buttonVisualizar;
     }

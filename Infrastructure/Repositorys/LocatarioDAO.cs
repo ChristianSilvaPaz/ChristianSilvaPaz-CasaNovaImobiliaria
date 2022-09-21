@@ -309,7 +309,31 @@ namespace Infrastructure.Repositorys
             return list;
         }
 
-        
+        public void ExcuirLocatario(Locatario locatario)
+        {
+            string queryExcluirLocatario = $"DELETE FROM pyhsical_person WHERE id = {locatario.Id}";
+
+            using (TransactionScope transactionScope = new TransactionScope())
+            {
+                using (MySqlConnection conn = new MySqlConnection(Connection.ConnectionString))
+                {
+                    using (MySqlCommand cmd = new MySqlCommand(queryExcluirLocatario, conn))
+                    {
+                        try
+                        {
+                            _fiadorDAO.ExcluirFiador(locatario.Fiadores);
+                            conn.Open();
+                            cmd.ExecuteNonQuery();
+                        }
+                        catch (Exception e)
+                        {
+                            throw e;
+                        }
+                    }
+                }
+                transactionScope.Complete();
+            }
+        }
     }
 }
 

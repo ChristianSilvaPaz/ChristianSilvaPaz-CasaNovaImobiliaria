@@ -229,24 +229,12 @@ namespace View.Telas
                     {
                         _locatarioServices.EditarLocatario(locatarioNovo);
                         MessageBox.Show("Locatário Alterado com Sucesso");
+                        VerificaEstadoCivilDoLocatarioDepoisDeEditar(_locatario.Casado, locatarioNovo.Casado);
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show("Erro ao Alterar o Locatário", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                }
-            }
-            if (_locatario.Casado != locatarioNovo.Casado)
-            {
-                if (_locatario.Casado == true && locatarioNovo.Casado == false)
-                {
-                    MessageBox.Show("Excluir Conjuge");
-                }
-                else if (_locatario.Casado == false && locatarioNovo.Casado == true)
-                {
-                    buttonCadastrarConjuge.Enabled = true;
-                    buttonEditarConjuge.Enabled = false;
-                    tabControl1.SelectTab(tabPageConjuge);
                 }
             }
         }
@@ -314,6 +302,7 @@ namespace View.Telas
                     {
                         _fiadorServices.EditarFiador(fiador1Novo);
                         MessageBox.Show("Fiador 1 Alterado com Sucesso");
+                        VerificaEstadoCivilDoFiador1DepoisDeEditar(_fiador1.Casado, fiador1Novo.Casado);
                     }
                     catch (Exception ex)
                     {
@@ -321,20 +310,7 @@ namespace View.Telas
                     }
                 }
             }
-            if (_fiador1.Casado != fiador1Novo.Casado)
-            {
-                if (_fiador1.Casado == true && fiador1Novo.Casado == false)
-                {
-                    MessageBox.Show("Excluir Conjuge");
-                }
-                else if (_fiador1.Casado == false && fiador1Novo.Casado == true)
-                {
-                    buttonCadastrarConjugeF1.Enabled = true;
-                    buttonEditarConjugeF1.Enabled = false;
-                    tabControl1.SelectTab(tabPageConjugeF1);
-                }
-            }
-        }        
+        }
         private void buttonEditarConjugeF1_Click(object sender, EventArgs e)
         {
             Conjuge conjugeF1Novo = new Conjuge();
@@ -399,6 +375,7 @@ namespace View.Telas
                     {
                         _fiadorServices.EditarFiador(fiador2Novo);
                         MessageBox.Show("Fiador 2 Alterado com Sucesso");
+                        VerificaEstadoCivilDoFiador2DepoisDeEditar(_fiador2.Casado, fiador2Novo.Casado);
                     }
                     catch (Exception ex)
                     {
@@ -406,20 +383,7 @@ namespace View.Telas
                     }
                 }
             }
-            if (_fiador2.Casado != fiador2Novo.Casado)
-            {
-                if (_fiador2.Casado == true && fiador2Novo.Casado == false)
-                {
-                    MessageBox.Show("Excluir Conjuge");
-                }
-                else if (_fiador2.Casado == false && fiador2Novo.Casado == true)
-                {
-                    buttonCadastrarConjugeF2.Enabled = true;
-                    buttonEditarConjugeF2.Enabled = false;
-                    tabControl1.SelectTab(tabPageConjugeF2);
-                }
-            }
-        }       
+        }
         private void buttonEditarConjugeF2_Click(object sender, EventArgs e)
         {
             Conjuge conjugeF2Novo = new Conjuge();
@@ -585,6 +549,77 @@ namespace View.Telas
                 }
             }
             return null;
+        }
+
+        //METODOS PARA CADASTRAR OU EXCLUIR CONJUGE DEPENDENDO DA ALTERACAO QUE HOUVE
+        private void VerificaEstadoCivilDoLocatarioDepoisDeEditar(bool casadoAntigo, bool casadoNovo)
+        {
+            if (casadoAntigo != casadoNovo)
+            {
+                if (casadoAntigo == true && casadoNovo == false)
+                {
+                    try
+                    {
+                        _conjugeServices.ExcluirConjuge(_conjuge.Id);
+                    }
+                    catch (Exception ex)
+                    {
+                        throw ex;
+                    }
+                }
+                else if (casadoAntigo == false && casadoNovo == true)
+                {
+                    buttonCadastrarConjuge.Enabled = true;
+                    buttonEditarConjuge.Enabled = false;
+                    tabControl1.SelectTab(tabPageConjuge);
+                }
+            }
+        }
+        private void VerificaEstadoCivilDoFiador1DepoisDeEditar(bool casadoAntigo, bool casadoNovo)
+        {
+            if (casadoAntigo != casadoNovo)
+            {
+                if (casadoAntigo == true && casadoNovo == false)
+                {
+                    try
+                    {
+                        _conjugeServices.ExcluirConjuge(_conjugeF1.Id);
+                    }
+                    catch (Exception ex)
+                    {
+                        throw ex;
+                    }
+                }
+                else if (casadoAntigo == false && casadoNovo == true)
+                {
+                    buttonCadastrarConjugeF1.Enabled = true;
+                    buttonEditarConjugeF1.Enabled = false;
+                    tabControl1.SelectTab(tabPageConjugeF1);
+                }
+            }
+        }
+        private void VerificaEstadoCivilDoFiador2DepoisDeEditar(bool casadoAntigo, bool casadoNovo)
+        {
+            if (casadoAntigo != casadoNovo)
+            {
+                if (casadoAntigo == true && casadoNovo == false)
+                {
+                    try
+                    {
+                        _conjugeServices.ExcluirConjuge(_conjugeF2.Id);
+                    }
+                    catch (Exception ex)
+                    {
+                        throw ex;
+                    }
+                }
+                else if (casadoAntigo == false && casadoNovo == true)
+                {
+                    buttonCadastrarConjugeF2.Enabled = true;
+                    buttonEditarConjugeF2.Enabled = false;
+                    tabControl1.SelectTab(tabPageConjugeF2);
+                }
+            }
         }
 
         //EVENTOS PARA PROIBIR A ENTRADA DE CARACTERES INVALIDOS

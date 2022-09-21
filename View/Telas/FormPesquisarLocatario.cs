@@ -1,4 +1,7 @@
 ﻿using Domain.Services;
+using Infrastructure.Entities;
+using System.Drawing.Design;
+using System.Windows.Forms;
 
 namespace View.Telas
 {
@@ -69,6 +72,26 @@ namespace View.Telas
             int idLocatario = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Id"].Value);
             FormEditarLocatario formEdiLocatario = new FormEditarLocatario(idLocatario, true);
             formEdiLocatario.Show();
+        }
+
+        //EVENTO DO BOTAO DE EXCLUIR
+        private void buttonExcluir_Click(object sender, EventArgs e)
+        {
+            DialogResult resposta = MessageBox.Show("Deseja Excluir o Locatário ?", "Excluir Locatário", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+            if (resposta == DialogResult.Yes)
+            {
+                try
+                {
+                    int idLocatario = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Id"].Value);
+                    _locatarioServices.ExcluirLocatario(idLocatario);
+                    MessageBox.Show("Locatário Excluído com Sucesso");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao Excluir o Locatário", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

@@ -19,5 +19,30 @@ namespace Infrastructure.Repositorys
                 }
             }
         }
+
+        public void ExcluirRelacionamento(int idFiador)
+        {
+            string queryExcluirRelacionamento = $"DELETE FROM person_guarantor WHERE id_guarantor = {idFiador};";
+            using (MySqlConnection conn = new MySqlConnection(Connection.ConnectionString))
+            {
+                using (MySqlCommand cmd = new MySqlCommand(queryExcluirRelacionamento, conn))
+                {
+                    try
+                    {
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception e)
+                    {
+                        throw e;
+                    }
+                }
+            }
+        }
     }
+
+
 }
+
+
+

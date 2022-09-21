@@ -197,8 +197,7 @@ namespace View.Telas
         //METODO DE CADASTRAR
         private void Cadastrar()
         {
-            var resposta = DialogResult;
-            resposta = MessageBox.Show("Deseja Cadastrar o Locatário ?", "Cadastrar Locatário", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+             DialogResult resposta = MessageBox.Show("Deseja Cadastrar o Locatário ?", "Cadastrar Locatário", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
 
             if (resposta == DialogResult.Yes)
             {

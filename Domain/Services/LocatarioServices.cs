@@ -6,6 +6,8 @@ namespace Domain.Services
     public class LocatarioServices
     {
         private LocatarioDAO _locatarioDAO;
+        private FiadorServices _fiadorServices;
+        private Locatario _locatario;
 
         public LocatarioServices()
         {
@@ -37,5 +39,12 @@ namespace Domain.Services
             return _locatarioDAO.ListarLocatarios();
         }
 
+        public void ExcluirLocatario(int idLocatario)
+        {
+            _locatario = ListarLocatarioPorId(idLocatario);
+            _fiadorServices = new FiadorServices();
+            _locatario.Fiadores = _fiadorServices.ListarFiadorPorId(idLocatario);
+            _locatarioDAO.ExcuirLocatario(_locatario);
+        }
     }
 }
