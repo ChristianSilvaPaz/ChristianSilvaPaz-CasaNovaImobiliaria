@@ -61,16 +61,17 @@ namespace Infrastructure.Entities
         public string Profession { get; set; }
 
         [Required(ErrorMessage = "O CAMPO RENDA É OBRIGATÓRIO")]
-        [Range(1, double.PositiveInfinity)]
-        public double Income { get; set; }
+        [Range(10, 99999.99, ErrorMessage = "RENDA INVÁLIDA")]
+        [DisplayName("Renda")]
+        public Decimal Income { get; set; }
 
         public string? WorkAddress { get; set; }
         public string? PhoneWork { get; set; }
 
-        [DisplayName("Telefone de Contato 01")]
+        [DisplayName("Telefone 01")]
         public string Phone1 { get; set; }
 
-        [DisplayName("Telefone de Contato 02")]
+        [DisplayName("Telefone 02")]
         public string? Phone2 { get; set; }
         public int QtdAnimals { get; set; }
         public string? Email { get; set; }

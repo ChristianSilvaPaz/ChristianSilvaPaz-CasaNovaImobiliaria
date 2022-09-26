@@ -1,6 +1,8 @@
 ﻿using Infrastructure.Entities;
 using Domain.Services;
 using System.Media;
+using System.Drawing.Text;
+using Org.BouncyCastle.Ocsp;
 
 namespace View.Telas
 {
@@ -36,7 +38,7 @@ namespace View.Telas
             _locatario.Naturalness = textNaturalness.Text;
             _locatario.Uf = textUf.Text;
             _locatario.Profession = textProfession.Text;
-            _locatario.Income = (double)(string.IsNullOrEmpty(textIncome.Text) ? 0 : Convert.ToDecimal(textIncome.Text));
+            _locatario.Income = (string.IsNullOrEmpty(textIncome.Text) ? 0 : Convert.ToDecimal(textIncome.Text));
             _locatario.WorkAddress = textWorkAdress.Text;
             _locatario.PhoneWork = maskedPhoneWork.Text;
             _locatario.Phone1 = maskedPhone1.Text;
@@ -163,6 +165,7 @@ namespace View.Telas
                 else
                 {
                     buttonCadastrar.Enabled = true;
+                    buttonCadastrar.FlatStyle = FlatStyle.Standard;
                 }
             }
         }
@@ -185,6 +188,7 @@ namespace View.Telas
             if (ValidationDataAnnotation.ValidationModel(_conjugeF2))
             {
                 buttonCadastrar.Enabled = true;
+                buttonCadastrar.FlatStyle = FlatStyle.Standard;
             }
         }
 
@@ -197,7 +201,7 @@ namespace View.Telas
         //METODO DE CADASTRAR
         private void Cadastrar()
         {
-             DialogResult resposta = MessageBox.Show("Deseja Cadastrar o Locatário ?", "Cadastrar Locatário", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            DialogResult resposta = MessageBox.Show("Deseja Cadastrar o Locatário ?", "Cadastrar Locatário", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
 
             if (resposta == DialogResult.Yes)
             {
@@ -208,6 +212,10 @@ namespace View.Telas
 
                 try
                 {
+                    _locatario.Conjuge = _conjuge;
+                    _fiador1.Conjuge = _conjugeF1;
+                    _fiador2.Conjuge = _conjugeF2;
+                    _locatario.Fiadores.AddRange(new Fiador[] { _fiador1, _fiador2 });
                     _locatarioServices.CadastrarLocatario(_locatario);
                     _locatario = null;
                     LimparControls(this);
@@ -282,14 +290,25 @@ namespace View.Telas
             }
         }
 
-        //METODO PARA INICIALIZAR TABPAGES COMO INATIVOS
+        //METODO PARA INICIALIZAR TABPAGES E BOTAO DE CADASTRR COMO INATIVOS 
         private void EstadoInicial()
         {
+            buttonCadastrar.Enabled = false;
             ((Control)tabControl1.TabPages[1]).Enabled = false;
             ((Control)tabControl1.TabPages[2]).Enabled = false;
             ((Control)tabControl1.TabPages[3]).Enabled = false;
             ((Control)tabControl1.TabPages[4]).Enabled = false;
             ((Control)tabControl1.TabPages[5]).Enabled = false;
+        }
+
+        //EVENTO DO BOTAO DE VOLTAR
+        private void buttonVoltarForm1_Click(object sender, EventArgs e)
+        {
+            DialogResult resposta = MessageBox.Show("Deseja Voltar ao Menu Principal ?", "Voltar ao Menu Principal", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (resposta == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         //EVENTOS PARA PROIBIR A ENTRADA DE CARACTERES INVALIDOS

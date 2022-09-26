@@ -32,7 +32,14 @@ namespace Infrastructure.Repositorys
                     cmdAdd.Parameters.AddWithValue("email", conjuge.Email);
                     cmdAdd.Parameters.AddWithValue("id_person", conjuge.id_locatario);
                     cmdAdd.Parameters.AddWithValue("id_guarantor", conjuge.id_fiador);
-                    cmdAdd.ExecuteNonQuery();
+                    try
+                    {
+                        cmdAdd.ExecuteNonQuery();
+                    }
+                    catch (Exception e)
+                    {
+                        throw e;
+                    }
                 }
             }
         }

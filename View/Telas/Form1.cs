@@ -47,16 +47,21 @@
             ShowSubMenu(panelCrudLocatario);
         }
 
-        private void buttonCadCrud_Click(object sender, EventArgs e)
+        private void buttonCadastrar_Click(object sender, EventArgs e)
         {
             AbrirFormNovo(new FormCadastrarLocatario());
             OcultaSubMenu();
         }
 
-        private void buttonPesCrud_Click(object sender, EventArgs e)
+        private void buttonPesquisar_Click(object sender, EventArgs e)
         {
             AbrirFormNovo(new FormPesquisarLocatario());
             OcultaSubMenu();
+        }
+
+        private void buttonContrato_Click(object sender, EventArgs e)
+        {
+            AbrirFormNovo(new FormCadastrarContrato());
         }
     }
 }

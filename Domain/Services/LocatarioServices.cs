@@ -24,6 +24,14 @@ namespace Domain.Services
             _locatarioDAO.EditarLocatario(locatario);
         }
 
+        public void ExcluirLocatario(int idLocatario)
+        {
+            _locatario = ListarLocatarioPorId(idLocatario);
+            _fiadorServices = new FiadorServices();
+            _locatario.Fiadores = _fiadorServices.ListarFiadorPorId(idLocatario);
+            _locatarioDAO.ExcuirLocatario(_locatario);
+        }
+
         public Locatario ListarLocatarioPorId(int idLocatario)
         {
             return _locatarioDAO.ListarLocatarioPorId(idLocatario);
@@ -39,12 +47,6 @@ namespace Domain.Services
             return _locatarioDAO.ListarLocatarios();
         }
 
-        public void ExcluirLocatario(int idLocatario)
-        {
-            _locatario = ListarLocatarioPorId(idLocatario);
-            _fiadorServices = new FiadorServices();
-            _locatario.Fiadores = _fiadorServices.ListarFiadorPorId(idLocatario);
-            _locatarioDAO.ExcuirLocatario(_locatario);
-        }
+       
     }
 }

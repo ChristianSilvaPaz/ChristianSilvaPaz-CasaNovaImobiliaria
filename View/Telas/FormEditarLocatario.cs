@@ -62,7 +62,7 @@ namespace View.Telas
             textNaturalness.Text = _locatario.Naturalness;
             textUf.Text = _locatario.Uf;
             textProfession.Text = _locatario.Profession;
-            textIncome.Text = _locatario.Income.ToString();
+            textIncome.Text = _locatario.Income.ToString("N2");
             textWorkAdress.Text = _locatario.WorkAddress;
             maskedPhoneWork.Text = _locatario.WorkAddress;
             maskedPhone1.Text = _locatario.Phone1;
@@ -209,7 +209,7 @@ namespace View.Telas
             locatarioNovo.Naturalness = textNaturalness.Text;
             locatarioNovo.Uf = textUf.Text;
             locatarioNovo.Profession = textProfession.Text;
-            locatarioNovo.Income = (double)(string.IsNullOrEmpty(textIncome.Text) ? 0 : Convert.ToDecimal(textIncome.Text));
+            locatarioNovo.Income = (string.IsNullOrEmpty(textIncome.Text) ? 0 : Convert.ToDecimal(textIncome.Text));
             locatarioNovo.WorkAddress = textWorkAdress.Text;
             locatarioNovo.PhoneWork = maskedPhoneWork.Text;
             locatarioNovo.Phone1 = maskedPhone1.Text;

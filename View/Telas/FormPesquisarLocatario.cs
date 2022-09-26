@@ -1,7 +1,4 @@
 ﻿using Domain.Services;
-using Infrastructure.Entities;
-using System.Drawing.Design;
-using System.Windows.Forms;
 
 namespace View.Telas
 {
@@ -22,6 +19,10 @@ namespace View.Telas
         public void CustomizaDGV()
         {
             dataGridView1.ReadOnly = true;
+            dataGridView1.Columns["BirthDate"].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dataGridView1.Columns["BirthDate"].Width = 150;
+            dataGridView1.Columns["Rg"].Visible = false;
+            dataGridView1.Columns["Sex"].Visible = false;
             dataGridView1.Columns["Conjuge"].Visible = false;
             dataGridView1.Columns["Id"].Visible = false;
             dataGridView1.Columns["DispatchingAgency"].Visible = false;
@@ -58,7 +59,7 @@ namespace View.Telas
             dataGridView1.DataSource = _locatarioServices.ListarLocatarioPorNome(textPesquisar.Text);
         }
 
-        //EVENTO DO BOTOES DE VISUALIZAR E EDITAR
+        //EVENTO DOS BOTOES DE VISUALIZAR E EDITAR
         //FALSE = VISUALIZAR
         //TRUE = EDITAR
         private void buttonVisualizar_Click(object sender, EventArgs e)
@@ -70,8 +71,8 @@ namespace View.Telas
         private void buttonEditar_Click(object sender, EventArgs e)
         {
             int idLocatario = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Id"].Value);
-            FormEditarLocatario formEdiLocatario = new FormEditarLocatario(idLocatario, true);
-            formEdiLocatario.Show();
+            FormEditarLocatario formEditarLocatario = new FormEditarLocatario(idLocatario, true);
+            formEditarLocatario.Show();
         }
 
         //EVENTO DO BOTAO DE EXCLUIR
@@ -91,6 +92,16 @@ namespace View.Telas
                 {
                     MessageBox.Show("Erro ao Excluir o Locatário", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+
+        //EVENTO DO BOTAO DE VOLTAR
+        private void buttonVoltarForm1_Click(object sender, EventArgs e)
+        {
+            DialogResult resposta = MessageBox.Show("Deseja Voltar ao Menu Principal ?", "Voltar ao Menu Principal", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (resposta == DialogResult.Yes)
+            {
+                this.Close();
             }
         }
     }

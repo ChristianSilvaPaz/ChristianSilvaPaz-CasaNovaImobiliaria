@@ -1,6 +1,6 @@
 ﻿namespace Domain.Exceptions
 {
-    public class DomainExceptions : ApplicationException
+    public class DomainExceptions : Exception
     {
         public DomainExceptions(string message) : base(message) { }
     }

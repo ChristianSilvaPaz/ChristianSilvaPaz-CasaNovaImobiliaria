@@ -159,7 +159,7 @@ namespace Infrastructure.Repositorys
                             locatario.Naturalness = reader["naturalness"].ToString();
                             locatario.Uf = reader["uf"].ToString();
                             locatario.Profession = reader["profession"].ToString();
-                            locatario.Income = Convert.ToDouble(reader["income"]);
+                            locatario.Income = Convert.ToDecimal(reader["income"]);
                             locatario.WorkAddress = reader["workaddress"].ToString();
                             locatario.PhoneWork = reader["phonework"].ToString();
                             locatario.Phone1 = reader["phone1"].ToString();
@@ -202,7 +202,7 @@ namespace Infrastructure.Repositorys
                             string naturalness = reader["naturalness"].ToString();
                             string uf = reader["uf"].ToString();
                             string profession = reader["profession"].ToString();
-                            double income = Convert.ToDouble(reader["income"]);
+                            decimal income = Convert.ToDecimal(reader["income"]);
                             string workAddress = reader["workaddress"].ToString();
                             string phoneWork = reader["phonework"].ToString();
                             string phone1 = reader["phone1"].ToString();
@@ -269,7 +269,7 @@ namespace Infrastructure.Repositorys
                             string naturalness = reader["naturalness"].ToString();
                             string uf = reader["uf"].ToString();
                             string profession = reader["profession"].ToString();
-                            double income = Convert.ToDouble(reader["income"]);
+                            decimal income = Convert.ToDecimal(reader["income"]);
                             string workAddress = reader["workaddress"].ToString();
                             string phoneWork = reader["phonework"].ToString();
                             string phone1 = reader["phone1"].ToString();

@@ -12,6 +12,21 @@ namespace Domain.Services
             _conjugeDAO = new ConjugeDAO();
         }
 
+        public void CadastrarConjuge(Conjuge conjuge)
+        {
+            _conjugeDAO.CadastrarConjuge(conjuge);
+        }
+
+        public void EditarConjuge(Conjuge conjuge)
+        {
+            _conjugeDAO.EditarConjuge(conjuge);
+        }
+
+        public void ExcluirConjuge(int idConjuge)
+        {
+            _conjugeDAO.ExcluirConjuge(idConjuge);
+        }
+
         public Conjuge ListarConjugeLocatarioPorId(int idLocatario)
         {
             return _conjugeDAO.ListarConjugeLocatarioPorId(idLocatario);
@@ -22,19 +37,10 @@ namespace Domain.Services
             return _conjugeDAO.ListarConjugeFiadorPorId(idFiador);
         }        
 
-        public void EditarConjuge(Conjuge conjuge)
-        {
-            _conjugeDAO.EditarConjuge(conjuge);
-        }
+        
 
-        public void CadastrarConjuge(Conjuge conjuge)
-        {
-            _conjugeDAO.CadastrarConjuge(conjuge);
-        }
+        
 
-        public void ExcluirConjuge(int idConjuge)
-        {
-            _conjugeDAO.ExcluirConjuge(idConjuge);
-        }
+       
     }
 }

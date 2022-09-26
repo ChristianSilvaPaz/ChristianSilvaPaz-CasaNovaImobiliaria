@@ -45,7 +45,14 @@ namespace Infrastructure.Repositorys
                         cmdAdd.Parameters.AddWithValue("phone2", fiador.Phone2);
                         cmdAdd.Parameters.AddWithValue("email", fiador.Email);
                         cmdAdd.Parameters.AddWithValue("casado", fiador.Casado);
-                        cmdAdd.ExecuteNonQuery();
+                        try
+                        {
+                            cmdAdd.ExecuteNonQuery();
+                        }
+                        catch (Exception e)
+                        {
+                            throw e;
+                        }
                     }
 
                     //OBTEM O ID DO FIADOR CADASTRADO

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditarLocatario));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageLocatario = new System.Windows.Forms.TabPage();
             this.buttonEditarLocatario = new System.Windows.Forms.Button();
@@ -138,6 +139,7 @@
             this.label64 = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
             this.tabPageConjugeF1 = new System.Windows.Forms.TabPage();
+            this.buttonCadastrarConjugeF1 = new System.Windows.Forms.Button();
             this.buttonEditarConjugeF1 = new System.Windows.Forms.Button();
             this.textEmail3 = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
@@ -201,6 +203,7 @@
             this.label76 = new System.Windows.Forms.Label();
             this.label77 = new System.Windows.Forms.Label();
             this.tabPageConjugeF2 = new System.Windows.Forms.TabPage();
+            this.buttonCadastrarConjugeF2 = new System.Windows.Forms.Button();
             this.buttonEditarConjugeF2 = new System.Windows.Forms.Button();
             this.textEmail5 = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
@@ -229,8 +232,7 @@
             this.maskedBirthDate5 = new System.Windows.Forms.MaskedTextBox();
             this.label52 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
-            this.buttonCadastrarConjugeF1 = new System.Windows.Forms.Button();
-            this.buttonCadastrarConjugeF2 = new System.Windows.Forms.Button();
+            this.buttonVoltarForm1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPageLocatario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericQtdAnimals)).BeginInit();
@@ -258,10 +260,11 @@
             this.tabControl1.Controls.Add(this.tabPageConjugeF1);
             this.tabControl1.Controls.Add(this.tabPageFiador2);
             this.tabControl1.Controls.Add(this.tabPageConjugeF2);
+            this.tabControl1.Font = new System.Drawing.Font("Yu Gothic UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tabControl1.Location = new System.Drawing.Point(1, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(647, 746);
+            this.tabControl1.Size = new System.Drawing.Size(767, 696);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPageLocatario
@@ -303,22 +306,29 @@
             this.tabPageLocatario.Controls.Add(this.maskedBirthDate);
             this.tabPageLocatario.Controls.Add(this.label3);
             this.tabPageLocatario.Controls.Add(this.label2);
-            this.tabPageLocatario.Location = new System.Drawing.Point(4, 24);
+            this.tabPageLocatario.Location = new System.Drawing.Point(4, 29);
             this.tabPageLocatario.Name = "tabPageLocatario";
             this.tabPageLocatario.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageLocatario.Size = new System.Drawing.Size(639, 718);
+            this.tabPageLocatario.Size = new System.Drawing.Size(759, 663);
             this.tabPageLocatario.TabIndex = 0;
             this.tabPageLocatario.Text = "Locatário";
             this.tabPageLocatario.UseVisualStyleBackColor = true;
             // 
             // buttonEditarLocatario
             // 
-            this.buttonEditarLocatario.Location = new System.Drawing.Point(551, 622);
+            this.buttonEditarLocatario.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.buttonEditarLocatario.FlatAppearance.BorderSize = 0;
+            this.buttonEditarLocatario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEditarLocatario.Font = new System.Drawing.Font("Yu Gothic UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonEditarLocatario.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonEditarLocatario.Image = ((System.Drawing.Image)(resources.GetObject("buttonEditarLocatario.Image")));
+            this.buttonEditarLocatario.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonEditarLocatario.Location = new System.Drawing.Point(544, 622);
             this.buttonEditarLocatario.Name = "buttonEditarLocatario";
-            this.buttonEditarLocatario.Size = new System.Drawing.Size(75, 23);
+            this.buttonEditarLocatario.Size = new System.Drawing.Size(128, 31);
             this.buttonEditarLocatario.TabIndex = 49;
             this.buttonEditarLocatario.Text = "Editar";
-            this.buttonEditarLocatario.UseVisualStyleBackColor = true;
+            this.buttonEditarLocatario.UseVisualStyleBackColor = false;
             this.buttonEditarLocatario.Click += new System.EventHandler(this.buttonEditarLocatario_Click);
             // 
             // numericQtdAnimals
@@ -326,14 +336,14 @@
             this.numericQtdAnimals.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.numericQtdAnimals.Location = new System.Drawing.Point(6, 443);
             this.numericQtdAnimals.Name = "numericQtdAnimals";
-            this.numericQtdAnimals.Size = new System.Drawing.Size(135, 29);
+            this.numericQtdAnimals.Size = new System.Drawing.Size(169, 29);
             this.numericQtdAnimals.TabIndex = 17;
             this.numericQtdAnimals.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // maskedPhone2
             // 
             this.maskedPhone2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.maskedPhone2.Location = new System.Drawing.Point(178, 382);
+            this.maskedPhone2.Location = new System.Drawing.Point(224, 382);
             this.maskedPhone2.Mask = "(00)00000-0000";
             this.maskedPhone2.Name = "maskedPhone2";
             this.maskedPhone2.Size = new System.Drawing.Size(200, 29);
@@ -347,7 +357,7 @@
             this.maskedPhone1.Location = new System.Drawing.Point(6, 382);
             this.maskedPhone1.Mask = "(00)00000-0000";
             this.maskedPhone1.Name = "maskedPhone1";
-            this.maskedPhone1.Size = new System.Drawing.Size(135, 29);
+            this.maskedPhone1.Size = new System.Drawing.Size(169, 29);
             this.maskedPhone1.TabIndex = 15;
             this.maskedPhone1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.maskedPhone1.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -355,7 +365,7 @@
             // maskedPhoneWork
             // 
             this.maskedPhoneWork.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.maskedPhoneWork.Location = new System.Drawing.Point(419, 382);
+            this.maskedPhoneWork.Location = new System.Drawing.Point(465, 382);
             this.maskedPhoneWork.Mask = "(00)00000-0000";
             this.maskedPhoneWork.Name = "maskedPhoneWork";
             this.maskedPhoneWork.Size = new System.Drawing.Size(207, 29);
@@ -369,7 +379,7 @@
             this.textComments.Location = new System.Drawing.Point(6, 503);
             this.textComments.Multiline = true;
             this.textComments.Name = "textComments";
-            this.textComments.Size = new System.Drawing.Size(620, 113);
+            this.textComments.Size = new System.Drawing.Size(666, 113);
             this.textComments.TabIndex = 19;
             // 
             // label7
@@ -385,7 +395,7 @@
             // textEmail
             // 
             this.textEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textEmail.Location = new System.Drawing.Point(178, 443);
+            this.textEmail.Location = new System.Drawing.Point(224, 443);
             this.textEmail.Name = "textEmail";
             this.textEmail.Size = new System.Drawing.Size(448, 29);
             this.textEmail.TabIndex = 18;
@@ -394,7 +404,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label19.Location = new System.Drawing.Point(178, 425);
+            this.label19.Location = new System.Drawing.Point(224, 425);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(47, 15);
             this.label19.TabIndex = 47;
@@ -414,7 +424,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label17.Location = new System.Drawing.Point(419, 364);
+            this.label17.Location = new System.Drawing.Point(465, 364);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(149, 15);
             this.label17.TabIndex = 44;
@@ -424,7 +434,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(178, 364);
+            this.label16.Location = new System.Drawing.Point(224, 364);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(143, 15);
             this.label16.TabIndex = 43;
@@ -443,7 +453,7 @@
             // textWorkAdress
             // 
             this.textWorkAdress.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textWorkAdress.Location = new System.Drawing.Point(419, 321);
+            this.textWorkAdress.Location = new System.Drawing.Point(465, 321);
             this.textWorkAdress.Name = "textWorkAdress";
             this.textWorkAdress.Size = new System.Drawing.Size(207, 29);
             this.textWorkAdress.TabIndex = 13;
@@ -451,7 +461,7 @@
             // textIncome
             // 
             this.textIncome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textIncome.Location = new System.Drawing.Point(178, 321);
+            this.textIncome.Location = new System.Drawing.Point(224, 321);
             this.textIncome.Name = "textIncome";
             this.textIncome.Size = new System.Drawing.Size(200, 29);
             this.textIncome.TabIndex = 12;
@@ -463,7 +473,7 @@
             this.textProfession.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textProfession.Location = new System.Drawing.Point(6, 321);
             this.textProfession.Name = "textProfession";
-            this.textProfession.Size = new System.Drawing.Size(135, 29);
+            this.textProfession.Size = new System.Drawing.Size(169, 29);
             this.textProfession.TabIndex = 11;
             this.textProfession.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -471,7 +481,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(419, 303);
+            this.label14.Location = new System.Drawing.Point(465, 303);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(154, 15);
             this.label14.TabIndex = 37;
@@ -481,7 +491,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(178, 303);
+            this.label13.Location = new System.Drawing.Point(224, 303);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(47, 15);
             this.label13.TabIndex = 35;
@@ -504,14 +514,14 @@
             this.textName.ForeColor = System.Drawing.SystemColors.WindowText;
             this.textName.Location = new System.Drawing.Point(6, 21);
             this.textName.Name = "textName";
-            this.textName.Size = new System.Drawing.Size(620, 29);
+            this.textName.Size = new System.Drawing.Size(666, 29);
             this.textName.TabIndex = 1;
             this.textName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textName_KeyPress);
             // 
             // textUf
             // 
             this.textUf.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textUf.Location = new System.Drawing.Point(419, 271);
+            this.textUf.Location = new System.Drawing.Point(465, 271);
             this.textUf.Name = "textUf";
             this.textUf.Size = new System.Drawing.Size(207, 29);
             this.textUf.TabIndex = 10;
@@ -521,7 +531,7 @@
             // textNaturalness
             // 
             this.textNaturalness.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textNaturalness.Location = new System.Drawing.Point(178, 271);
+            this.textNaturalness.Location = new System.Drawing.Point(224, 271);
             this.textNaturalness.Name = "textNaturalness";
             this.textNaturalness.Size = new System.Drawing.Size(200, 29);
             this.textNaturalness.TabIndex = 9;
@@ -532,7 +542,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(419, 253);
+            this.label11.Location = new System.Drawing.Point(465, 253);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(22, 15);
             this.label11.TabIndex = 30;
@@ -542,7 +552,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(178, 253);
+            this.label10.Location = new System.Drawing.Point(224, 253);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(97, 15);
             this.label10.TabIndex = 28;
@@ -553,15 +563,14 @@
             this.textNacionality.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textNacionality.Location = new System.Drawing.Point(6, 271);
             this.textNacionality.Name = "textNacionality";
-            this.textNacionality.Size = new System.Drawing.Size(135, 29);
+            this.textNacionality.Size = new System.Drawing.Size(169, 29);
             this.textNacionality.TabIndex = 8;
             this.textNacionality.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textNacionality.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textNacionality_KeyPress);
             // 
             // textDispatchingAgency
             // 
             this.textDispatchingAgency.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textDispatchingAgency.Location = new System.Drawing.Point(178, 212);
+            this.textDispatchingAgency.Location = new System.Drawing.Point(224, 212);
             this.textDispatchingAgency.Name = "textDispatchingAgency";
             this.textDispatchingAgency.Size = new System.Drawing.Size(200, 29);
             this.textDispatchingAgency.TabIndex = 7;
@@ -573,10 +582,9 @@
             this.textRg.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textRg.Location = new System.Drawing.Point(6, 212);
             this.textRg.Name = "textRg";
-            this.textRg.Size = new System.Drawing.Size(135, 29);
+            this.textRg.Size = new System.Drawing.Size(169, 29);
             this.textRg.TabIndex = 6;
             this.textRg.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textRg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textRg_KeyPress);
             // 
             // label9
             // 
@@ -592,7 +600,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(178, 194);
+            this.label6.Location = new System.Drawing.Point(224, 194);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(119, 15);
             this.label6.TabIndex = 25;
@@ -614,7 +622,7 @@
             this.maskedCpf.Location = new System.Drawing.Point(6, 148);
             this.maskedCpf.Mask = "000,000,000-00";
             this.maskedCpf.Name = "maskedCpf";
-            this.maskedCpf.Size = new System.Drawing.Size(135, 29);
+            this.maskedCpf.Size = new System.Drawing.Size(169, 29);
             this.maskedCpf.TabIndex = 5;
             this.maskedCpf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.maskedCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -624,7 +632,7 @@
             this.groupSex.Controls.Add(this.radioFeminine);
             this.groupSex.Controls.Add(this.radioMasculine);
             this.groupSex.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupSex.Location = new System.Drawing.Point(419, 58);
+            this.groupSex.Location = new System.Drawing.Point(465, 58);
             this.groupSex.Name = "groupSex";
             this.groupSex.Size = new System.Drawing.Size(207, 119);
             this.groupSex.TabIndex = 4;
@@ -661,7 +669,7 @@
             this.groupMaritalStatus.Controls.Add(this.radioMarried);
             this.groupMaritalStatus.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupMaritalStatus.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.groupMaritalStatus.Location = new System.Drawing.Point(178, 58);
+            this.groupMaritalStatus.Location = new System.Drawing.Point(224, 58);
             this.groupMaritalStatus.Name = "groupMaritalStatus";
             this.groupMaritalStatus.Size = new System.Drawing.Size(200, 119);
             this.groupMaritalStatus.TabIndex = 3;
@@ -724,7 +732,7 @@
             this.maskedBirthDate.Location = new System.Drawing.Point(6, 77);
             this.maskedBirthDate.Mask = "00/00/0000";
             this.maskedBirthDate.Name = "maskedBirthDate";
-            this.maskedBirthDate.Size = new System.Drawing.Size(135, 29);
+            this.maskedBirthDate.Size = new System.Drawing.Size(169, 29);
             this.maskedBirthDate.TabIndex = 2;
             this.maskedBirthDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.maskedBirthDate.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -779,47 +787,61 @@
             this.tabPageConjuge.Controls.Add(this.maskedBirthDate1);
             this.tabPageConjuge.Controls.Add(this.label24);
             this.tabPageConjuge.Controls.Add(this.label25);
-            this.tabPageConjuge.Location = new System.Drawing.Point(4, 24);
+            this.tabPageConjuge.Location = new System.Drawing.Point(4, 29);
             this.tabPageConjuge.Name = "tabPageConjuge";
             this.tabPageConjuge.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageConjuge.Size = new System.Drawing.Size(639, 718);
+            this.tabPageConjuge.Size = new System.Drawing.Size(759, 663);
             this.tabPageConjuge.TabIndex = 1;
             this.tabPageConjuge.Text = "Cônjuge";
             this.tabPageConjuge.UseVisualStyleBackColor = true;
             // 
             // buttonCadastrarConjuge
             // 
-            this.buttonCadastrarConjuge.Location = new System.Drawing.Point(8, 412);
+            this.buttonCadastrarConjuge.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.buttonCadastrarConjuge.FlatAppearance.BorderSize = 0;
+            this.buttonCadastrarConjuge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCadastrarConjuge.Font = new System.Drawing.Font("Yu Gothic UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonCadastrarConjuge.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonCadastrarConjuge.Image = ((System.Drawing.Image)(resources.GetObject("buttonCadastrarConjuge.Image")));
+            this.buttonCadastrarConjuge.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCadastrarConjuge.Location = new System.Drawing.Point(6, 418);
             this.buttonCadastrarConjuge.Name = "buttonCadastrarConjuge";
-            this.buttonCadastrarConjuge.Size = new System.Drawing.Size(75, 23);
+            this.buttonCadastrarConjuge.Size = new System.Drawing.Size(128, 30);
             this.buttonCadastrarConjuge.TabIndex = 58;
             this.buttonCadastrarConjuge.Text = "Cadastrar";
-            this.buttonCadastrarConjuge.UseVisualStyleBackColor = true;
+            this.buttonCadastrarConjuge.UseVisualStyleBackColor = false;
             this.buttonCadastrarConjuge.Click += new System.EventHandler(this.buttonCadastrarConjuge_Click);
             // 
             // buttonEditarConjuge
             // 
-            this.buttonEditarConjuge.Location = new System.Drawing.Point(544, 406);
+            this.buttonEditarConjuge.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.buttonEditarConjuge.FlatAppearance.BorderSize = 0;
+            this.buttonEditarConjuge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEditarConjuge.Font = new System.Drawing.Font("Yu Gothic UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonEditarConjuge.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonEditarConjuge.Image = ((System.Drawing.Image)(resources.GetObject("buttonEditarConjuge.Image")));
+            this.buttonEditarConjuge.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonEditarConjuge.Location = new System.Drawing.Point(557, 418);
             this.buttonEditarConjuge.Name = "buttonEditarConjuge";
-            this.buttonEditarConjuge.Size = new System.Drawing.Size(75, 23);
+            this.buttonEditarConjuge.Size = new System.Drawing.Size(128, 30);
             this.buttonEditarConjuge.TabIndex = 57;
             this.buttonEditarConjuge.Text = "Editar";
-            this.buttonEditarConjuge.UseVisualStyleBackColor = true;
+            this.buttonEditarConjuge.UseVisualStyleBackColor = false;
             this.buttonEditarConjuge.Click += new System.EventHandler(this.buttonEditarConjuge_Click);
             // 
             // textEmail1
             // 
             this.textEmail1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textEmail1.Location = new System.Drawing.Point(6, 371);
+            this.textEmail1.Location = new System.Drawing.Point(6, 383);
             this.textEmail1.Name = "textEmail1";
-            this.textEmail1.Size = new System.Drawing.Size(613, 29);
+            this.textEmail1.Size = new System.Drawing.Size(679, 29);
             this.textEmail1.TabIndex = 13;
             // 
             // label29
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label29.Location = new System.Drawing.Point(6, 353);
+            this.label29.Location = new System.Drawing.Point(6, 365);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(47, 15);
             this.label29.TabIndex = 56;
@@ -828,10 +850,10 @@
             // maskedTextBox2
             // 
             this.maskedTextBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.maskedTextBox2.Location = new System.Drawing.Point(419, 321);
+            this.maskedTextBox2.Location = new System.Drawing.Point(478, 329);
             this.maskedTextBox2.Mask = "(00)00000-0000";
             this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(200, 29);
+            this.maskedTextBox2.Size = new System.Drawing.Size(207, 29);
             this.maskedTextBox2.TabIndex = 12;
             this.maskedTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.maskedTextBox2.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -839,7 +861,7 @@
             // maskedTextBox1
             // 
             this.maskedTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.maskedTextBox1.Location = new System.Drawing.Point(178, 321);
+            this.maskedTextBox1.Location = new System.Drawing.Point(237, 329);
             this.maskedTextBox1.Mask = "(00)00000-0000";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(200, 29);
@@ -851,7 +873,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label27.Location = new System.Drawing.Point(419, 303);
+            this.label27.Location = new System.Drawing.Point(478, 311);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(143, 15);
             this.label27.TabIndex = 54;
@@ -861,7 +883,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label28.Location = new System.Drawing.Point(178, 303);
+            this.label28.Location = new System.Drawing.Point(237, 311);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(143, 15);
             this.label28.TabIndex = 53;
@@ -870,9 +892,9 @@
             // textProfession1
             // 
             this.textProfession1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textProfession1.Location = new System.Drawing.Point(6, 321);
+            this.textProfession1.Location = new System.Drawing.Point(6, 329);
             this.textProfession1.Name = "textProfession1";
-            this.textProfession1.Size = new System.Drawing.Size(135, 29);
+            this.textProfession1.Size = new System.Drawing.Size(181, 29);
             this.textProfession1.TabIndex = 10;
             this.textProfession1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -880,7 +902,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label26.Location = new System.Drawing.Point(3, 303);
+            this.label26.Location = new System.Drawing.Point(3, 311);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(72, 15);
             this.label26.TabIndex = 50;
@@ -893,14 +915,14 @@
             this.textName1.ForeColor = System.Drawing.SystemColors.WindowText;
             this.textName1.Location = new System.Drawing.Point(6, 21);
             this.textName1.Name = "textName1";
-            this.textName1.Size = new System.Drawing.Size(620, 29);
+            this.textName1.Size = new System.Drawing.Size(679, 29);
             this.textName1.TabIndex = 1;
             this.textName1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textName1_KeyPress);
             // 
             // textUf1
             // 
             this.textUf1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textUf1.Location = new System.Drawing.Point(419, 271);
+            this.textUf1.Location = new System.Drawing.Point(478, 271);
             this.textUf1.Name = "textUf1";
             this.textUf1.Size = new System.Drawing.Size(207, 29);
             this.textUf1.TabIndex = 9;
@@ -910,7 +932,7 @@
             // textNaturalness1
             // 
             this.textNaturalness1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textNaturalness1.Location = new System.Drawing.Point(178, 271);
+            this.textNaturalness1.Location = new System.Drawing.Point(237, 271);
             this.textNaturalness1.Name = "textNaturalness1";
             this.textNaturalness1.Size = new System.Drawing.Size(200, 29);
             this.textNaturalness1.TabIndex = 8;
@@ -921,7 +943,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(419, 253);
+            this.label1.Location = new System.Drawing.Point(478, 253);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(22, 15);
             this.label1.TabIndex = 48;
@@ -931,7 +953,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(178, 253);
+            this.label8.Location = new System.Drawing.Point(237, 253);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(97, 15);
             this.label8.TabIndex = 46;
@@ -942,7 +964,7 @@
             this.textNacionality1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textNacionality1.Location = new System.Drawing.Point(6, 271);
             this.textNacionality1.Name = "textNacionality1";
-            this.textNacionality1.Size = new System.Drawing.Size(135, 29);
+            this.textNacionality1.Size = new System.Drawing.Size(181, 29);
             this.textNacionality1.TabIndex = 7;
             this.textNacionality1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textNacionality1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textNacionality1_KeyPress);
@@ -950,7 +972,7 @@
             // textDispatchingAgency1
             // 
             this.textDispatchingAgency1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textDispatchingAgency1.Location = new System.Drawing.Point(178, 212);
+            this.textDispatchingAgency1.Location = new System.Drawing.Point(237, 212);
             this.textDispatchingAgency1.Name = "textDispatchingAgency1";
             this.textDispatchingAgency1.Size = new System.Drawing.Size(200, 29);
             this.textDispatchingAgency1.TabIndex = 6;
@@ -962,7 +984,7 @@
             this.textRg1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textRg1.Location = new System.Drawing.Point(6, 212);
             this.textRg1.Name = "textRg1";
-            this.textRg1.Size = new System.Drawing.Size(135, 29);
+            this.textRg1.Size = new System.Drawing.Size(181, 29);
             this.textRg1.TabIndex = 5;
             this.textRg1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textRg1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textRg1_KeyPress);
@@ -981,7 +1003,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label21.Location = new System.Drawing.Point(178, 194);
+            this.label21.Location = new System.Drawing.Point(237, 194);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(119, 15);
             this.label21.TabIndex = 43;
@@ -1003,7 +1025,7 @@
             this.maskedCpf1.Location = new System.Drawing.Point(6, 148);
             this.maskedCpf1.Mask = "000,000,000-00";
             this.maskedCpf1.Name = "maskedCpf1";
-            this.maskedCpf1.Size = new System.Drawing.Size(135, 29);
+            this.maskedCpf1.Size = new System.Drawing.Size(181, 29);
             this.maskedCpf1.TabIndex = 4;
             this.maskedCpf1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.maskedCpf1.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -1013,7 +1035,7 @@
             this.groupSex1.Controls.Add(this.radioButton1);
             this.groupSex1.Controls.Add(this.radioButton2);
             this.groupSex1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupSex1.Location = new System.Drawing.Point(419, 58);
+            this.groupSex1.Location = new System.Drawing.Point(478, 58);
             this.groupSex1.Name = "groupSex1";
             this.groupSex1.Size = new System.Drawing.Size(207, 119);
             this.groupSex1.TabIndex = 3;
@@ -1058,7 +1080,7 @@
             this.maskedBirthDate1.Location = new System.Drawing.Point(6, 77);
             this.maskedBirthDate1.Mask = "00/00/0000";
             this.maskedBirthDate1.Name = "maskedBirthDate1";
-            this.maskedBirthDate1.Size = new System.Drawing.Size(135, 29);
+            this.maskedBirthDate1.Size = new System.Drawing.Size(181, 29);
             this.maskedBirthDate1.TabIndex = 2;
             this.maskedBirthDate1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.maskedBirthDate1.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -1113,22 +1135,29 @@
             this.tabPageFiador1.Controls.Add(this.maskedBirthDate2);
             this.tabPageFiador1.Controls.Add(this.label64);
             this.tabPageFiador1.Controls.Add(this.label65);
-            this.tabPageFiador1.Location = new System.Drawing.Point(4, 24);
+            this.tabPageFiador1.Location = new System.Drawing.Point(4, 29);
             this.tabPageFiador1.Name = "tabPageFiador1";
             this.tabPageFiador1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageFiador1.Size = new System.Drawing.Size(639, 718);
+            this.tabPageFiador1.Size = new System.Drawing.Size(759, 663);
             this.tabPageFiador1.TabIndex = 2;
             this.tabPageFiador1.Text = "Fiador 1";
             this.tabPageFiador1.UseVisualStyleBackColor = true;
             // 
             // buttonEditarFiador1
             // 
-            this.buttonEditarFiador1.Location = new System.Drawing.Point(544, 416);
+            this.buttonEditarFiador1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.buttonEditarFiador1.FlatAppearance.BorderSize = 0;
+            this.buttonEditarFiador1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEditarFiador1.Font = new System.Drawing.Font("Yu Gothic UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonEditarFiador1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonEditarFiador1.Image = ((System.Drawing.Image)(resources.GetObject("buttonEditarFiador1.Image")));
+            this.buttonEditarFiador1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonEditarFiador1.Location = new System.Drawing.Point(547, 413);
             this.buttonEditarFiador1.Name = "buttonEditarFiador1";
-            this.buttonEditarFiador1.Size = new System.Drawing.Size(75, 23);
+            this.buttonEditarFiador1.Size = new System.Drawing.Size(128, 30);
             this.buttonEditarFiador1.TabIndex = 83;
             this.buttonEditarFiador1.Text = "Editar";
-            this.buttonEditarFiador1.UseVisualStyleBackColor = true;
+            this.buttonEditarFiador1.UseVisualStyleBackColor = false;
             this.buttonEditarFiador1.Click += new System.EventHandler(this.buttonEditarFiador1_Click);
             // 
             // groupMaritalStatus2
@@ -1139,7 +1168,7 @@
             this.groupMaritalStatus2.Controls.Add(this.radioButton12);
             this.groupMaritalStatus2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupMaritalStatus2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.groupMaritalStatus2.Location = new System.Drawing.Point(178, 66);
+            this.groupMaritalStatus2.Location = new System.Drawing.Point(227, 59);
             this.groupMaritalStatus2.Name = "groupMaritalStatus2";
             this.groupMaritalStatus2.Size = new System.Drawing.Size(200, 119);
             this.groupMaritalStatus2.TabIndex = 3;
@@ -1189,16 +1218,16 @@
             // textEmail2
             // 
             this.textEmail2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textEmail2.Location = new System.Drawing.Point(6, 381);
+            this.textEmail2.Location = new System.Drawing.Point(6, 378);
             this.textEmail2.Name = "textEmail2";
-            this.textEmail2.Size = new System.Drawing.Size(613, 29);
+            this.textEmail2.Size = new System.Drawing.Size(669, 29);
             this.textEmail2.TabIndex = 14;
             // 
             // label54
             // 
             this.label54.AutoSize = true;
             this.label54.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label54.Location = new System.Drawing.Point(6, 363);
+            this.label54.Location = new System.Drawing.Point(6, 360);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(47, 15);
             this.label54.TabIndex = 81;
@@ -1207,10 +1236,10 @@
             // maskedTextBox4
             // 
             this.maskedTextBox4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.maskedTextBox4.Location = new System.Drawing.Point(419, 331);
+            this.maskedTextBox4.Location = new System.Drawing.Point(468, 328);
             this.maskedTextBox4.Mask = "(00)00000-0000";
             this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(200, 29);
+            this.maskedTextBox4.Size = new System.Drawing.Size(207, 29);
             this.maskedTextBox4.TabIndex = 13;
             this.maskedTextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.maskedTextBox4.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -1218,7 +1247,7 @@
             // maskedTextBox3
             // 
             this.maskedTextBox3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.maskedTextBox3.Location = new System.Drawing.Point(178, 331);
+            this.maskedTextBox3.Location = new System.Drawing.Point(227, 328);
             this.maskedTextBox3.Mask = "(00)00000-0000";
             this.maskedTextBox3.Name = "maskedTextBox3";
             this.maskedTextBox3.Size = new System.Drawing.Size(200, 29);
@@ -1230,7 +1259,7 @@
             // 
             this.label55.AutoSize = true;
             this.label55.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label55.Location = new System.Drawing.Point(419, 313);
+            this.label55.Location = new System.Drawing.Point(468, 310);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(143, 15);
             this.label55.TabIndex = 79;
@@ -1240,7 +1269,7 @@
             // 
             this.label56.AutoSize = true;
             this.label56.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label56.Location = new System.Drawing.Point(178, 313);
+            this.label56.Location = new System.Drawing.Point(227, 310);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(143, 15);
             this.label56.TabIndex = 78;
@@ -1249,9 +1278,9 @@
             // textProfession2
             // 
             this.textProfession2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textProfession2.Location = new System.Drawing.Point(6, 331);
+            this.textProfession2.Location = new System.Drawing.Point(6, 328);
             this.textProfession2.Name = "textProfession2";
-            this.textProfession2.Size = new System.Drawing.Size(135, 29);
+            this.textProfession2.Size = new System.Drawing.Size(172, 29);
             this.textProfession2.TabIndex = 11;
             this.textProfession2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1259,7 +1288,7 @@
             // 
             this.label57.AutoSize = true;
             this.label57.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label57.Location = new System.Drawing.Point(3, 313);
+            this.label57.Location = new System.Drawing.Point(3, 310);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(72, 15);
             this.label57.TabIndex = 75;
@@ -1270,16 +1299,16 @@
             this.textName2.BackColor = System.Drawing.SystemColors.Window;
             this.textName2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textName2.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textName2.Location = new System.Drawing.Point(6, 31);
+            this.textName2.Location = new System.Drawing.Point(6, 24);
             this.textName2.Name = "textName2";
-            this.textName2.Size = new System.Drawing.Size(620, 29);
+            this.textName2.Size = new System.Drawing.Size(669, 29);
             this.textName2.TabIndex = 1;
             this.textName2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textName2_KeyPress);
             // 
             // textUf2
             // 
             this.textUf2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textUf2.Location = new System.Drawing.Point(419, 281);
+            this.textUf2.Location = new System.Drawing.Point(468, 274);
             this.textUf2.Name = "textUf2";
             this.textUf2.Size = new System.Drawing.Size(207, 29);
             this.textUf2.TabIndex = 10;
@@ -1289,7 +1318,7 @@
             // textNaturalness2
             // 
             this.textNaturalness2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textNaturalness2.Location = new System.Drawing.Point(178, 281);
+            this.textNaturalness2.Location = new System.Drawing.Point(227, 274);
             this.textNaturalness2.Name = "textNaturalness2";
             this.textNaturalness2.Size = new System.Drawing.Size(200, 29);
             this.textNaturalness2.TabIndex = 9;
@@ -1300,7 +1329,7 @@
             // 
             this.label58.AutoSize = true;
             this.label58.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label58.Location = new System.Drawing.Point(419, 263);
+            this.label58.Location = new System.Drawing.Point(468, 256);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(22, 15);
             this.label58.TabIndex = 73;
@@ -1310,7 +1339,7 @@
             // 
             this.label59.AutoSize = true;
             this.label59.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label59.Location = new System.Drawing.Point(178, 263);
+            this.label59.Location = new System.Drawing.Point(227, 256);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(97, 15);
             this.label59.TabIndex = 71;
@@ -1319,9 +1348,9 @@
             // textNacionality2
             // 
             this.textNacionality2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textNacionality2.Location = new System.Drawing.Point(6, 281);
+            this.textNacionality2.Location = new System.Drawing.Point(6, 274);
             this.textNacionality2.Name = "textNacionality2";
-            this.textNacionality2.Size = new System.Drawing.Size(135, 29);
+            this.textNacionality2.Size = new System.Drawing.Size(172, 29);
             this.textNacionality2.TabIndex = 8;
             this.textNacionality2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textNacionality2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textNacionality2_KeyPress);
@@ -1329,7 +1358,7 @@
             // textDispatchingAgency2
             // 
             this.textDispatchingAgency2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textDispatchingAgency2.Location = new System.Drawing.Point(178, 222);
+            this.textDispatchingAgency2.Location = new System.Drawing.Point(227, 215);
             this.textDispatchingAgency2.Name = "textDispatchingAgency2";
             this.textDispatchingAgency2.Size = new System.Drawing.Size(200, 29);
             this.textDispatchingAgency2.TabIndex = 7;
@@ -1339,9 +1368,9 @@
             // textRg2
             // 
             this.textRg2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textRg2.Location = new System.Drawing.Point(6, 222);
+            this.textRg2.Location = new System.Drawing.Point(6, 215);
             this.textRg2.Name = "textRg2";
-            this.textRg2.Size = new System.Drawing.Size(135, 29);
+            this.textRg2.Size = new System.Drawing.Size(172, 29);
             this.textRg2.TabIndex = 6;
             this.textRg2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textRg2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textRg2_KeyPress);
@@ -1350,7 +1379,7 @@
             // 
             this.label60.AutoSize = true;
             this.label60.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label60.Location = new System.Drawing.Point(3, 263);
+            this.label60.Location = new System.Drawing.Point(3, 256);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(103, 15);
             this.label60.TabIndex = 69;
@@ -1360,7 +1389,7 @@
             // 
             this.label61.AutoSize = true;
             this.label61.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label61.Location = new System.Drawing.Point(178, 204);
+            this.label61.Location = new System.Drawing.Point(227, 197);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(119, 15);
             this.label61.TabIndex = 68;
@@ -1370,7 +1399,7 @@
             // 
             this.label62.AutoSize = true;
             this.label62.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label62.Location = new System.Drawing.Point(3, 204);
+            this.label62.Location = new System.Drawing.Point(3, 197);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(24, 15);
             this.label62.TabIndex = 66;
@@ -1379,10 +1408,10 @@
             // maskedCpf2
             // 
             this.maskedCpf2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.maskedCpf2.Location = new System.Drawing.Point(6, 158);
+            this.maskedCpf2.Location = new System.Drawing.Point(6, 151);
             this.maskedCpf2.Mask = "000,000,000-00";
             this.maskedCpf2.Name = "maskedCpf2";
-            this.maskedCpf2.Size = new System.Drawing.Size(135, 29);
+            this.maskedCpf2.Size = new System.Drawing.Size(172, 29);
             this.maskedCpf2.TabIndex = 5;
             this.maskedCpf2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.maskedCpf2.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -1392,7 +1421,7 @@
             this.groupSex2.Controls.Add(this.radioButton7);
             this.groupSex2.Controls.Add(this.radioButton8);
             this.groupSex2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupSex2.Location = new System.Drawing.Point(419, 68);
+            this.groupSex2.Location = new System.Drawing.Point(468, 61);
             this.groupSex2.Name = "groupSex2";
             this.groupSex2.Size = new System.Drawing.Size(207, 119);
             this.groupSex2.TabIndex = 4;
@@ -1425,7 +1454,7 @@
             // 
             this.label63.AutoSize = true;
             this.label63.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label63.Location = new System.Drawing.Point(3, 140);
+            this.label63.Location = new System.Drawing.Point(3, 133);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(27, 15);
             this.label63.TabIndex = 61;
@@ -1434,10 +1463,10 @@
             // maskedBirthDate2
             // 
             this.maskedBirthDate2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.maskedBirthDate2.Location = new System.Drawing.Point(6, 87);
+            this.maskedBirthDate2.Location = new System.Drawing.Point(6, 80);
             this.maskedBirthDate2.Mask = "00/00/0000";
             this.maskedBirthDate2.Name = "maskedBirthDate2";
-            this.maskedBirthDate2.Size = new System.Drawing.Size(135, 29);
+            this.maskedBirthDate2.Size = new System.Drawing.Size(172, 29);
             this.maskedBirthDate2.TabIndex = 2;
             this.maskedBirthDate2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.maskedBirthDate2.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -1447,7 +1476,7 @@
             // 
             this.label64.AutoSize = true;
             this.label64.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label64.Location = new System.Drawing.Point(3, 68);
+            this.label64.Location = new System.Drawing.Point(3, 61);
             this.label64.Name = "label64";
             this.label64.Size = new System.Drawing.Size(135, 15);
             this.label64.TabIndex = 60;
@@ -1457,7 +1486,7 @@
             // 
             this.label65.AutoSize = true;
             this.label65.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label65.Location = new System.Drawing.Point(3, 13);
+            this.label65.Location = new System.Drawing.Point(3, 6);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(42, 15);
             this.label65.TabIndex = 57;
@@ -1492,37 +1521,61 @@
             this.tabPageConjugeF1.Controls.Add(this.maskedBirthDate3);
             this.tabPageConjugeF1.Controls.Add(this.label40);
             this.tabPageConjugeF1.Controls.Add(this.label41);
-            this.tabPageConjugeF1.Location = new System.Drawing.Point(4, 24);
+            this.tabPageConjugeF1.Location = new System.Drawing.Point(4, 29);
             this.tabPageConjugeF1.Name = "tabPageConjugeF1";
             this.tabPageConjugeF1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageConjugeF1.Size = new System.Drawing.Size(639, 718);
+            this.tabPageConjugeF1.Size = new System.Drawing.Size(759, 663);
             this.tabPageConjugeF1.TabIndex = 3;
             this.tabPageConjugeF1.Text = "Cônjuge do Fiador 1";
             this.tabPageConjugeF1.UseVisualStyleBackColor = true;
             // 
+            // buttonCadastrarConjugeF1
+            // 
+            this.buttonCadastrarConjugeF1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.buttonCadastrarConjugeF1.FlatAppearance.BorderSize = 0;
+            this.buttonCadastrarConjugeF1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCadastrarConjugeF1.Font = new System.Drawing.Font("Yu Gothic UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonCadastrarConjugeF1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonCadastrarConjugeF1.Image = ((System.Drawing.Image)(resources.GetObject("buttonCadastrarConjugeF1.Image")));
+            this.buttonCadastrarConjugeF1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCadastrarConjugeF1.Location = new System.Drawing.Point(10, 413);
+            this.buttonCadastrarConjugeF1.Name = "buttonCadastrarConjugeF1";
+            this.buttonCadastrarConjugeF1.Size = new System.Drawing.Size(128, 30);
+            this.buttonCadastrarConjugeF1.TabIndex = 83;
+            this.buttonCadastrarConjugeF1.Text = "Cadastrar";
+            this.buttonCadastrarConjugeF1.UseVisualStyleBackColor = false;
+            this.buttonCadastrarConjugeF1.Click += new System.EventHandler(this.buttonCadastrarConjugeF1_Click);
+            // 
             // buttonEditarConjugeF1
             // 
-            this.buttonEditarConjugeF1.Location = new System.Drawing.Point(548, 406);
+            this.buttonEditarConjugeF1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.buttonEditarConjugeF1.FlatAppearance.BorderSize = 0;
+            this.buttonEditarConjugeF1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEditarConjugeF1.Font = new System.Drawing.Font("Yu Gothic UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonEditarConjugeF1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonEditarConjugeF1.Image = ((System.Drawing.Image)(resources.GetObject("buttonEditarConjugeF1.Image")));
+            this.buttonEditarConjugeF1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonEditarConjugeF1.Location = new System.Drawing.Point(544, 413);
             this.buttonEditarConjugeF1.Name = "buttonEditarConjugeF1";
-            this.buttonEditarConjugeF1.Size = new System.Drawing.Size(75, 23);
+            this.buttonEditarConjugeF1.Size = new System.Drawing.Size(128, 30);
             this.buttonEditarConjugeF1.TabIndex = 82;
             this.buttonEditarConjugeF1.Text = "Editar";
-            this.buttonEditarConjugeF1.UseVisualStyleBackColor = true;
+            this.buttonEditarConjugeF1.UseVisualStyleBackColor = false;
             this.buttonEditarConjugeF1.Click += new System.EventHandler(this.buttonEditarConjugeF1_Click);
             // 
             // textEmail3
             // 
             this.textEmail3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textEmail3.Location = new System.Drawing.Point(10, 371);
+            this.textEmail3.Location = new System.Drawing.Point(10, 378);
             this.textEmail3.Name = "textEmail3";
-            this.textEmail3.Size = new System.Drawing.Size(613, 29);
+            this.textEmail3.Size = new System.Drawing.Size(662, 29);
             this.textEmail3.TabIndex = 13;
             // 
             // label30
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label30.Location = new System.Drawing.Point(10, 353);
+            this.label30.Location = new System.Drawing.Point(10, 360);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(47, 15);
             this.label30.TabIndex = 81;
@@ -1531,7 +1584,7 @@
             // maskedTextBox5
             // 
             this.maskedTextBox5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.maskedTextBox5.Location = new System.Drawing.Point(182, 321);
+            this.maskedTextBox5.Location = new System.Drawing.Point(224, 328);
             this.maskedTextBox5.Mask = "(00)00000-0000";
             this.maskedTextBox5.Name = "maskedTextBox5";
             this.maskedTextBox5.Size = new System.Drawing.Size(200, 29);
@@ -1542,10 +1595,10 @@
             // maskedTextBox6
             // 
             this.maskedTextBox6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.maskedTextBox6.Location = new System.Drawing.Point(423, 321);
+            this.maskedTextBox6.Location = new System.Drawing.Point(465, 328);
             this.maskedTextBox6.Mask = "(00)00000-0000";
             this.maskedTextBox6.Name = "maskedTextBox6";
-            this.maskedTextBox6.Size = new System.Drawing.Size(200, 29);
+            this.maskedTextBox6.Size = new System.Drawing.Size(207, 29);
             this.maskedTextBox6.TabIndex = 11;
             this.maskedTextBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.maskedTextBox6.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -1554,7 +1607,7 @@
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label31.Location = new System.Drawing.Point(423, 303);
+            this.label31.Location = new System.Drawing.Point(465, 310);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(143, 15);
             this.label31.TabIndex = 79;
@@ -1564,7 +1617,7 @@
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label32.Location = new System.Drawing.Point(182, 303);
+            this.label32.Location = new System.Drawing.Point(224, 310);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(143, 15);
             this.label32.TabIndex = 78;
@@ -1573,9 +1626,9 @@
             // textProfession3
             // 
             this.textProfession3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textProfession3.Location = new System.Drawing.Point(10, 321);
+            this.textProfession3.Location = new System.Drawing.Point(10, 328);
             this.textProfession3.Name = "textProfession3";
-            this.textProfession3.Size = new System.Drawing.Size(135, 29);
+            this.textProfession3.Size = new System.Drawing.Size(165, 29);
             this.textProfession3.TabIndex = 10;
             this.textProfession3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1583,7 +1636,7 @@
             // 
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label33.Location = new System.Drawing.Point(7, 303);
+            this.label33.Location = new System.Drawing.Point(7, 310);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(72, 15);
             this.label33.TabIndex = 75;
@@ -1596,14 +1649,14 @@
             this.textName3.ForeColor = System.Drawing.SystemColors.WindowText;
             this.textName3.Location = new System.Drawing.Point(10, 21);
             this.textName3.Name = "textName3";
-            this.textName3.Size = new System.Drawing.Size(620, 29);
+            this.textName3.Size = new System.Drawing.Size(662, 29);
             this.textName3.TabIndex = 1;
             this.textName3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textName3_KeyPress);
             // 
             // textUf3
             // 
             this.textUf3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textUf3.Location = new System.Drawing.Point(423, 271);
+            this.textUf3.Location = new System.Drawing.Point(465, 271);
             this.textUf3.Name = "textUf3";
             this.textUf3.Size = new System.Drawing.Size(207, 29);
             this.textUf3.TabIndex = 9;
@@ -1613,7 +1666,7 @@
             // textNaturalness3
             // 
             this.textNaturalness3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textNaturalness3.Location = new System.Drawing.Point(182, 271);
+            this.textNaturalness3.Location = new System.Drawing.Point(224, 271);
             this.textNaturalness3.Name = "textNaturalness3";
             this.textNaturalness3.Size = new System.Drawing.Size(200, 29);
             this.textNaturalness3.TabIndex = 8;
@@ -1624,7 +1677,7 @@
             // 
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label34.Location = new System.Drawing.Point(423, 253);
+            this.label34.Location = new System.Drawing.Point(465, 253);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(22, 15);
             this.label34.TabIndex = 73;
@@ -1634,7 +1687,7 @@
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label35.Location = new System.Drawing.Point(182, 253);
+            this.label35.Location = new System.Drawing.Point(224, 253);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(97, 15);
             this.label35.TabIndex = 71;
@@ -1645,7 +1698,7 @@
             this.textNacionality3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textNacionality3.Location = new System.Drawing.Point(10, 271);
             this.textNacionality3.Name = "textNacionality3";
-            this.textNacionality3.Size = new System.Drawing.Size(135, 29);
+            this.textNacionality3.Size = new System.Drawing.Size(165, 29);
             this.textNacionality3.TabIndex = 7;
             this.textNacionality3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textNacionality3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textNacionality3_KeyPress);
@@ -1653,7 +1706,7 @@
             // textDispatchingAgency3
             // 
             this.textDispatchingAgency3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textDispatchingAgency3.Location = new System.Drawing.Point(182, 212);
+            this.textDispatchingAgency3.Location = new System.Drawing.Point(224, 212);
             this.textDispatchingAgency3.Name = "textDispatchingAgency3";
             this.textDispatchingAgency3.Size = new System.Drawing.Size(200, 29);
             this.textDispatchingAgency3.TabIndex = 6;
@@ -1665,7 +1718,7 @@
             this.textRg3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textRg3.Location = new System.Drawing.Point(10, 212);
             this.textRg3.Name = "textRg3";
-            this.textRg3.Size = new System.Drawing.Size(135, 29);
+            this.textRg3.Size = new System.Drawing.Size(165, 29);
             this.textRg3.TabIndex = 5;
             this.textRg3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textRg3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textRg3_KeyPress);
@@ -1684,7 +1737,7 @@
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label37.Location = new System.Drawing.Point(182, 194);
+            this.label37.Location = new System.Drawing.Point(224, 194);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(119, 15);
             this.label37.TabIndex = 68;
@@ -1706,7 +1759,7 @@
             this.maskedCpf3.Location = new System.Drawing.Point(10, 148);
             this.maskedCpf3.Mask = "000,000,000-00";
             this.maskedCpf3.Name = "maskedCpf3";
-            this.maskedCpf3.Size = new System.Drawing.Size(135, 29);
+            this.maskedCpf3.Size = new System.Drawing.Size(165, 29);
             this.maskedCpf3.TabIndex = 4;
             this.maskedCpf3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.maskedCpf3.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -1716,7 +1769,7 @@
             this.groupSex3.Controls.Add(this.radioButton3);
             this.groupSex3.Controls.Add(this.radioButton4);
             this.groupSex3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupSex3.Location = new System.Drawing.Point(423, 58);
+            this.groupSex3.Location = new System.Drawing.Point(465, 58);
             this.groupSex3.Name = "groupSex3";
             this.groupSex3.Size = new System.Drawing.Size(207, 119);
             this.groupSex3.TabIndex = 3;
@@ -1761,7 +1814,7 @@
             this.maskedBirthDate3.Location = new System.Drawing.Point(10, 77);
             this.maskedBirthDate3.Mask = "00/00/0000";
             this.maskedBirthDate3.Name = "maskedBirthDate3";
-            this.maskedBirthDate3.Size = new System.Drawing.Size(135, 29);
+            this.maskedBirthDate3.Size = new System.Drawing.Size(165, 29);
             this.maskedBirthDate3.TabIndex = 2;
             this.maskedBirthDate3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.maskedBirthDate3.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -1816,22 +1869,29 @@
             this.tabPageFiador2.Controls.Add(this.maskedBirthDate4);
             this.tabPageFiador2.Controls.Add(this.label76);
             this.tabPageFiador2.Controls.Add(this.label77);
-            this.tabPageFiador2.Location = new System.Drawing.Point(4, 24);
+            this.tabPageFiador2.Location = new System.Drawing.Point(4, 29);
             this.tabPageFiador2.Name = "tabPageFiador2";
             this.tabPageFiador2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageFiador2.Size = new System.Drawing.Size(639, 718);
+            this.tabPageFiador2.Size = new System.Drawing.Size(759, 663);
             this.tabPageFiador2.TabIndex = 4;
             this.tabPageFiador2.Text = "Fiador 2";
             this.tabPageFiador2.UseVisualStyleBackColor = true;
             // 
             // buttonEditarFiador2
             // 
-            this.buttonEditarFiador2.Location = new System.Drawing.Point(547, 425);
+            this.buttonEditarFiador2.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.buttonEditarFiador2.FlatAppearance.BorderSize = 0;
+            this.buttonEditarFiador2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEditarFiador2.Font = new System.Drawing.Font("Yu Gothic UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonEditarFiador2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonEditarFiador2.Image = ((System.Drawing.Image)(resources.GetObject("buttonEditarFiador2.Image")));
+            this.buttonEditarFiador2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonEditarFiador2.Location = new System.Drawing.Point(536, 422);
             this.buttonEditarFiador2.Name = "buttonEditarFiador2";
-            this.buttonEditarFiador2.Size = new System.Drawing.Size(75, 23);
+            this.buttonEditarFiador2.Size = new System.Drawing.Size(128, 30);
             this.buttonEditarFiador2.TabIndex = 108;
             this.buttonEditarFiador2.Text = "Editar";
-            this.buttonEditarFiador2.UseVisualStyleBackColor = true;
+            this.buttonEditarFiador2.UseVisualStyleBackColor = false;
             this.buttonEditarFiador2.Click += new System.EventHandler(this.buttonEditarFiador2_Click);
             // 
             // groupMaritalStatus4
@@ -1842,7 +1902,7 @@
             this.groupMaritalStatus4.Controls.Add(this.radioButton16);
             this.groupMaritalStatus4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupMaritalStatus4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.groupMaritalStatus4.Location = new System.Drawing.Point(181, 66);
+            this.groupMaritalStatus4.Location = new System.Drawing.Point(216, 66);
             this.groupMaritalStatus4.Name = "groupMaritalStatus4";
             this.groupMaritalStatus4.Size = new System.Drawing.Size(200, 119);
             this.groupMaritalStatus4.TabIndex = 3;
@@ -1892,16 +1952,16 @@
             // textEmail4
             // 
             this.textEmail4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textEmail4.Location = new System.Drawing.Point(9, 381);
+            this.textEmail4.Location = new System.Drawing.Point(9, 387);
             this.textEmail4.Name = "textEmail4";
-            this.textEmail4.Size = new System.Drawing.Size(613, 29);
+            this.textEmail4.Size = new System.Drawing.Size(655, 29);
             this.textEmail4.TabIndex = 14;
             // 
             // label66
             // 
             this.label66.AutoSize = true;
             this.label66.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label66.Location = new System.Drawing.Point(9, 363);
+            this.label66.Location = new System.Drawing.Point(9, 369);
             this.label66.Name = "label66";
             this.label66.Size = new System.Drawing.Size(47, 15);
             this.label66.TabIndex = 107;
@@ -1910,10 +1970,10 @@
             // maskedTextBox8
             // 
             this.maskedTextBox8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.maskedTextBox8.Location = new System.Drawing.Point(422, 331);
+            this.maskedTextBox8.Location = new System.Drawing.Point(457, 336);
             this.maskedTextBox8.Mask = "(00)00000-0000";
             this.maskedTextBox8.Name = "maskedTextBox8";
-            this.maskedTextBox8.Size = new System.Drawing.Size(200, 29);
+            this.maskedTextBox8.Size = new System.Drawing.Size(207, 29);
             this.maskedTextBox8.TabIndex = 13;
             this.maskedTextBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.maskedTextBox8.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -1921,7 +1981,7 @@
             // maskedTextBox7
             // 
             this.maskedTextBox7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.maskedTextBox7.Location = new System.Drawing.Point(181, 331);
+            this.maskedTextBox7.Location = new System.Drawing.Point(216, 336);
             this.maskedTextBox7.Mask = "(00)00000-0000";
             this.maskedTextBox7.Name = "maskedTextBox7";
             this.maskedTextBox7.Size = new System.Drawing.Size(200, 29);
@@ -1933,7 +1993,7 @@
             // 
             this.label67.AutoSize = true;
             this.label67.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label67.Location = new System.Drawing.Point(422, 313);
+            this.label67.Location = new System.Drawing.Point(457, 318);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(143, 15);
             this.label67.TabIndex = 105;
@@ -1943,7 +2003,7 @@
             // 
             this.label68.AutoSize = true;
             this.label68.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label68.Location = new System.Drawing.Point(181, 313);
+            this.label68.Location = new System.Drawing.Point(216, 318);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(143, 15);
             this.label68.TabIndex = 104;
@@ -1952,9 +2012,9 @@
             // textProfession4
             // 
             this.textProfession4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textProfession4.Location = new System.Drawing.Point(9, 331);
+            this.textProfession4.Location = new System.Drawing.Point(9, 336);
             this.textProfession4.Name = "textProfession4";
-            this.textProfession4.Size = new System.Drawing.Size(135, 29);
+            this.textProfession4.Size = new System.Drawing.Size(160, 29);
             this.textProfession4.TabIndex = 11;
             this.textProfession4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1962,7 +2022,7 @@
             // 
             this.label69.AutoSize = true;
             this.label69.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label69.Location = new System.Drawing.Point(6, 313);
+            this.label69.Location = new System.Drawing.Point(6, 318);
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(72, 15);
             this.label69.TabIndex = 101;
@@ -1975,14 +2035,14 @@
             this.textName4.ForeColor = System.Drawing.SystemColors.WindowText;
             this.textName4.Location = new System.Drawing.Point(9, 31);
             this.textName4.Name = "textName4";
-            this.textName4.Size = new System.Drawing.Size(620, 29);
+            this.textName4.Size = new System.Drawing.Size(655, 29);
             this.textName4.TabIndex = 1;
             this.textName4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textName4_KeyPress);
             // 
             // textUf4
             // 
             this.textUf4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textUf4.Location = new System.Drawing.Point(422, 281);
+            this.textUf4.Location = new System.Drawing.Point(457, 281);
             this.textUf4.Name = "textUf4";
             this.textUf4.Size = new System.Drawing.Size(207, 29);
             this.textUf4.TabIndex = 10;
@@ -1992,7 +2052,7 @@
             // textNaturalness4
             // 
             this.textNaturalness4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textNaturalness4.Location = new System.Drawing.Point(181, 281);
+            this.textNaturalness4.Location = new System.Drawing.Point(216, 281);
             this.textNaturalness4.Name = "textNaturalness4";
             this.textNaturalness4.Size = new System.Drawing.Size(200, 29);
             this.textNaturalness4.TabIndex = 9;
@@ -2003,7 +2063,7 @@
             // 
             this.label70.AutoSize = true;
             this.label70.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label70.Location = new System.Drawing.Point(422, 263);
+            this.label70.Location = new System.Drawing.Point(457, 263);
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(22, 15);
             this.label70.TabIndex = 99;
@@ -2013,7 +2073,7 @@
             // 
             this.label71.AutoSize = true;
             this.label71.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label71.Location = new System.Drawing.Point(181, 263);
+            this.label71.Location = new System.Drawing.Point(216, 263);
             this.label71.Name = "label71";
             this.label71.Size = new System.Drawing.Size(97, 15);
             this.label71.TabIndex = 97;
@@ -2024,7 +2084,7 @@
             this.textNacionality4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textNacionality4.Location = new System.Drawing.Point(9, 281);
             this.textNacionality4.Name = "textNacionality4";
-            this.textNacionality4.Size = new System.Drawing.Size(135, 29);
+            this.textNacionality4.Size = new System.Drawing.Size(160, 29);
             this.textNacionality4.TabIndex = 8;
             this.textNacionality4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textNacionality4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textNacionality4_KeyPress);
@@ -2032,7 +2092,7 @@
             // textDispatchingAgency4
             // 
             this.textDispatchingAgency4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textDispatchingAgency4.Location = new System.Drawing.Point(181, 222);
+            this.textDispatchingAgency4.Location = new System.Drawing.Point(216, 222);
             this.textDispatchingAgency4.Name = "textDispatchingAgency4";
             this.textDispatchingAgency4.Size = new System.Drawing.Size(200, 29);
             this.textDispatchingAgency4.TabIndex = 7;
@@ -2044,7 +2104,7 @@
             this.textRg4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textRg4.Location = new System.Drawing.Point(9, 222);
             this.textRg4.Name = "textRg4";
-            this.textRg4.Size = new System.Drawing.Size(135, 29);
+            this.textRg4.Size = new System.Drawing.Size(160, 29);
             this.textRg4.TabIndex = 6;
             this.textRg4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textRg4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textRg4_KeyPress);
@@ -2063,7 +2123,7 @@
             // 
             this.label73.AutoSize = true;
             this.label73.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label73.Location = new System.Drawing.Point(181, 204);
+            this.label73.Location = new System.Drawing.Point(216, 204);
             this.label73.Name = "label73";
             this.label73.Size = new System.Drawing.Size(119, 15);
             this.label73.TabIndex = 94;
@@ -2085,7 +2145,7 @@
             this.maskedCpf4.Location = new System.Drawing.Point(9, 158);
             this.maskedCpf4.Mask = "000,000,000-00";
             this.maskedCpf4.Name = "maskedCpf4";
-            this.maskedCpf4.Size = new System.Drawing.Size(135, 29);
+            this.maskedCpf4.Size = new System.Drawing.Size(160, 29);
             this.maskedCpf4.TabIndex = 5;
             this.maskedCpf4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.maskedCpf4.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -2095,7 +2155,7 @@
             this.groupSex4.Controls.Add(this.radioButton17);
             this.groupSex4.Controls.Add(this.radioButton18);
             this.groupSex4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupSex4.Location = new System.Drawing.Point(422, 68);
+            this.groupSex4.Location = new System.Drawing.Point(457, 68);
             this.groupSex4.Name = "groupSex4";
             this.groupSex4.Size = new System.Drawing.Size(207, 119);
             this.groupSex4.TabIndex = 4;
@@ -2140,7 +2200,7 @@
             this.maskedBirthDate4.Location = new System.Drawing.Point(9, 87);
             this.maskedBirthDate4.Mask = "00/00/0000";
             this.maskedBirthDate4.Name = "maskedBirthDate4";
-            this.maskedBirthDate4.Size = new System.Drawing.Size(135, 29);
+            this.maskedBirthDate4.Size = new System.Drawing.Size(160, 29);
             this.maskedBirthDate4.TabIndex = 2;
             this.maskedBirthDate4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.maskedBirthDate4.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -2195,37 +2255,61 @@
             this.tabPageConjugeF2.Controls.Add(this.maskedBirthDate5);
             this.tabPageConjugeF2.Controls.Add(this.label52);
             this.tabPageConjugeF2.Controls.Add(this.label53);
-            this.tabPageConjugeF2.Location = new System.Drawing.Point(4, 24);
+            this.tabPageConjugeF2.Location = new System.Drawing.Point(4, 29);
             this.tabPageConjugeF2.Name = "tabPageConjugeF2";
             this.tabPageConjugeF2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageConjugeF2.Size = new System.Drawing.Size(639, 718);
+            this.tabPageConjugeF2.Size = new System.Drawing.Size(759, 663);
             this.tabPageConjugeF2.TabIndex = 5;
             this.tabPageConjugeF2.Text = "Conjuge do Fiador 2";
             this.tabPageConjugeF2.UseVisualStyleBackColor = true;
             // 
+            // buttonCadastrarConjugeF2
+            // 
+            this.buttonCadastrarConjugeF2.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.buttonCadastrarConjugeF2.FlatAppearance.BorderSize = 0;
+            this.buttonCadastrarConjugeF2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCadastrarConjugeF2.Font = new System.Drawing.Font("Yu Gothic UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonCadastrarConjugeF2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonCadastrarConjugeF2.Image = ((System.Drawing.Image)(resources.GetObject("buttonCadastrarConjugeF2.Image")));
+            this.buttonCadastrarConjugeF2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCadastrarConjugeF2.Location = new System.Drawing.Point(10, 427);
+            this.buttonCadastrarConjugeF2.Name = "buttonCadastrarConjugeF2";
+            this.buttonCadastrarConjugeF2.Size = new System.Drawing.Size(128, 30);
+            this.buttonCadastrarConjugeF2.TabIndex = 83;
+            this.buttonCadastrarConjugeF2.Text = "Cadastrar";
+            this.buttonCadastrarConjugeF2.UseVisualStyleBackColor = false;
+            this.buttonCadastrarConjugeF2.Click += new System.EventHandler(this.buttonCadastrarConjugeF2_Click);
+            // 
             // buttonEditarConjugeF2
             // 
-            this.buttonEditarConjugeF2.Location = new System.Drawing.Point(548, 418);
+            this.buttonEditarConjugeF2.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.buttonEditarConjugeF2.FlatAppearance.BorderSize = 0;
+            this.buttonEditarConjugeF2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEditarConjugeF2.Font = new System.Drawing.Font("Yu Gothic UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonEditarConjugeF2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonEditarConjugeF2.Image = ((System.Drawing.Image)(resources.GetObject("buttonEditarConjugeF2.Image")));
+            this.buttonEditarConjugeF2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonEditarConjugeF2.Location = new System.Drawing.Point(536, 427);
             this.buttonEditarConjugeF2.Name = "buttonEditarConjugeF2";
-            this.buttonEditarConjugeF2.Size = new System.Drawing.Size(75, 23);
+            this.buttonEditarConjugeF2.Size = new System.Drawing.Size(128, 30);
             this.buttonEditarConjugeF2.TabIndex = 82;
             this.buttonEditarConjugeF2.Text = "Editar";
-            this.buttonEditarConjugeF2.UseVisualStyleBackColor = true;
+            this.buttonEditarConjugeF2.UseVisualStyleBackColor = false;
             this.buttonEditarConjugeF2.Click += new System.EventHandler(this.buttonEditarConjugeF2_Click);
             // 
             // textEmail5
             // 
             this.textEmail5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textEmail5.Location = new System.Drawing.Point(10, 383);
+            this.textEmail5.Location = new System.Drawing.Point(10, 392);
             this.textEmail5.Name = "textEmail5";
-            this.textEmail5.Size = new System.Drawing.Size(613, 29);
+            this.textEmail5.Size = new System.Drawing.Size(654, 29);
             this.textEmail5.TabIndex = 13;
             // 
             // label42
             // 
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label42.Location = new System.Drawing.Point(10, 365);
+            this.label42.Location = new System.Drawing.Point(10, 374);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(47, 15);
             this.label42.TabIndex = 81;
@@ -2234,7 +2318,7 @@
             // maskedTextBox9
             // 
             this.maskedTextBox9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.maskedTextBox9.Location = new System.Drawing.Point(182, 333);
+            this.maskedTextBox9.Location = new System.Drawing.Point(216, 342);
             this.maskedTextBox9.Mask = "(00)00000-0000";
             this.maskedTextBox9.Name = "maskedTextBox9";
             this.maskedTextBox9.Size = new System.Drawing.Size(200, 29);
@@ -2245,7 +2329,7 @@
             // maskedTextBox10
             // 
             this.maskedTextBox10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.maskedTextBox10.Location = new System.Drawing.Point(423, 333);
+            this.maskedTextBox10.Location = new System.Drawing.Point(457, 342);
             this.maskedTextBox10.Mask = "(00)00000-0000";
             this.maskedTextBox10.Name = "maskedTextBox10";
             this.maskedTextBox10.Size = new System.Drawing.Size(207, 29);
@@ -2257,7 +2341,7 @@
             // 
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label43.Location = new System.Drawing.Point(423, 315);
+            this.label43.Location = new System.Drawing.Point(457, 324);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(143, 15);
             this.label43.TabIndex = 79;
@@ -2267,7 +2351,7 @@
             // 
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label44.Location = new System.Drawing.Point(182, 315);
+            this.label44.Location = new System.Drawing.Point(216, 324);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(143, 15);
             this.label44.TabIndex = 78;
@@ -2276,9 +2360,9 @@
             // textProfession5
             // 
             this.textProfession5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textProfession5.Location = new System.Drawing.Point(10, 333);
+            this.textProfession5.Location = new System.Drawing.Point(10, 342);
             this.textProfession5.Name = "textProfession5";
-            this.textProfession5.Size = new System.Drawing.Size(135, 29);
+            this.textProfession5.Size = new System.Drawing.Size(163, 29);
             this.textProfession5.TabIndex = 10;
             this.textProfession5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2286,7 +2370,7 @@
             // 
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label45.Location = new System.Drawing.Point(7, 315);
+            this.label45.Location = new System.Drawing.Point(7, 324);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(72, 15);
             this.label45.TabIndex = 75;
@@ -2299,14 +2383,14 @@
             this.textName5.ForeColor = System.Drawing.SystemColors.WindowText;
             this.textName5.Location = new System.Drawing.Point(10, 33);
             this.textName5.Name = "textName5";
-            this.textName5.Size = new System.Drawing.Size(620, 29);
+            this.textName5.Size = new System.Drawing.Size(654, 29);
             this.textName5.TabIndex = 1;
             this.textName5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textName5_KeyPress);
             // 
             // textUf5
             // 
             this.textUf5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textUf5.Location = new System.Drawing.Point(423, 283);
+            this.textUf5.Location = new System.Drawing.Point(457, 283);
             this.textUf5.Name = "textUf5";
             this.textUf5.Size = new System.Drawing.Size(207, 29);
             this.textUf5.TabIndex = 9;
@@ -2316,7 +2400,7 @@
             // textNaturalness5
             // 
             this.textNaturalness5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textNaturalness5.Location = new System.Drawing.Point(182, 283);
+            this.textNaturalness5.Location = new System.Drawing.Point(216, 283);
             this.textNaturalness5.Name = "textNaturalness5";
             this.textNaturalness5.Size = new System.Drawing.Size(200, 29);
             this.textNaturalness5.TabIndex = 8;
@@ -2327,7 +2411,7 @@
             // 
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label46.Location = new System.Drawing.Point(423, 265);
+            this.label46.Location = new System.Drawing.Point(457, 265);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(22, 15);
             this.label46.TabIndex = 73;
@@ -2337,7 +2421,7 @@
             // 
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label47.Location = new System.Drawing.Point(182, 265);
+            this.label47.Location = new System.Drawing.Point(216, 265);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(97, 15);
             this.label47.TabIndex = 71;
@@ -2348,7 +2432,7 @@
             this.textNacionality5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textNacionality5.Location = new System.Drawing.Point(10, 283);
             this.textNacionality5.Name = "textNacionality5";
-            this.textNacionality5.Size = new System.Drawing.Size(135, 29);
+            this.textNacionality5.Size = new System.Drawing.Size(163, 29);
             this.textNacionality5.TabIndex = 7;
             this.textNacionality5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textNacionality5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textNacionality5_KeyPress);
@@ -2356,7 +2440,7 @@
             // textDispatchingAgency5
             // 
             this.textDispatchingAgency5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textDispatchingAgency5.Location = new System.Drawing.Point(182, 224);
+            this.textDispatchingAgency5.Location = new System.Drawing.Point(216, 224);
             this.textDispatchingAgency5.Name = "textDispatchingAgency5";
             this.textDispatchingAgency5.Size = new System.Drawing.Size(200, 29);
             this.textDispatchingAgency5.TabIndex = 6;
@@ -2368,7 +2452,7 @@
             this.textRg5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textRg5.Location = new System.Drawing.Point(10, 224);
             this.textRg5.Name = "textRg5";
-            this.textRg5.Size = new System.Drawing.Size(135, 29);
+            this.textRg5.Size = new System.Drawing.Size(163, 29);
             this.textRg5.TabIndex = 5;
             this.textRg5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textRg5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textRg5_KeyPress);
@@ -2387,7 +2471,7 @@
             // 
             this.label49.AutoSize = true;
             this.label49.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label49.Location = new System.Drawing.Point(182, 206);
+            this.label49.Location = new System.Drawing.Point(216, 206);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(119, 15);
             this.label49.TabIndex = 68;
@@ -2409,7 +2493,7 @@
             this.maskedCpf5.Location = new System.Drawing.Point(10, 160);
             this.maskedCpf5.Mask = "000,000,000-00";
             this.maskedCpf5.Name = "maskedCpf5";
-            this.maskedCpf5.Size = new System.Drawing.Size(135, 29);
+            this.maskedCpf5.Size = new System.Drawing.Size(163, 29);
             this.maskedCpf5.TabIndex = 4;
             this.maskedCpf5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.maskedCpf5.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -2419,7 +2503,7 @@
             this.groupSex5.Controls.Add(this.radioButton5);
             this.groupSex5.Controls.Add(this.radioButton6);
             this.groupSex5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupSex5.Location = new System.Drawing.Point(423, 70);
+            this.groupSex5.Location = new System.Drawing.Point(457, 70);
             this.groupSex5.Name = "groupSex5";
             this.groupSex5.Size = new System.Drawing.Size(207, 119);
             this.groupSex5.TabIndex = 3;
@@ -2464,7 +2548,7 @@
             this.maskedBirthDate5.Location = new System.Drawing.Point(10, 89);
             this.maskedBirthDate5.Mask = "00/00/0000";
             this.maskedBirthDate5.Name = "maskedBirthDate5";
-            this.maskedBirthDate5.Size = new System.Drawing.Size(135, 29);
+            this.maskedBirthDate5.Size = new System.Drawing.Size(163, 29);
             this.maskedBirthDate5.TabIndex = 2;
             this.maskedBirthDate5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.maskedBirthDate5.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -2490,33 +2574,33 @@
             this.label53.TabIndex = 57;
             this.label53.Text = "NOME";
             // 
-            // buttonCadastrarConjugeF1
+            // buttonVoltarForm1
             // 
-            this.buttonCadastrarConjugeF1.Location = new System.Drawing.Point(10, 406);
-            this.buttonCadastrarConjugeF1.Name = "buttonCadastrarConjugeF1";
-            this.buttonCadastrarConjugeF1.Size = new System.Drawing.Size(75, 23);
-            this.buttonCadastrarConjugeF1.TabIndex = 83;
-            this.buttonCadastrarConjugeF1.Text = "Cadastrar";
-            this.buttonCadastrarConjugeF1.UseVisualStyleBackColor = true;
-            this.buttonCadastrarConjugeF1.Click += new System.EventHandler(this.buttonCadastrarConjugeF1_Click);
-            // 
-            // buttonCadastrarConjugeF2
-            // 
-            this.buttonCadastrarConjugeF2.Location = new System.Drawing.Point(10, 418);
-            this.buttonCadastrarConjugeF2.Name = "buttonCadastrarConjugeF2";
-            this.buttonCadastrarConjugeF2.Size = new System.Drawing.Size(75, 23);
-            this.buttonCadastrarConjugeF2.TabIndex = 83;
-            this.buttonCadastrarConjugeF2.Text = "Cadastrar";
-            this.buttonCadastrarConjugeF2.UseVisualStyleBackColor = true;
-            this.buttonCadastrarConjugeF2.Click += new System.EventHandler(this.buttonCadastrarConjugeF2_Click);
+            this.buttonVoltarForm1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonVoltarForm1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.buttonVoltarForm1.FlatAppearance.BorderSize = 0;
+            this.buttonVoltarForm1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonVoltarForm1.Font = new System.Drawing.Font("Yu Gothic UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonVoltarForm1.ForeColor = System.Drawing.Color.White;
+            this.buttonVoltarForm1.Image = ((System.Drawing.Image)(resources.GetObject("buttonVoltarForm1.Image")));
+            this.buttonVoltarForm1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonVoltarForm1.Location = new System.Drawing.Point(791, 655);
+            this.buttonVoltarForm1.Name = "buttonVoltarForm1";
+            this.buttonVoltarForm1.Size = new System.Drawing.Size(170, 29);
+            this.buttonVoltarForm1.TabIndex = 52;
+            this.buttonVoltarForm1.Text = "Voltar";
+            this.buttonVoltarForm1.UseVisualStyleBackColor = false;
             // 
             // FormEditarLocatario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(732, 710);
+            this.ClientSize = new System.Drawing.Size(973, 710);
+            this.Controls.Add(this.buttonVoltarForm1);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "FormEditarLocatario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditarLocatario";
             this.tabControl1.ResumeLayout(false);
             this.tabPageLocatario.ResumeLayout(false);
@@ -2759,5 +2843,6 @@
         private Button buttonCadastrarConjuge;
         private Button buttonCadastrarConjugeF1;
         private Button buttonCadastrarConjugeF2;
+        private Button buttonVoltarForm1;
     }
 }
