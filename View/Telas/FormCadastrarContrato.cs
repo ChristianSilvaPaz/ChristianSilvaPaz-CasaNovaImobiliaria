@@ -1,5 +1,4 @@
 ﻿using Domain.Services;
-using Infrastructure.Entities;
 using Infrastructure.Entities.Enums;
 
 namespace View.Telas
@@ -7,16 +6,13 @@ namespace View.Telas
     public partial class FormCadastrarContrato : Form
     {
         private LocatarioServices _locatarioServices;
-        private CnabServices _cnabServices;
 
         public FormCadastrarContrato()
         {
             InitializeComponent();
-            _cnabServices = new CnabServices();
             _locatarioServices = new LocatarioServices();
-            dataGridView1.DataSource = _cnabServices.iterar();
-            //dataGridView1.DataSource = _locatarioServices.ListarLocatarios();
-            //CustomizaDGV();
+            dataGridView1.DataSource = _locatarioServices.ListarLocatarios();
+            CustomizaDGV();
         }
 
         public void CustomizaDGV()
@@ -77,6 +73,6 @@ namespace View.Telas
                 }
             }
             return null;
-        }        
+        }
     }
 }

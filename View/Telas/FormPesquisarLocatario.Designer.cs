@@ -114,7 +114,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1154, 100);
+            this.panel1.Size = new System.Drawing.Size(1187, 100);
             this.panel1.TabIndex = 3;
             // 
             // panel2
@@ -131,7 +131,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 100);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1154, 579);
+            this.panel2.Size = new System.Drawing.Size(1187, 610);
             this.panel2.TabIndex = 4;
             // 
             // buttonVoltarForm1
@@ -144,7 +144,7 @@
             this.buttonVoltarForm1.ForeColor = System.Drawing.Color.White;
             this.buttonVoltarForm1.Image = ((System.Drawing.Image)(resources.GetObject("buttonVoltarForm1.Image")));
             this.buttonVoltarForm1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonVoltarForm1.Location = new System.Drawing.Point(985, 537);
+            this.buttonVoltarForm1.Location = new System.Drawing.Point(1018, 568);
             this.buttonVoltarForm1.Name = "buttonVoltarForm1";
             this.buttonVoltarForm1.Size = new System.Drawing.Size(152, 30);
             this.buttonVoltarForm1.TabIndex = 52;
@@ -243,7 +243,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1154, 679);
+            this.ClientSize = new System.Drawing.Size(1187, 710);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
