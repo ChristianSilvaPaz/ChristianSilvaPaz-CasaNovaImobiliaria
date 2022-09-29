@@ -1,8 +1,6 @@
 ﻿using Infrastructure.Entities;
 using Domain.Services;
 using System.Media;
-using System.Drawing.Text;
-using Org.BouncyCastle.Ocsp;
 
 namespace View.Telas
 {

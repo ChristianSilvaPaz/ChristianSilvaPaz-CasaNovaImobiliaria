@@ -45,8 +45,6 @@ namespace Domain.Services
         public List<Locatario> ListarLocatarios()
         {
             return _locatarioDAO.ListarLocatarios();
-        }
-
-       
+        }       
     }
 }

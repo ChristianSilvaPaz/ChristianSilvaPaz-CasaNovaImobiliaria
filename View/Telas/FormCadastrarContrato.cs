@@ -7,14 +7,16 @@ namespace View.Telas
     public partial class FormCadastrarContrato : Form
     {
         private LocatarioServices _locatarioServices;
-
+        private CnabServices _cnabServices;
 
         public FormCadastrarContrato()
         {
             InitializeComponent();
+            _cnabServices = new CnabServices();
             _locatarioServices = new LocatarioServices();
-            dataGridView1.DataSource = _locatarioServices.ListarLocatarios();
-            CustomizaDGV();
+            dataGridView1.DataSource = _cnabServices.iterar();
+            //dataGridView1.DataSource = _locatarioServices.ListarLocatarios();
+            //CustomizaDGV();
         }
 
         public void CustomizaDGV()
@@ -41,7 +43,7 @@ namespace View.Telas
             dataGridView1.Columns["Phone2"].Visible = false;
         }
 
-        private void buttonSelecionar_Click(object sender, EventArgs e)
+        private void buttonSelecionar_Click_1(object sender, EventArgs e)
         {
             textName.Text = dataGridView1.CurrentRow.Cells["Name"].Value.ToString();
             maskedCpf.Text = dataGridView1.CurrentRow.Cells["Cpf"].Value.ToString();
@@ -49,7 +51,7 @@ namespace View.Telas
 
         private void buttonCadastrar_Click(object sender, EventArgs e)
         {
-            Contrato contrato = new Contrato();
+            /*Contrato contrato = new Contrato();
             contrato.IdLocatario = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Id"].Value);
             int dia = Convert.ToInt16(maskedDataInicio.Text.Substring(0, 2));
             int mes = Convert.ToInt16(maskedDataInicio.Text.Substring(2, 2));
@@ -62,7 +64,7 @@ namespace View.Telas
             contrato.QuantidadeMeses = Convert.ToInt16(textQtdMeses.Text);
             contrato.FormaPagamento = (FormaDePagamento)IdentificaFormaDePagamento(groupFormaPagamento);
             contrato.Valor = (string.IsNullOrEmpty(textValor.Text) ? 0 : Convert.ToDecimal(textValor.Text));
-            contrato.Observacoes = textObservacoes.Text;
+            contrato.Observacoes = textObservacoes.Text;*/
         }
 
         private FormaDePagamento? IdentificaFormaDePagamento(GroupBox groupBox)
@@ -75,6 +77,6 @@ namespace View.Telas
                 }
             }
             return null;
-        }
+        }        
     }
 }
